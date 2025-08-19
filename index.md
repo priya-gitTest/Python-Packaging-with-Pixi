@@ -23,7 +23,9 @@ It is a roughly 2 hour course.
 - Upload a package to the Test Python Package Index (TestPyPI).
 - Install a package from TestPyPI using pip.
 
-  ## Prerequisites
+:::::::::::::::::::::::::::::::::::::::::: prereq
+## Prerequisites
 
   - Basic knowledge of python
-    
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
