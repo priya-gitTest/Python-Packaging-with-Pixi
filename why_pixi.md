@@ -1,12 +1,13 @@
 ---
-title: "TBD"
+title: "Why choose Pixi for Python Packaging ?"
 teaching: 5
 exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- TBD
+- Wht Pixi ?
+- What are the benefits of Pixi ?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -17,3 +18,4 @@ exercises: 0
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
+Pixi is a fast and reproducible package management tool. It has lots of unique features which are missing in other tools at this point in time. Hence we choose this tool.
