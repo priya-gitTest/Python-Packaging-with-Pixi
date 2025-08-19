@@ -24,7 +24,7 @@ title: 'Python packaging with Pixi'
 created: 2025-08-19
 
 # Comma-separated list of keywords for the lesson
-keywords: 'python','packaging','pixi'
+keywords: ["python", "packaging", "pixi"]
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
