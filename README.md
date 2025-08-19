@@ -1,3 +1,8 @@
+# Learning Python packaging with Pixi
+
+We will learn about the Python packaging in simple steps using a tool called [Pixi](https://prefix.dev/)
+
+================ Section below to be deleted =====================
 # The Carpentries Workbench Template Markdown Lesson
 
 This lesson is a template lesson that uses [The Carpentries Workbench][workbench]. 
