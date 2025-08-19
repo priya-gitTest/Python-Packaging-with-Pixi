@@ -1,12 +1,13 @@
 ---
-title: "TBD"
+title: "Metadata for Python packging"
 teaching: 5
-exercises: 0
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- TBD
+- What is pyproject.toml?
+- 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
