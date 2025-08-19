@@ -26,6 +26,7 @@ It is a roughly 2 hour course.
 :::::::::::::::::::::::::::::::::::::::::: prereq
 ## Prerequisites
 
-  - Basic knowledge of python
+  - Basic knowledge of Python
+  - Basic knowledge of GIT
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
