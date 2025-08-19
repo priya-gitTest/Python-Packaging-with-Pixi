@@ -1,18 +1,21 @@
 ---
-title: "TBD"
+title: "Set up a project directory"
 teaching: 5
 exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- TBD
+- How should we  structure our project ?
+- What is __init__.py ?
+  
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- TBD
+- To understand how to structure your project to be able to package it well.
+- Understand the importance of  __init__.py and where to place it.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
