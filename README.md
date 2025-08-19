@@ -1,6 +1,9 @@
 # Learning Python packaging with Pixi
 
-We will learn about the Python packaging in simple steps using a tool called [Pixi](https://prefix.dev/)
+## Introduction
+This lesson introduces the basics of Python packaging using a tool called [Pixi](https://prefix.dev/).
+This course is designed for intermediate Python users.
+
 
 ================ Section below to be deleted =====================
 # The Carpentries Workbench Template Markdown Lesson
