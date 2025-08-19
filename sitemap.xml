@@ -1,69 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/404.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/CODE_OF_CONDUCT.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/LICENSE.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/aio.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/images.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/index.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/404.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/LICENSE.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/aio.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/images.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/index.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/instructor-notes.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/introduction.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/intoduction_python_packaging.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/key-points.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/profiles.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/key-points.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/reference.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/profiles.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor-notes.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/project_metadata.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/introduction.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/project_publishing.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/key-points.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/project_structure.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/profiles.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/reference.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/reference.html</loc>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/why_pixi.html</loc>
+  </url>
+  <url>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/intoduction_python_packaging.html</loc>
+  </url>
+  <url>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/project_metadata.html</loc>
+  </url>
+  <url>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/project_publishing.html</loc>
+  </url>
+  <url>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/project_structure.html</loc>
+  </url>
+  <url>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://priya-gitTest.github.io/Python-Packaging-with-Pixi/why_pixi.html</loc>
   </url>
 </urlset>
