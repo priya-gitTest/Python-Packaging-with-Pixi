@@ -361,19 +361,34 @@
 have our code ready and we want to share it across the world. Well there
 are many ways to do that ofcourse ! By doing this course we will learn
 to distribute our code via Python Packaging using a tool call Pixi. You
-can think of the package as setup.exe from yester years. When we make a
-package, we solve some key challenges like reproducibility, making it
-platform independent and also make it multi- environment. Distributing
-our code as package is better than sharing the souce code via for
-instance in a Github repository for many reasons : - Dependency
-management : A Package can explicityl declare its deepndencies. Tools
-like ‘pip’ or ‘uv’ can be then used to automatically install them for a
-user. - Versioning : You version your package and can make and
-distribute several versions of your code for backwards compatability. -
-Standerdisation : Packaging is an accepted way to distribute the code
-via repositories like PyPI - Metadata : A package has project specific
-metadata which are important for the end users.</p>
-<div id="keypoints1" class="callout keypoints">
+can think of the package as setup.exe from yester years.</p>
+<p>When we make a package, we solve some key challenges like
+reproducibility, making it platform independent and also make it multi-
+environment. Distributing our code as package is better than sharing the
+souce code via for instance in a Github repository for many reasons
+:</p>
+<ul><li><p>Dependency management : A Package can explicityl declare its
+deepndencies. Tools like ‘pip’ or ‘uv’ can be then used to automatically
+install them for a user.</p></li>
+<li><p>Versioning : You version your package and can make and distribute
+several versions of your code for backwards compatability.</p></li>
+<li><p>Standerdisation : Packaging is an accepted way to distribute the
+code via repositories like PyPI</p></li>
+<li>
+<p>Metadata : A package has project specific metadata which are
+important for the end users.</p>
+<h2 id="what-can-you-package">What can you package ?</h2>
+<p>Any .py files (modules) or directories with <strong>init</strong>.py
+(packages).</p>
+<h2 id="what-is-pypi">What is PyPI</h2>
+<p>PyPi is the repository where all the Python packages which are
+released are available for end users to use. You can visit it here to
+have a look : <a href="https://pypi.org/" class="external-link uri">https://pypi.org/</a> There is also a repository called <a href="https://test.pypi.org/" class="external-link uri">https://test.pypi.org/</a>,
+which allows us to try distribution tools and processes without
+affecting the real PyPi. In this course , we will publish our package to
+TestPyPI.</p>
+</li>
+</ul><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
