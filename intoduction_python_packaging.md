@@ -24,12 +24,26 @@ exercises: 10
 
 ## Introduction
 We all love to write code, to solve interesting problems. What if we have our code ready and we want to share it across the world. Well there are many ways to do that ofcourse ! By doing this course we will learn to distribute our code via Python Packaging using a tool call Pixi. You can think of the package as setup.exe from yester years.
+
 When we make a package, we solve some key challenges like reproducibility, making it platform independent and also make it multi- environment.
 Distributing our code as package is better than sharing the souce code via for instance in a Github repository for many reasons :
+
 - Dependency management : A Package can explicityl declare its deepndencies. Tools like 'pip' or 'uv' can be then used to automatically install them for a user.
 - Versioning : You version your package and can make and distribute several versions of your code for backwards compatability.
 - Standerdisation : Packaging is an accepted way to distribute the code via repositories like PyPI
 - Metadata : A package has project specific metadata which are important for the end users.
+
+  ## What can you package ?
+
+  Any .py files (modules) or directories with __init__.py (packages).
+
+  ## What is PyPI
+
+  PyPi is the repository where all the Python packages which are released are available for end users to use.
+  You can visit it here to have a look : https://pypi.org/
+  There is also a repository called https://test.pypi.org/, which allows us to try distribution tools and processes without affecting the real PyPi.
+  In this course , we will publish our package to TestPyPI.
+  
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
