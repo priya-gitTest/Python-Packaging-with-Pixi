@@ -1,8 +1,7 @@
-
 ---
-title: "TBD"
-teaching: 5
-exercises: 0
+title: "How to publish your Python project"
+teaching: 10
+exercises: 15
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
