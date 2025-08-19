@@ -1,6 +1,6 @@
 ---
 title: "TBD"
-teaching: 10
+teaching: 5
 exercises: 0
 ---
 
