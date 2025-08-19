@@ -43,7 +43,14 @@ Distributing our code as package is better than sharing the souce code via for i
   You can visit it here to have a look : https://pypi.org/
   There is also a repository called https://test.pypi.org/, which allows us to try distribution tools and processes without affecting the real PyPi.
   In this course , we will publish our package to TestPyPI.
-  
+
+  ## What is a build ?
+
+  It can be defined as a process of creation of distribution of your project from source code. This distribution can then be installed using tools like 'pip' or 'uv' etc.
+  You can create a build for your project using the following command in the terminal : python -m build.
+
+  The end product of a successful build process in a .whl or .tar.gz file. These can then be installed via pip or uploaded to PyPI.
+  It is important to version your build and provide necessary metadata.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
