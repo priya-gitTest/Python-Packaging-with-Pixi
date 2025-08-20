@@ -6,14 +6,19 @@ exercises: 0
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- Wht Pixi ?
+- Why Pixi ?
 - What are the benefits of Pixi ?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- TBD
+- To understand the benefits offered by Pixi
+-  What is `pixi.toml` and `pyproject.toml`
+-  What is `pixi.lock`
+-  What do we mean by multi-environment support
+-  
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -28,3 +33,13 @@ It comes with following features :
 - Uses `uv` under the hood.
 - Helps with reproducibility via `pixi.lock`
    
+## Configuration files (`pixi.toml` and `pyproject.toml`)
+
+`pixi.toml` is the file used by Pixi for defining the environment , dependencies and tasks.
+`pyproject.toml` is the file in Python ecosystem (PEP 518/621) for configuring the build, distribution and configration of python projects. It is required in build tools like Poety, Hatch, Flit , setuptools. It specifies metadata (name, version, author). you can also specifiy dependencies here.
+
+## Multi-environment support
+
+You can specify the installation of certain tools and packages specific to a particular OS or environmentsl like ( dev, test prod) etc.
+
+
