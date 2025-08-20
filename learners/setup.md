@@ -34,6 +34,20 @@ To install pixi, run:
 ```bash
 curl -fsSL https://pixi.sh/install.sh | sh
 ```
-
+```output
+This script will automatically download and install Pixi (latest) for you.
+Getting it from this url: https://github.com/prefix-dev/pixi/releases/latest/download/pixi-x86_64-unknown-linux-musl.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 23.2M  100 23.2M    0     0  24.0M      0 --:--:-- --:--:-- --:--:-- 66.9M
+The 'pixi' binary is installed into '/home/codespace/.pixi/bin'
+Updating '/home/codespace/.bashrc'
+Please restart or source your shell.
+```
+```bash
+source ~/.bashrc
+```
 ::::::::::::::::::::::::
 
