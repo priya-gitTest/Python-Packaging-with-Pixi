@@ -38,7 +38,39 @@ A typical project would look like :
     └── sad.py
 ```
 Lets create the same structure for our project in the codespace.
- 
+```bash
+pixi init greet_me
+```
+This create a following structure for us. 
+
+<img width="301" height="96" alt="image" src="https://github.com/user-attachments/assets/b07a9498-cd76-470b-80ad-d74a5202c061" />
+
+`pixi.toml` : Lets edit the pixi.toml file generated for us.
+
+```toml
+[project]
+authors = ["Priyanka O <21082240+priya-gitTest@users.noreply.github.com>"]
+name = "greet_me"
+version = "0.1.0"
+platforms = ["linux-64"]
+description = "A simple greeting package."
+
+[dependencies]
+python = ">=3.10"
+
+
+[tasks]
+start = "python -c 'print(\"Hello from greet_me!\")'"
+```
+Lets install the dependencies now, which wiil generate the `pixi.lock` file
+```bash
+pixi install
+```
+```output
+▪ fetching repodata    [━━━━━━━━━━━━━━━━━━━━] 
+▪ solving              [━━━━━━━━━━━━━━━━━━━━]  1/1
+```  
+
 ```python
 # happy.py <- A module
 def greet_happy():
