@@ -532,7 +532,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-project_structure"><p>Content from <a href="project_structure.html">Set up a project directory</a></p>
 <hr>
-<p>Last updated on 2025-08-19 |
+<p>Last updated on 2025-08-20 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/project_structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 5 minutes</p>
@@ -549,6 +549,7 @@ any links that you are not going to use.
 <ul>
 <li>How should we structure our project ?</li>
 <li>What is <strong>init</strong>.py ?</li>
+<li>How should be name our packages ?</li>
 </ul>
 </div>
 </div>
@@ -562,6 +563,7 @@ any links that you are not going to use.
 well.</li>
 <li>Understand the importance of <strong>init</strong>.py and where to
 place it.</li>
+<li>Giving unique but understandable names to our packages.</li>
 </ul>
 </div>
 </div>
@@ -571,10 +573,41 @@ place it.</li>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
+<p>It is important to structure your project and add necessary files and
+give unique but understanable package names. Packages are a way of
+structuring modules in a Python Project. You can have several modules in
+a project. Also, every package must have a special file
+<strong>init</strong>.py in its folder. The presence of this file,
+allows the package to be imported later on.</p>
+</section><section><h2 class="section-heading" id="project-structure">Project Structure<a class="anchor" aria-label="anchor" href="#project-structure"></a>
+</h2>
+<hr class="half-width">
+<p>A typical Project would look like : greet_me/ └── my_package/ ├──
+<strong>init</strong>.py ├── happy.py └── sad.py Lets create the same
+for our Project in the codespace.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># happy.py</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="kw">def</span> greet_happy():</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Yay! I’m so happy to see you! 😀"</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># sad.py</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="kw">def</span> greet_sad():</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Oh no… I’m feeling a bit down today. 😢"</span></span></code></pre>
+</div>
+<p>Ultimately, Our project structure should look like this : reet_me/
+├── LICENSE ├── pyproject.toml ├── README.md ├── pixi.toml ├── pixi.lock
+# auto-generated, do not edit ├── tests/ │ └── test_greetings.py └──
+my_package/ ├── <strong>init</strong>.py ├── happy.py └── sad.py</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section><section id="aio-project_metadata"><p>Content from <a href="project_metadata.html">Metadata for Python packging</a></p>
+ -->
+</section></section><section id="aio-project_metadata"><p>Content from <a href="project_metadata.html">Metadata for Python packging</a></p>
 <hr>
 <p>Last updated on 2025-08-20 |
 
