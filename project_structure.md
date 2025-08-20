@@ -34,8 +34,9 @@ A typical Project would look like :
 └── my_package/
     ├── __init__.py
     ├── happy.py
-    └── sad.py```
- Lets create the same for our Project in the codespace.
+    └── sad.py
+```
+Lets create the same for our Project in the codespace.
  
 ```python
 # happy.py
@@ -59,5 +60,6 @@ Ultimately, Our project structure should look like this :
 └── my_package/
     ├── __init__.py
     ├── happy.py
-    └── sad.py```
+    └── sad.py
+```
 
