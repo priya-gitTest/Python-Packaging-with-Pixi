@@ -583,22 +583,34 @@ allows the package to be imported later on.</p>
 <pre class="greet_me/"><code>└── my_package/
     ├── __init__.py
     ├── happy.py
-    └── sad.py```
- Lets create the same for our Project in the codespace.
-
-```python
-# happy.py
-def greet_happy():
-    return "Yay! I’m so happy to see you! 😀"</code></pre>
+    └── sad.py</code></pre>
+<p>Lets create the same for our Project in the codespace.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># sad.py</span></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="kw">def</span> greet_sad():</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Oh no… I’m feeling a bit down today. 😢"</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># happy.py</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="kw">def</span> greet_happy():</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Yay! I’m so happy to see you! 😀"</span></span></code></pre>
 </div>
-<p>Ultimately, Our project structure should look like this :
-<code>greet_me/ ├── LICENSE ├── pyproject.toml ├── README.md ├── pixi.toml ├── pixi.lock         # auto-generated, do not edit ├── tests/ │   └── test_greetings.py └── my_package/     ├── __init__.py     ├── happy.py     └── sad.py</code></p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># sad.py</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="kw">def</span> greet_sad():</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Oh no… I’m feeling a bit down today. 😢"</span></span></code></pre>
+</div>
+<p>Ultimately, Our project structure should look like this :</p>
+<pre class="greet_me/"><code>├── LICENSE
+├── pyproject.toml
+├── README.md
+├── pixi.toml
+├── pixi.lock         # auto-generated, do not edit
+├── tests/
+│   └── test_greetings.py
+└── my_package/
+    ├── __init__.py
+    ├── happy.py
+    └── sad.py</code></pre>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
