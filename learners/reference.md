@@ -8,8 +8,14 @@ title: 'Reference'
 
 ## Glossary
 
+bash 
+: command-line program that runs in terminal and reads the command and tells the [LINUX] operating system  what to do.
+
 Build
 : TBD
+
+cURL
+: command-line tool/ utility to tansfer data to or from a server via URL
 
 Module
 : TBD
