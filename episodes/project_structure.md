@@ -23,10 +23,11 @@ exercises: 0
 
 ## Introduction
 
-It is important to structure your project and add necessary files and give unique but understanable package names. Packages are a way of structuring modules in a Python Project.
-You can have several modules in a project.
-Also, every package must have a special file __init__.py in its folder.
-The presence of this file, allows the package to be imported later on.
+It is important to structure your project properly and include the necessary files, while giving unique yet understandable package names.
+
+Packages are a way to organize modules in a Python project. A project can contain several modules, and grouping them into packages helps keep the code organized and maintainable.
+
+Every package should have a special file called __init__.py in its folder. The presence of this file signals to Python that the folder is a package, allowing it to be imported later in your code.
 
 ## Project Structure
 A typical Project would look like :
