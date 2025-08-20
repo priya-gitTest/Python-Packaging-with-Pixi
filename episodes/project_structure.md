@@ -49,7 +49,7 @@ def greet_happy():
 def greet_sad():
     return "Oh no… I’m feeling a bit down today. 😢"
 ```
-Ultimately, Our project structure should look like this : 
+Ultimately, our project structure should look like this : 
 ```
 greet_me/
 ├── LICENSE
