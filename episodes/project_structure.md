@@ -36,7 +36,7 @@ A typical Project would look like :
     ├── happy.py
     └── sad.py
 ```
-Lets create the same for our Project in the codespace.
+Lets create the same structure for our Project in the codespace.
  
 ```python
 # happy.py
