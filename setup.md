@@ -30,7 +30,10 @@ Your Codespace environment is Linux-based, so we will be using standard Linux co
 
 ### Linux
 
-Use Terminal
+To install pixi, run:
+```bash
+curl -fsSL https://pixi.sh/install.sh | sh
+```
 
 ::::::::::::::::::::::::
 
