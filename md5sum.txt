@@ -10,5 +10,5 @@
 "episodes/project_metadata.md" "9b2c2d6a4e1247eac8393bff13f7506d" "site/built/project_metadata.md" "2025-08-20"
 "episodes/project_publishing.md" "531430c2e1a3550f78d1b3a1b4b5dea7" "site/built/project_publishing.md" "2025-08-19"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2025-08-19"
-"learners/setup.md" "9cb7668f4dd736d4bf504875bbe57958" "site/built/setup.md" "2025-08-20"
+"learners/setup.md" "6c3f8595224aa528bfb711230b032196" "site/built/setup.md" "2025-08-20"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2025-08-19"

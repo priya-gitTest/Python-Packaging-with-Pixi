@@ -59,5 +59,12 @@ Please restart or source your shell.
 ```bash
 source ~/.bashrc
 ```
+Check if pixi is installed correctly
+```bash
+pixi --version
+```
+```output
+pixi 0.53.0
+```
 ::::::::::::::::::::::::
 
