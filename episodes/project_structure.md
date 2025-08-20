@@ -42,7 +42,7 @@ Lets create the same structure for our project in the codespace.
 ```python
 # happy.py
 def greet_happy():
-    return "Yay! I’m so happy to see you! 😀"
+    return "Yay! happy day! 😀"
 ```
 ```python
 # sad.py
