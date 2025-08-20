@@ -26,6 +26,14 @@ Your Codespace environment is Linux-based, so we will be using standard Linux co
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
+## 1. Create a repository 
+
+Log into [GitHub](https://github.com) and create a new repository for this lesson called `greet_me`.
+
+From the top right, under the Code drop down, choose the Codepaces tab and click on the button : Create codespace on main.
+
+<img width="416" height="353" alt="image" src="https://github.com/user-attachments/assets/15167dca-b8c3-4701-87ac-3d6cb2b1022b" />
+
 :::::::::::::::: spoiler
 
 ### Linux
