@@ -18,4 +18,12 @@ exercises: 0
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
-Pixi is a fast and reproducible package management tool. It has lots of unique features which are missing in other tools at this point in time. Hence we choose this tool.
+
+Pixi is a fast and reproducible package management tool. It has lots of [features](https://pixi.sh/latest/#what-is-the-difference-with-pixi) which are not all present in a single tool at this point in time. Hence we choose this tool.
+It comes with following features : 
+- Native supprt for both PyPI packages and conda
+- Modern
+- Support for multi-language dependency ( E.g. RUST + Python, or Python + C++)
+- Uses 'uv' under the hood.
+- Helps with reproducibility via 'pixi.lock'
+- 
