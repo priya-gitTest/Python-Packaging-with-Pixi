@@ -225,6 +225,9 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
+<li><a href="#configuration-files-pixi.toml-and-pyproject.toml">Configuration files (<code>pixi.toml</code> and
+<code>pyproject.toml</code>)</a></li>
+<li><a href="#multi-environment-support">Multi-environment support</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -335,7 +338,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>Wht Pixi ?</li>
+<ul><li>Why Pixi ?</li>
 <li>What are the benefits of Pixi ?</li>
 </ul></div>
 </div>
@@ -344,7 +347,14 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>TBD</li>
+<ul><li>To understand the benefits offered by Pixi</li>
+<li>What is <code>pixi.toml</code> and <code>pyproject.toml</code>
+</li>
+<li>What is <code>pixi.lock</code>
+</li>
+<li>What do we mean by multi-environment support</li>
+<li>
+</li>
 </ul></div>
 </div>
 </div>
@@ -362,10 +372,23 @@ Python + C++)</li>
 <li>Uses <code>uv</code> under the hood.</li>
 <li>Helps with reproducibility via <code>pixi.lock</code>
 </li>
-</ul><!--
+</ul></section><section><h2 class="section-heading" id="configuration-files-pixi-toml-and-pyproject-toml">Configuration files (<code>pixi.toml</code> and
+<code>pyproject.toml</code>)<a class="anchor" aria-label="anchor" href="#configuration-files-pixi-toml-and-pyproject-toml"></a></h2>
+<hr class="half-width"><p><code>pixi.toml</code> is the file used by Pixi for defining the
+environment , dependencies and tasks. <code>pyproject.toml</code> is the
+file in Python ecosystem (PEP 518/621) for configuring the build,
+distribution and configration of python projects. It is required in
+build tools like Poety, Hatch, Flit , setuptools. It specifies metadata
+(name, version, author). you can also specifiy dependencies here.</p>
+</section><section><h2 class="section-heading" id="multi-environment-support">Multi-environment support<a class="anchor" aria-label="anchor" href="#multi-environment-support"></a></h2>
+<hr class="half-width"><p>You can specify the installation of certain tools and packages
+specific to a particular OS or environmentsl like ( dev, test prod)
+etc.</p>
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></div> <!-- / div.lesson-content -->
+ -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="intoduction_python_packaging.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="project_structure.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>

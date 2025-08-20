@@ -468,7 +468,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>Wht Pixi ?</li>
+<li>Why Pixi ?</li>
 <li>What are the benefits of Pixi ?</li>
 </ul>
 </div>
@@ -479,7 +479,14 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>TBD</li>
+<li>To understand the benefits offered by Pixi</li>
+<li>What is <code>pixi.toml</code> and <code>pyproject.toml</code>
+</li>
+<li>What is <code>pixi.lock</code>
+</li>
+<li>What do we mean by multi-environment support</li>
+<li>
+</li>
 </ul>
 </div>
 </div>
@@ -501,11 +508,27 @@ Python + C++)</li>
 <li>Uses <code>uv</code> under the hood.</li>
 <li>Helps with reproducibility via <code>pixi.lock</code>
 </li>
-</ul>
+</ul></section><section><h2 class="section-heading" id="configuration-files-pixi-toml-and-pyproject-toml">Configuration files (<code>pixi.toml</code> and
+<code>pyproject.toml</code>)<a class="anchor" aria-label="anchor" href="#configuration-files-pixi-toml-and-pyproject-toml"></a>
+</h2>
+<hr class="half-width">
+<p><code>pixi.toml</code> is the file used by Pixi for defining the
+environment , dependencies and tasks. <code>pyproject.toml</code> is the
+file in Python ecosystem (PEP 518/621) for configuring the build,
+distribution and configration of python projects. It is required in
+build tools like Poety, Hatch, Flit , setuptools. It specifies metadata
+(name, version, author). you can also specifiy dependencies here.</p>
+</section><section><h2 class="section-heading" id="multi-environment-support">Multi-environment support<a class="anchor" aria-label="anchor" href="#multi-environment-support"></a>
+</h2>
+<hr class="half-width">
+<p>You can specify the installation of certain tools and packages
+specific to a particular OS or environmentsl like ( dev, test prod)
+etc.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section><section id="aio-project_structure"><p>Content from <a href="project_structure.html">Set up a project directory</a></p>
+ -->
+</section></section><section id="aio-project_structure"><p>Content from <a href="project_structure.html">Set up a project directory</a></p>
 <hr>
 <p>Last updated on 2025-08-19 |
 
