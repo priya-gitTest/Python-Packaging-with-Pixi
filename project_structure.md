@@ -30,11 +30,11 @@ The presence of this file, allows the package to be imported later on.
 
 ## Project Structure
 A typical Project would look like :
-greet_me/
+```greet_me/
 └── my_package/
     ├── __init__.py
     ├── happy.py
-    └── sad.py
+    └── sad.py```
  Lets create the same for our Project in the codespace.
  
 ```python
@@ -48,7 +48,7 @@ def greet_sad():
     return "Oh no… I’m feeling a bit down today. 😢"
 ```
 Ultimately, Our project structure should look like this : 
-reet_me/
+```greet_me/
 ├── LICENSE
 ├── pyproject.toml
 ├── README.md
@@ -59,5 +59,5 @@ reet_me/
 └── my_package/
     ├── __init__.py
     ├── happy.py
-    └── sad.py
+    └── sad.py```
 
