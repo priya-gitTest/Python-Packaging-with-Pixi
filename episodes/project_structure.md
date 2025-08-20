@@ -40,12 +40,12 @@ A typical project would look like :
 Lets create the same structure for our project in the codespace.
  
 ```python
-# happy.py
+# happy.py <- A module
 def greet_happy():
     return "Yay! happy day! 😀"
 ```
 ```python
-# sad.py
+# sad.py <- A module
 def greet_sad():
     return "Oh no… I’m feeling a bit down today. 😢"
 ```
