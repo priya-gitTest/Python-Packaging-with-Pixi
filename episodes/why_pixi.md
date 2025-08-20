@@ -26,4 +26,5 @@ It comes with following features :
 - Support for multi-language dependency ( E.g. RUST + Python, or Python + C++)
 - Uses 'uv' under the hood.
 - Helps with reproducibility via 'pixi.lock'
+  
 ::::::::::::::::::::::::::::::::::::::::::::::::
