@@ -59,12 +59,25 @@ description = "A simple greeting package."
 python = ">=3.10"
 
 ```
- 
+To add libraries via pixi command use this syntax : 
+```bash
+pixi add requests
+```
+You can also generate `pixi.lock` file via this command : 
+```bash
+pixi lock
+```
 
-Lets install the dependencies now, which wiil generate the `pixi.lock` file
+Alternatively, Lets install the dependencies now, which wiil generate the `pixi.lock` file. This is also useful when you clone someone else repo, the dependencies are installed via the `pixi.lock` file
 ```bash
 pixi install
 ```
+
+There is also a command to update your dependencies to newer versions where possible with latest compatible versions. 
+```bash
+pixi update
+```
+
 ```output
 ▪ fetching repodata    [━━━━━━━━━━━━━━━━━━━━] 
 ▪ solving              [━━━━━━━━━━━━━━━━━━━━]  1/1
@@ -109,3 +122,7 @@ pixi run start
 ```output
 Yay! happy day! 😀
 ```
+::::::::::::::::::::::::::::::::::::: keypoints
+- Follow the structure
+- Sequence of pixi commands : init -> add -> run -> lock ->install -> update
+::::::::::::::::::::::::::::::::::::::::::::::::
