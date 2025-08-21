@@ -76,6 +76,7 @@ episodes:
 learners: 
 - setup.md
 - reference.md
+- acknowledgements.md
 
 # Information for Instructors
 instructors: 
