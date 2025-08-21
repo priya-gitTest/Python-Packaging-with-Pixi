@@ -49,7 +49,7 @@ This create a following structure for us.
 
 ```toml
 [project]
-authors = ["Priyanka O <21082240+priya-gitTest@users.noreply.github.com>"]
+authors = ["Priyanka O"]
 name = "greet_me"
 version = "0.1.0"
 platforms = ["linux-64"]
@@ -60,8 +60,15 @@ python = ">=3.10"
 
 
 [tasks]
-start = "python -c 'print(\"Hello from greet_me!\")'"
+start = "python -c 'from my_package  import happy; print(happy.greet_happy())'"
 ```
+```bash
+pixi run start
+```
+```output
+Yay! happy day! 😀
+``` 
+
 Lets install the dependencies now, which wiil generate the `pixi.lock` file
 ```bash
 pixi install
