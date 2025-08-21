@@ -45,7 +45,7 @@ This create a following structure for us.
 
 <img width="301" height="96" alt="image" src="https://github.com/user-attachments/assets/b07a9498-cd76-470b-80ad-d74a5202c061" />
 
-`pixi.toml` : Lets edit the pixi.toml file generated for us.
+`pixi.toml` : Lets view and edit the pixi.toml file generated for us.
 
 ```toml
 [project]
@@ -58,9 +58,6 @@ description = "A simple greeting package."
 [dependencies]
 python = ">=3.10"
 
-
-[tasks]
-start = "python -c 'from my_package  import happy; print(happy.greet_happy())'"
 ```
  
 
@@ -98,6 +95,14 @@ greet_me/
     ├── happy.py
     └── sad.py
 ```
+Add the following task to the pixi.toml file and then run via pixi
+
+```toml
+
+[tasks]
+start = "python -c 'from my_package  import happy; print(happy.greet_happy())'"
+```
+
 ```bash
 pixi run start
 ```
