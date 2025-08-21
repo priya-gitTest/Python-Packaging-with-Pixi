@@ -123,6 +123,8 @@ pixi run start
 Yay! happy day! 😀
 ```
 ::::::::::::::::::::::::::::::::::::: keypoints
-- Follow the structure
+- Follow the folder structure
+- dont forget to add the __init__.py file.
 - Sequence of pixi commands : init -> add -> run -> lock ->install -> update
+  
 ::::::::::::::::::::::::::::::::::::::::::::::::
