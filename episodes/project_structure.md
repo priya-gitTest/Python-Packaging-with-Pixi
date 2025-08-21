@@ -62,12 +62,7 @@ python = ">=3.10"
 [tasks]
 start = "python -c 'from my_package  import happy; print(happy.greet_happy())'"
 ```
-```bash
-pixi run start
-```
-```output
-Yay! happy day! 😀
-``` 
+ 
 
 Lets install the dependencies now, which wiil generate the `pixi.lock` file
 ```bash
@@ -103,4 +98,9 @@ greet_me/
     ├── happy.py
     └── sad.py
 ```
-
+```bash
+pixi run start
+```
+```output
+Yay! happy day! 😀
+```
