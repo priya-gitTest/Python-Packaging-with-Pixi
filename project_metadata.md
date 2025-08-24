@@ -43,7 +43,7 @@ requires-python = ">=3.10"
 dependencies = []
 ```
 ```toml
-build-system]
+[build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 ```
