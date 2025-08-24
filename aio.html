@@ -731,7 +731,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What is pyproject.toml?</li>
+<li>What is <code>pyproject.toml</code>?</li>
 <li>
 </li>
 </ul>
@@ -743,7 +743,8 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>TBD</li>
+<li>To understand the structure of <code>pyproject.toml</code>
+</li>
 </ul>
 </div>
 </div>
@@ -773,6 +774,28 @@ command :</p>
 <hr class="half-width">
 <ul>
 <li>Manifest metadata</li>
+</ul>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">[project]</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"greet_me"</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"greet_me Pixi-managed package"</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[{ </span><span class="dt">name</span><span class="op"> =</span> <span class="st">"Priyanka"</span><span class="op">, </span><span class="dt">email</span><span class="op"> =</span> <span class="st">""</span><span class="op"> }]</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="dt">readme</span> <span class="op">=</span> <span class="st">"README.md"</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="dt">license</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">text</span><span class="op"> =</span> <span class="st">"MIT"</span><span class="op"> }</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.10"</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[]</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="dt">build-system</span><span class="er">]</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="dt">requires</span> <span class="op">=</span> <span class="op">[</span><span class="st">"hatchling"</span><span class="op">]</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="dt">build-backend</span> <span class="op">=</span> <span class="st">"hatchling.build"</span></span></code></pre>
+</div>
+<ul>
 <li>Editable project install</li>
 <li>Dependency handling</li>
 <li>Tasks</li>
