@@ -6,14 +6,14 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What is pyproject.toml?
+- What is `pyproject.toml`?
 - 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- TBD
+- To understand the structure of `pyproject.toml`
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -31,6 +31,22 @@ pixi init --format pyproject
 ## Whats inside `pyproject.toml`
 
 - Manifest metadata
+```toml
+[project]
+name = "greet_me"
+version = "0.1.0"
+description = "greet_me Pixi-managed package"
+authors = [{ name = "Priyanka", email = "" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = []
+```
+```toml
+build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+```
 - Editable project install
 - Dependency handling
 - Tasks
