@@ -42,6 +42,13 @@ license = { text = "MIT" }
 requires-python = ">=3.10"
 dependencies = []
 ```
+The `[build-system]` table in a pyproject.toml file tells packaging tools like pip what software is needed to build your Python project. It specifies the build backend that will be used to create distributable packages, like wheels (.whl) or source distributions (.sdist).
+
+This section was introduced by PEP 518 and is essential for modern Python packaging.
+The `[build-system]` table has two main keys:
+
+1. `requires`: This is a list of strings specifying the packages needed to build your project. These packages will be downloaded and installed into a temporary, isolated environment before the build process begins. You must include the build backend itself here.
+2. `build-backend`: This is a string that points to the specific Python object (the "backend") that packaging tools will use to execute the build. It's the entry point for creating your project's packages.
 ```toml
 [build-system]
 requires = ["hatchling"]
@@ -56,9 +63,9 @@ build-backend = "hatchling.build"
 - Dependency handling
   For dependency management, following lines are necessary in your `pyproject.toml` file. `requires_python` tag is used to specify the version of Python.
   
-`[tool.pixi.workspace]`: This section controls where packages come from and what platforms Pixi should resolve for. It is also used to define project-wide settings.
-
-`[tool.pixi.pypi-dependencies]` : Thus section is used to delare the depencecis of our project that come from Python Package Index. In short they are libraries necessary for our project and will be installed via pip.
+  `[tool.pixi.workspace]`: This section controls where packages come from and what platforms Pixi should resolve for. It is also used to define project-wide settings.
+  
+  `[tool.pixi.pypi-dependencies]` : Thus section is used to delare the depencecis of our project that come from Python Package Index. In short they are libraries necessary for our project and will be installed via pip.
 
 ```toml
 [project]
