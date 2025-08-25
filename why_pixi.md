@@ -36,7 +36,7 @@ It comes with following features :
 ## Configuration files (`pixi.toml` and `pyproject.toml`)
 
 `pixi.toml` is the file used by Pixi for defining the environment , dependencies and tasks.
-`pyproject.toml` is the file in Python ecosystem (PEP 518/621) for configuring the build, distribution and configration of python projects. It is required in build tools like Poety, Hatch, Flit , setuptools. It specifies metadata (name, version, author). you can also specifiy dependencies here.
+`pyproject.toml` is the file in Python ecosystem (PEP 518/621) for configuring the build, distribution and configration of python projects. It is required in build tools like Poetry, Hatch, Flit , setuptools. It specifies metadata (name, version, author). you can also specifiy dependencies here.
 
 ## Multi-environment support
 
