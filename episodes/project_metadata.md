@@ -90,13 +90,15 @@ requires-python = ">=3.11, <3.12"
 ```
 If you were using `pixi.toml` file, the equivalent syntax would be 
 ```toml
-[workspace]
+[tool.pixi.workspace]
 name = "greet_me"
 channels = ["conda-forge"]
 platforms = ["linux-64", "win-64"]
 
-[dependencies]
+[tool.pixi.pypi-dependencies]
 python = ">=3.11"
+
+[tool.pixi.tasks]
 ```
 - Tasks
 
