@@ -108,6 +108,35 @@ Here you can specify various steps that you would want to run before making your
 # This command will only be defined on Windows
 greet  = { cmd = "echo 'Happy Python Packaging!'" }
 ```
+Final `pyproject.toml` should look like this below, for reference.
+
+```toml
+[project]
+authors = [{name = "Priyanka O"}]
+dependencies = []
+name = "po_greet_me"
+requires-python = ">= 3.11"
+version = "0.1.2"
+description = "greet_me Pixi-managed package"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["my_package"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+greet_me = { path = ".", editable = true }
+requests = ">=2.32.5,<3"
+
+[tool.pixi.tasks]
+greet  = { cmd = "echo 'Happy Python Packaging!'" }
+```
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Need to have a `pyproject.toml` file
 - Need to have `[build-system]` section  with `requires` and `build-backend` specfied.
