@@ -25,7 +25,9 @@ exercises: 15
 Once we have created our project, defined all the necessary metadata in the toml file, its time to publish our project. Let see the tools and steps we need to acheive this.
 
 We need to install the following tools i.e. `build` and `twine`
-Before proceeding with the steps mentioned below, kidnly rename or delete the `pixi.toml` file as we will mainly focus on `pyproject.toml` for the steps mentioned below. You can also try the build with `pixi.toml` at a later point in time by deleting or renaming the `pyproject.toml` file.
+
+_Before proceeding with the steps mentioned below, kindly rename or delete the `pixi.toml` file as we will mainly focus on `pyproject.toml` for the steps mentioned below. You can also try the build with `pixi.toml` at a later point in time by deleting or renaming the `pyproject.toml` file._
+
 ##  Create your build
 
 `build` :A tool to read the `pyproject.toml` file and build the package files
