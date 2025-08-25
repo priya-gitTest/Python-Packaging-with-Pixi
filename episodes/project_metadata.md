@@ -94,4 +94,10 @@ platforms = ["linux-64", "win-64"]
 python = ">=3.10"
 ```
 - Tasks
-Here you can specify various steps that you would want to run before making your package.
+
+Here you can specify various steps that you would want to run before making your package. It ususally lets you define and run custom cammands or scripts for your project.
+```toml
+[tool.pixi.tasks]
+# This command will only be defined on Windows
+greet  = { cmd = "echo 'Happy Python Packaging!'" }
+```
