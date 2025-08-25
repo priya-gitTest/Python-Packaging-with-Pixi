@@ -65,11 +65,11 @@ python -m build
  Successfully built greet_me-0.1.0.tar.gz and greet_me-0.1.0-py3-none-any.whl
  ```
       
-     This command creates a `dist` directory containing two files:
-     - A wheel file (`greet_me-0.1.0-py3-none-any.whl`).
-     - A source archive (`greet_me-0.1.0.tar.gz`).
+This command creates a `dist` directory containing two files:
+- A wheel file (`greet_me-0.1.0-py3-none-any.whl`).
+- A source archive (`greet_me-0.1.0.tar.gz`).
      
-     <img width="259" height="398" alt="image" src="https://github.com/user-attachments/assets/302f502b-34ed-470e-a4e0-884b808a6ff0" />
+<img width="259" height="398" alt="image" src="https://github.com/user-attachments/assets/302f502b-34ed-470e-a4e0-884b808a6ff0" />
 
 
  ## Create an account on TestPyPI
@@ -77,7 +77,7 @@ python -m build
      Visit this [URL](https://test.pypi.org/account/register/) and crete an account to generate the API keys, to be able to upload your package to TestPyPI in the next step.
      Once you create your account, you can visit this [link](https://test.pypi.org/manage/account/token/) to generate the API key. Please copy the same in a notepad and paste it when prompted for it in the next step below.
      
-     <img width="1726" height="625" alt="image" src="https://github.com/user-attachments/assets/0c27a806-8fa2-469a-8b5c-fbf73c47e5e6" />
+<img width="1726" height="625" alt="image" src="https://github.com/user-attachments/assets/0c27a806-8fa2-469a-8b5c-fbf73c47e5e6" />
      
 
 ## Upload your build
