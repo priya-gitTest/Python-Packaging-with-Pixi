@@ -1101,26 +1101,18 @@ file and build the package files</p>
  * Building wheel...
  Successfully built greet_me-0.1.0.tar.gz and greet_me-0.1.0-py3-none-any.whl</code></pre>
 </div>
+<p>This command creates a <code>dist</code> directory containing two
+files: - A wheel file (<code>greet_me-0.1.0-py3-none-any.whl</code>). -
+A source archive (<code>greet_me-0.1.0.tar.gz</code>).</p>
+<figure><img width="259" height="398" alt="image" src="https://github.com/user-attachments/assets/302f502b-34ed-470e-a4e0-884b808a6ff0" class="figure mx-auto d-block"></figure><p>## Create an account on TestPyPI</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a> <span class="ex">This</span> command creates a <span class="kw">`</span><span class="ex">dist</span><span class="kw">`</span> directory containing two files:</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a> <span class="ex">-</span> A wheel file <span class="er">(</span><span class="kw">`</span><span class="ex">greet_me-0.1.0-py3-none-any.whl</span><span class="kw">`)</span><span class="bu">.</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a> <span class="ex">-</span> A source archive <span class="er">(</span><span class="kw">`</span><span class="ex">greet_me-0.1.0.tar.gz</span><span class="kw">`)</span><span class="bu">.</span></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a> </span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a> <span class="op">&lt;</span>img <span class="va">width</span><span class="op">=</span><span class="st">"259"</span> <span class="va">height</span><span class="op">=</span><span class="st">"398"</span> <span class="va">alt</span><span class="op">=</span><span class="st">"image"</span> <span class="va">src</span><span class="op">=</span><span class="st">"https://github.com/user-attachments/assets/302f502b-34ed-470e-a4e0-884b808a6ff0"</span> <span class="ex">/</span><span class="op">&gt;</span></span></code></pre>
+<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a> <span class="ex">Visit</span> this <span class="pp">[</span><span class="ss">URL</span><span class="pp">]</span><span class="er">(</span><span class="ex">https://test.pypi.org/account/register/</span><span class="kw">)</span> <span class="ex">and</span> crete an account to generate the API keys, to be able to upload your package to TestPyPI in the next step.</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a> <span class="ex">Once</span> you create your account, you can visit this <span class="pp">[</span><span class="ss">link</span><span class="pp">]</span><span class="er">(</span><span class="ex">https://test.pypi.org/manage/account/token/</span><span class="kw">)</span> <span class="ex">to</span> generate the API key. Please copy the same in a notepad and paste it when prompted for it in the next step below.</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a> </span></code></pre>
 </div>
-<p>## Create an account on TestPyPI</p>
-<div class="codewrapper sourceCode" id="cb6">
-<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a> <span class="ex">Visit</span> this <span class="pp">[</span><span class="ss">URL</span><span class="pp">]</span><span class="er">(</span><span class="ex">https://test.pypi.org/account/register/</span><span class="kw">)</span> <span class="ex">and</span> crete an account to generate the API keys, to be able to upload your package to TestPyPI in the next step.</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a> <span class="ex">Once</span> you create your account, you can visit this <span class="pp">[</span><span class="ss">link</span><span class="pp">]</span><span class="er">(</span><span class="ex">https://test.pypi.org/manage/account/token/</span><span class="kw">)</span> <span class="ex">to</span> generate the API key. Please copy the same in a notepad and paste it when prompted for it in the next step below.</span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a> </span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a> <span class="op">&lt;</span>img <span class="va">width</span><span class="op">=</span><span class="st">"1726"</span> <span class="va">height</span><span class="op">=</span><span class="st">"625"</span> <span class="va">alt</span><span class="op">=</span><span class="st">"image"</span> <span class="va">src</span><span class="op">=</span><span class="st">"https://github.com/user-attachments/assets/0c27a806-8fa2-469a-8b5c-fbf73c47e5e6"</span> <span class="ex">/</span><span class="op">&gt;</span></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a> </span></code></pre>
-</div>
-</section><section><h2 class="section-heading" id="upload-your-build">Upload your build<a class="anchor" aria-label="anchor" href="#upload-your-build"></a>
+<figure><img width="1726" height="625" alt="image" src="https://github.com/user-attachments/assets/0c27a806-8fa2-469a-8b5c-fbf73c47e5e6" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="upload-your-build">Upload your build<a class="anchor" aria-label="anchor" href="#upload-your-build"></a>
 </h2>
 <hr class="half-width">
 <p><code>twine</code> :A tool for securely uploading packages to PyPI
@@ -1185,10 +1177,10 @@ like this :
 <code>output twine upload --repository testpypi dist/* Uploading distributions to https://test.pypi.org/legacy/ Enter your API token:  Uploading greet_me-0.1.1-py3-none-any.whl 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 kB • 00:00 • ? WARNING  Error during upload. Retry with the --verbose option for more details.                                                                                                                                             ERROR    HTTPError: 403 Forbidden from https://test.pypi.org/legacy/                                                                                                                                                                 Forbidden</code>
 This isnt always helpful and you should try this command as tipped in
 the error message above to know more.</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">twine</span> upload <span class="at">--repository</span> testpypi dist/<span class="pp">*</span> <span class="at">--verbose</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">twine</span> upload <span class="at">--repository</span> testpypi dist/<span class="pp">*</span> <span class="at">--verbose</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1224,32 +1216,32 @@ ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/
 <p>To fix this, rename you project e.g. to <code>po_greet_me</code> ,
 and add the following in <code>pyproject.toml</code> file. and try the
 steps below to upload it again.</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="kw">[tool.hatch.build.targets.wheel]</span></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="dt">packages</span> <span class="op">=</span> <span class="op">[</span><span class="st">"src/po_greet_me"</span><span class="op">]</span></span></code></pre>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="kw">[tool.hatch.build.targets.wheel]</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="dt">packages</span> <span class="op">=</span> <span class="op">[</span><span class="st">"src/po_greet_me"</span><span class="op">]</span></span></code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># 1. (Recommended) Remove the old build directory</span></span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> dist</span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="co"># 2. Re-build your package with the new name</span></span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> build</span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="co"># 3. Upload the new version to TestPyPI</span></span>
-<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a><span class="ex">twine</span> upload <span class="at">--repository</span> testpypi dist/<span class="pp">*</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># 1. (Recommended) Remove the old build directory</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> dist</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co"># 2. Re-build your package with the new name</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> build</span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co"># 3. Upload the new version to TestPyPI</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="ex">twine</span> upload <span class="at">--repository</span> testpypi dist/<span class="pp">*</span></span></code></pre>
 </div>
 </section><section><h2 class="section-heading" id="test-your-package">Test your package<a class="anchor" aria-label="anchor" href="#test-your-package"></a>
 </h2>
 <hr class="half-width">
 <p>Install your package via this command :</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">--index-url</span> https://test.pypi.org/simple/ <span class="at">--extra-index-url</span> https://pypi.org/simple po-greet-me==0.1.1</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">--index-url</span> https://test.pypi.org/simple/ <span class="at">--extra-index-url</span> https://pypi.org/simple po-greet-me==0.1.1</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1262,17 +1254,17 @@ Installing collected packages: po-greet-me
 Successfully installed po-greet-me-0.1.1</code></pre>
 </div>
 <p>Create a Python file named test_package.py</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="im">from</span> my_package <span class="im">import</span> happy, sad</span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="bu">print</span>(happy.greet_happy())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="im">from</span> my_package <span class="im">import</span> happy, sad</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="bu">print</span>(happy.greet_happy())</span></code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="ex">python</span> test_package.py </span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="ex">python</span> test_package.py </span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
