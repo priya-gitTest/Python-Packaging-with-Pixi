@@ -49,6 +49,12 @@ This create a following structure for us.
 
 <img width="301" height="96" alt="image" src="https://github.com/user-attachments/assets/b07a9498-cd76-470b-80ad-d74a5202c061" />
 
+Please note, if you want to use a `pyproject.toml`, you need to use the syntax mentioned below. This is also our preferance and we will use this file in the next lesson.
+
+```bash
+pixi init --format pyproject
+```
+
 `pixi.toml` : Lets view and edit the pixi.toml file generated for us.
 
 ```toml
