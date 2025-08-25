@@ -41,6 +41,10 @@ Lets create the same structure for our project in the codespace.
 ```bash
 pixi init greet_me
 ```
+```output
+✔ Created ...greet_me/pixi.toml
+```
+
 This create a following structure for us. 
 
 <img width="301" height="96" alt="image" src="https://github.com/user-attachments/assets/b07a9498-cd76-470b-80ad-d74a5202c061" />
@@ -48,8 +52,9 @@ This create a following structure for us.
 `pixi.toml` : Lets view and edit the pixi.toml file generated for us.
 
 ```toml
-[project]
+[workspace]
 authors = ["Priyanka O"]
+channels = ["conda-forge"]
 name = "greet_me"
 version = "0.1.0"
 platforms = ["linux-64"]
@@ -58,24 +63,45 @@ description = "A simple greeting package."
 [dependencies]
 python = ">=3.10"
 
+[tasks]
 ```
+Lets go inside the project directory:
+```bash
+cd greet_me
+```
+
 To add libraries via pixi command use this syntax : 
 ```bash
 pixi add requests
 ```
-You can also generate `pixi.lock` file via this command : 
+```output
+✔ Added requests >=2.32.5,<3
+```
+Let us see that gets added to the pixi.toml
+``toml
+[dependencies]
+requests = ">=2.32.5,<3"
+```
+You can also generate/ update `pixi.lock` file via this command : 
 ```bash
 pixi lock
 ```
-
+```output
+✔ Lock-file was already up-to-date
+```
 Alternatively, Lets install the dependencies now, which wiil generate the `pixi.lock` file. This is also useful when you clone someone else repo, the dependencies are installed via the `pixi.lock` file
 ```bash
 pixi install
 ```
-
+```output
+✔ The default environment has been installed.
+```
 There is also a command to update your dependencies to newer versions where possible with latest compatible versions. 
 ```bash
 pixi update
+```
+```output
+✔ Lock-file was already up-to-date
 ```
 
 ```output
