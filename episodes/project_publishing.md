@@ -214,6 +214,21 @@ Downloading https://test-files.pythonhosted.org/packages/52/85/dd6ebf4ee0a6ff766
 Installing collected packages: po-greet-me
 Successfully installed po-greet-me-0.1.1
 ```
+Create a Python file named test_package.py
+
+```python
+from my_package import happy, sad
+
+print(happy.greet_happy())
+```
+
+```bash
+python test_package.py 
+```
+```output
+Yay! happy day! 😀
+```
+
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Fill all the metadata and give your project a unique name
 - Build your Project
