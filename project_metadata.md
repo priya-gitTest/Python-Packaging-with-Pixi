@@ -70,12 +70,12 @@ greet_me = { path = ".", editable = true }
   
   `[tool.pixi.workspace]`: This section controls where packages come from and what platforms Pixi should resolve for. It is also used to define project-wide settings.
   
-  `[tool.pixi.pypi-dependencies]` : Thus section is used to delare the depencecis of our project that come from Python Package Index. In short they are libraries necessary for our project and will be installed via pip.
+  `[tool.pixi.pypi-dependencies]` : This section is used to delare the dependencies of our project that will be installed via Pip or similar tools from Python Package Index. In short they are libraries necessary for our project and will be installed via pip.
 
 ```toml
 [project]
 name = "greet_me"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]
@@ -86,7 +86,7 @@ requests = ">=2.31.0,<3"
 ```
 You can specify a range or multiple supported Python versions using the syntax below.
 ```toml
-requires-python = ">=3.10, <3.12"
+requires-python = ">=3.11, <3.12"
 ```
 If you were using `pixi.toml` file, the equivalent syntax would be 
 ```toml
@@ -96,7 +96,7 @@ channels = ["conda-forge"]
 platforms = ["linux-64", "win-64"]
 
 [dependencies]
-python = ">=3.10"
+python = ">=3.11"
 ```
 - Tasks
 
