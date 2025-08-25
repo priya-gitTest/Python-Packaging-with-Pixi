@@ -22,3 +22,9 @@ exercises: 15
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
+Once we have created our project, defined all the necessary metadata in our toml file, its time to publish our project. Let see the tools and steps we need to acheive this.
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
