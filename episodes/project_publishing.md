@@ -25,11 +25,15 @@ exercises: 15
 Once we have created our project, defined all the necessary metadata in the toml file, its time to publish our project. Let see the tools and steps we need to acheive this.
 
 We need to install the following tools i.e. `build` and `twine`
+
 ##  Create your build
-`build` :A tool to read the ['pyproject']toml file and build the package files
+
+`build` :A tool to read the `pyproject.toml` file and build the package files
+
      ```bash
      pip install build
      ```
+     
      ```output
      Collecting build
         Downloading build-1.3.0-py3-none-any.whl.metadata (5.6 kB)
@@ -41,9 +45,11 @@ We need to install the following tools i.e. `build` and `twine`
       Installing collected packages: pyproject_hooks, build
       Successfully installed build-1.3.0 pyproject_hooks-1.2.0
      ```
+     
      ```bash
      python -m build
      ```
+     
      ```output
       * Creating isolated environment: venv+pip...
       * Installing packages in isolated environment:
@@ -58,6 +64,7 @@ We need to install the following tools i.e. `build` and `twine`
       * Building wheel...
       Successfully built greet_me-0.1.0.tar.gz and greet_me-0.1.0-py3-none-any.whl
       ```
+      
      This command creates a `dist` directory containing two files:
      - A wheel file (`greet_me-0.1.0-py3-none-any.whl`).
      - A source archive (`greet_me-0.1.0.tar.gz`).
@@ -66,9 +73,12 @@ We need to install the following tools i.e. `build` and `twine`
 
 
  ## Create an account on TestPyPI
+     
      Visit this [URL](https://test.pypi.org/account/register/) and crete an account to generate the API keys, to be able to upload your package to TestPyPI in the next step.
      Once you create your account, you can visit this [link](https://test.pypi.org/manage/account/token/) to generate the API key. Please copy the same in a notepad and paste it when prompted for it in the next step below.
+     
      <img width="1726" height="625" alt="image" src="https://github.com/user-attachments/assets/0c27a806-8fa2-469a-8b5c-fbf73c47e5e6" />
+     
 
 ## Upload your build
 `twine` :A tool for securely uploading packages to PyPI and TestPyPI.
@@ -127,6 +137,7 @@ https://test.pypi.org/project/po-greet-me/0.1.1/
   ```
 
   That's it! After the upload is successful, your package will be available on TestPyPI. E.g. : https://test.pypi.org/project/po-greet-me/0.1.1/
+  
 <img width="1619" height="854" alt="image" src="https://github.com/user-attachments/assets/980a83e1-dfce-4902-bb85-e44d47af9088" />
 
   It is possible that the name of your project already exists or is simialr to an existing project. In that case you may end up in an error like this : 
