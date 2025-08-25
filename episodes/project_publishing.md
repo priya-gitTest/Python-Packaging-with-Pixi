@@ -56,10 +56,9 @@ We need to install the following tools
       * Building wheel...
       Successfully built greet_me-0.1.0.tar.gz and greet_me-0.1.0-py3-none-any.whl
       ```
-     This command creates a dist directory containing two files:
-      A wheel file (`greet_me-0.1.0-py3-none-any.whl`).
-
-      A source archive (`greet_me-0.1.0.tar.gz`).
+     This command creates a `dist` directory containing two files:
+     - A wheel file (`greet_me-0.1.0-py3-none-any.whl`).
+     - A source archive (`greet_me-0.1.0.tar.gz`).
      
      <img width="259" height="398" alt="image" src="https://github.com/user-attachments/assets/302f502b-34ed-470e-a4e0-884b808a6ff0" />
 
