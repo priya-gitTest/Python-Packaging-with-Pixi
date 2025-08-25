@@ -437,17 +437,17 @@ Python.</p>
 <p><code>[tool.pixi.workspace]</code>: This section controls where
 packages come from and what platforms Pixi should resolve for. It is
 also used to define project-wide settings.</p>
-<p><code>[tool.pixi.pypi-dependencies]</code> : Thus section is used to
-delare the depencecis of our project that come from Python Package
-Index. In short they are libraries necessary for our project and will be
-installed via pip.</p>
+<p><code>[tool.pixi.pypi-dependencies]</code> : This section is used to
+delare the dependencies of our project that will be installed via Pip or
+similar tools from Python Package Index. In short they are libraries
+necessary for our project and will be installed via pip.</p>
 </li>
 </ul><div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">[project]</span></span>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"greet_me"</span></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.10"</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.11"</span></span>
 <span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
 <span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="kw">[tool.pixi.workspace]</span></span>
 <span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"conda-forge"</span><span class="op">]</span></span>
@@ -461,7 +461,7 @@ the syntax below.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.10, &lt;3.12"</span></span></code></pre>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.11, &lt;3.12"</span></span></code></pre>
 </div>
 <p>If you were using <code>pixi.toml</code> file, the equivalent syntax
 would be</p>
@@ -474,7 +474,7 @@ would be</p>
 <span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"linux-64"</span><span class="op">,</span> <span class="st">"win-64"</span><span class="op">]</span></span>
 <span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a></span>
 <span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="kw">[dependencies]</span></span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="dt">python</span> <span class="op">=</span> <span class="st">"&gt;=3.10"</span></span></code></pre>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="dt">python</span> <span class="op">=</span> <span class="st">"&gt;=3.11"</span></span></code></pre>
 </div>
 <ul><li>Tasks</li>
 </ul><p>Here you can specify various steps that you would want to run before
