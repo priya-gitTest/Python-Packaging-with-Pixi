@@ -6,13 +6,18 @@ exercises: 15
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- TBD
+- What is Twine and why is it needed
+- What is build command and what does it do ?
+- How to create and upload the Python package ?
+- How to test/ use the uploaded Python package?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- TBD
+- Learn the usage for tools like Twine and build
+- How to upload the Python Package to repositories like TestPyPi
+- How to use the uploaded package.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
