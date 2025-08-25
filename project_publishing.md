@@ -23,8 +23,10 @@ exercises: 15
 
 ## Introduction
 Once we have created our project, defined all the necessary metadata in the toml file, its time to publish our project. Let see the tools and steps we need to acheive this.
+
 We need to install the following tools i.e. `build` and `twine`
-  1. `build` : A tool to read the ['pyproject']toml file and build the package files
+##  Create your build
+`build` :A tool to read the ['pyproject']toml file and build the package files
      ```bash
      pip install build
      ```
@@ -63,10 +65,11 @@ We need to install the following tools i.e. `build` and `twine`
      <img width="259" height="398" alt="image" src="https://github.com/user-attachments/assets/302f502b-34ed-470e-a4e0-884b808a6ff0" />
 
 
-  2. Create an account on TestPyPI
+ ## Create an account on TestPyPI
      Visit this [URL](https://test.pypi.org/account/register/) and crete an account to generate the API keys, to be able to upload your package to TestPyPI in the next step.
      
-  4. `twine` :  A tool for securely uploading packages to PyPI and TestPyPI.
+## Upload your build
+`twine` :A tool for securely uploading packages to PyPI and TestPyPI.
    ```bash
    pip install build twine
 
@@ -184,7 +187,20 @@ python -m build
 # 3. Upload the new version to TestPyPI
 twine upload --repository testpypi dist/*
 ```
-         
+
+## Test your package
+Install your package via this command : 
+```bash
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple po-greet-me==0.1.1
+```
+```output
+Looking in indexes: https://test.pypi.org/simple/, https://pypi.org/simple
+Collecting po-greet-me==0.1.1
+  Downloading https://test-files.pythonhosted.org/packages/52/85/dd6ebf4ee0a6ff76699a4c4f134059e6615b75c50e30cd40cd424370b81e/po_greet_me-0.1.1-py3-none-any.whl.metadata (137 bytes)
+Downloading https://test-files.pythonhosted.org/packages/52/85/dd6ebf4ee0a6ff76699a4c4f134059e6615b75c50e30cd40cd424370b81e/po_greet_me-0.1.1-py3-none-any.whl (815 bytes)
+Installing collected packages: po-greet-me
+Successfully installed po-greet-me-0.1.1
+```
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 
