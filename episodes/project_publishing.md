@@ -15,7 +15,7 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Learn the usage for tools like Twine and build
+- Learn the usage for tools like build and twine
 - How to upload the Python Package to repositories like TestPyPi
 - How to use the uploaded package.
 
