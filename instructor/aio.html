@@ -819,6 +819,13 @@ necessary in your <code>pyproject.toml</code> file.
 <code>requires_python</code> tag is used to specify the version of
 Python.</li>
 </ul>
+<p><code>[tool.pixi.workspace]</code>: This section controls where
+packages come from and what platforms Pixi should resolve for. It is
+also used to define project-wide settings.</p>
+<p><code>[tool.pixi.pypi-dependencies]</code> : Thus section is used to
+delare the depencecis of our project that come from Python Package
+Index. In short they are libraries necessary for our project and will be
+installed via pip.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -828,17 +835,34 @@ Python.</li>
 <span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
 <span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="kw">[tool.pixi.workspace]</span></span>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"conda-forge"</span><span class="op">]</span></span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"linux-64"</span><span class="op">,</span> <span class="st">"win-64"</span><span class="op">]</span></span></code></pre>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"linux-64"</span><span class="op">,</span> <span class="st">"win-64"</span><span class="op">]</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="kw">[tool.pixi.pypi-dependencies]</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a><span class="dt">requests</span> <span class="op">=</span> <span class="st">"&gt;=2.31.0,&lt;3"</span></span></code></pre>
 </div>
 <p>You can specify a range or multiple supported Python versions using
 the syntax below.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.9, &lt;3.12"</span></span></code></pre>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.10, &lt;3.12"</span></span></code></pre>
+</div>
+<p>If you were using <code>pixi.toml</code> file, the equivalent syntax
+would be</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">[workspace]</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"greet_me"</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"conda-forge"</span><span class="op">]</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"linux-64"</span><span class="op">,</span> <span class="st">"win-64"</span><span class="op">]</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="kw">[dependencies]</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="dt">python</span> <span class="op">=</span> <span class="st">"&gt;=3.10"</span></span></code></pre>
 </div>
 <ul>
-<li>Tasks</li>
+<li>Tasks Here you can specify various steps that you would want to run
+before making your package.</li>
 </ul>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
