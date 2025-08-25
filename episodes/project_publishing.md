@@ -25,7 +25,7 @@ exercises: 15
 Once we have created our project, defined all the necessary metadata in the toml file, its time to publish our project. Let see the tools and steps we need to acheive this.
 
 We need to install the following tools i.e. `build` and `twine`
-
+Before proceeding with the steps mentioned below, kidnly rename or delete the `pixi.toml` file as we will mainly focus on `pyproject.toml` for the steps mentioned below. You can also try the build with `pixi.toml` at a later point in time by deleting or renaming the `pyproject.toml` file.
 ##  Create your build
 
 `build` :A tool to read the `pyproject.toml` file and build the package files
@@ -138,12 +138,13 @@ View at:
 https://test.pypi.org/project/po-greet-me/0.1.1/
   ```
 
-  That's it! After the upload is successful, your package will be available on TestPyPI. E.g. : https://test.pypi.org/project/po-greet-me/0.1.1/
-  
+That's it! After the upload is successful, your package will be available on TestPyPI. E.g. : https://test.pypi.org/project/po-greet-me/0.1.1/
+
 <img width="1619" height="854" alt="image" src="https://github.com/user-attachments/assets/980a83e1-dfce-4902-bb85-e44d47af9088" />
 
-  It is possible that the name of your project already exists or is simialr to an existing project. In that case you may end up in an error like this : 
-  ```output
+It is possible that the name of your project already exists or is simialr to an existing project. In that case you may end up in an error like this : 
+
+```output
 twine upload --repository testpypi dist/*
 Uploading distributions to https://test.pypi.org/legacy/
 Enter your API token: 
@@ -151,12 +152,15 @@ Uploading greet_me-0.1.1-py3-none-any.whl
 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 kB • 00:00 • ?
 WARNING  Error during upload. Retry with the --verbose option for more details.                                                                                                                                            
 ERROR    HTTPError: 403 Forbidden from https://test.pypi.org/legacy/                                                                                                                                                       
-         Forbidden
+    Forbidden
 ```
+
 This isnt always helpful and you should try this command as tipped in the error message above to know more.
+
 ```bash
 twine upload --repository testpypi dist/* --verbose
 ```
+
 ```output
 Uploading distributions to https://test.pypi.org/legacy/
 INFO     dist/greet_me-0.1.1-py3-none-any.whl (0.9 KB)                                                                                                                                                                     
@@ -186,12 +190,15 @@ INFO     <html>
 ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/                                                                                                                                                     
          Bad Request                   
 ```
+
 To fix this, rename you project e.g. to `po_greet_me` , and add the following in `pyproject.toml` file.
 and try the steps below to upload it again.
+
 ```toml
 [tool.hatch.build.targets.wheel]
 packages = ["src/po_greet_me"]
 ```
+
 ```bash
 # 1. (Recommended) Remove the old build directory
 rm -rf dist
@@ -204,10 +211,13 @@ twine upload --repository testpypi dist/*
 ```
 
 ## Test your package
+
 Install your package via this command : 
+
 ```bash
 pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple po-greet-me==0.1.1
 ```
+
 ```output
 Looking in indexes: https://test.pypi.org/simple/, https://pypi.org/simple
 Collecting po-greet-me==0.1.1
@@ -216,6 +226,7 @@ Downloading https://test-files.pythonhosted.org/packages/52/85/dd6ebf4ee0a6ff766
 Installing collected packages: po-greet-me
 Successfully installed po-greet-me-0.1.1
 ```
+
 Create a Python file named test_package.py
 
 ```python
@@ -227,6 +238,7 @@ print(happy.greet_happy())
 ```bash
 python test_package.py 
 ```
+
 ```output
 Yay! happy day! 😀
 ```
