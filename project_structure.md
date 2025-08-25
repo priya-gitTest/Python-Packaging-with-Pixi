@@ -78,7 +78,8 @@ pixi add requests
 ✔ Added requests >=2.32.5,<3
 ```
 Let us see that gets added to the pixi.toml
-``toml
+
+```toml
 [dependencies]
 requests = ">=2.32.5,<3"
 ```
@@ -101,13 +102,12 @@ There is also a command to update your dependencies to newer versions where poss
 pixi update
 ```
 ```output
+▪ solving              [━━━━━━━━━━━━━━━━━━━━]  0/1
+▪ updating lock-files    [━━━━━━━━━━━━━━━━━━━━] 0/2
+```
+```output
 ✔ Lock-file was already up-to-date
 ```
-
-```output
-▪ fetching repodata    [━━━━━━━━━━━━━━━━━━━━] 
-▪ solving              [━━━━━━━━━━━━━━━━━━━━]  1/1
-```  
 
 ```python
 # happy.py <- A module
