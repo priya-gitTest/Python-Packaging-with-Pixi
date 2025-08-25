@@ -54,6 +54,9 @@ Distributing our code as package is better than sharing the souce code via for i
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- TBD
+- The code needs to be versioned.
+- The dependencies of the projects needs to be managed.
+- The metadata for the project needs to be managed.
+- To make our python code installable, reusable and shareable via PyPi or TestPyPI, we need to package our code.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
