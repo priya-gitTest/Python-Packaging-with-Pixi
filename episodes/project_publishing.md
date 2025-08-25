@@ -215,6 +215,9 @@ Installing collected packages: po-greet-me
 Successfully installed po-greet-me-0.1.1
 ```
 ::::::::::::::::::::::::::::::::::::: keypoints
-
-
+- Fill all the metadata and give your project a unique name
+- Build your Project
+- Create a TestPyPI account and generate the API token
+- Upload your package via twine to TestPyPI
+- Check your package via pip install
 ::::::::::::::::::::::::::::::::::::::::::::::::
