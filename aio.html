@@ -954,8 +954,39 @@ any links that you are not going to use.
 </h2>
 <hr class="half-width">
 <p>Once we have created our project, defined all the necessary metadata
-in our toml file, its time to publish our project. Let see the tools and
-steps we need to acheive this.</p>
+in the toml file, its time to publish our project. Let see the tools and
+steps we need to acheive this. We need to install the following tools 1.
+<code>build</code> : A tool to read the [‘pyproject’]toml file and build
+the package files ```bash pip install build</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a> <span class="ex">python</span> <span class="at">-m</span> build</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a> <span class="kw">```</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a> <span class="ex">This</span> command creates a dist directory containing two files:</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>  <span class="kw">```</span>output</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  <span class="kw">```</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>  <span class="ex">A</span> wheel file <span class="er">(</span><span class="ex">e.g.,</span> my_minimal_package-0.0.1-py3-none-any.whl<span class="kw">)</span><span class="bu">.</span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>  <span class="ex">A</span> source archive <span class="er">(</span><span class="ex">e.g.,</span> my-minimal-package-0.0.1.tar.gz<span class="kw">)</span><span class="bu">.</span></span></code></pre>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>
+<code>twine</code> : A tool for securely uploading packages to PyPI
+and TestPyPI.</li>
+</ol>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">pip</span> install build twine</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="ex">twine</span> upload <span class="at">--repository</span> testpypi dist/<span class="pp">*</span></span></code></pre>
+</div>
+<p>You’ll be prompted to enter your TestPyPI username and password. It’s
+recommended to use an API token instead of your password. When prompted
+for your password, paste the token in.</p>
+<p>That’s it! After the upload is successful, your package will be
+available on TestPyPI.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
