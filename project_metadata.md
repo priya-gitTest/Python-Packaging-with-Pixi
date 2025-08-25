@@ -54,4 +54,18 @@ build-backend = "hatchling.build"
 ```
   
 - Dependency handling
+  For dependency management, following lines are necessary in your `pyproject.toml` file. `requires_python` tag is used to specify the version of Python.
+```toml
+[project]
+name = "greet_me"
+requires-python = ">=3.10"
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64", "win-64"]
+```
+You can specify a range or multiple supported Python versions using the syntax below.
+```toml
+requires-python = ">=3.9, <3.12"
+```
 - Tasks
