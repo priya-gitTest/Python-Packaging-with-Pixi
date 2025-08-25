@@ -57,7 +57,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 ```
 - Editable project install
-  This means that the package is installed in editable mode, so you can make changes to the package and see the changes reflected in the environment, without having to re-install the environment. The `greet_me` package itself is added as an editable dependency.
+
+This means that the package is installed in editable mode, so you can make changes to the package and see the changes reflected in the environment, without having to re-install the environment. The `greet_me` package itself is added as an editable dependency.
   
 ```toml
 [tool.pixi.pypi-dependencies]
