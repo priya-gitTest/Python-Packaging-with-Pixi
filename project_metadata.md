@@ -41,7 +41,7 @@ description = "greet_me Pixi-managed package"
 authors = [{ name = "Priyanka", email = "" }]
 readme = "README.md"
 license = { text = "MIT" }
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = []
 ```
 The `[build-system]` table in a pyproject.toml file tells packaging tools like pip what software is needed to build your Python project. It specifies the build backend that will be used to create distributable packages, like wheels (.whl) or source distributions (.sdist).
