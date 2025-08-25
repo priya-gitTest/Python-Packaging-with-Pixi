@@ -55,6 +55,11 @@ build-backend = "hatchling.build"
   
 - Dependency handling
   For dependency management, following lines are necessary in your `pyproject.toml` file. `requires_python` tag is used to specify the version of Python.
+  
+`[tool.pixi.workspace]`: This section controls where packages come from and what platforms Pixi should resolve for. It is also used to define project-wide settings.
+
+`[tool.pixi.pypi-dependencies]` : Thus section is used to delare the depencecis of our project that come from Python Package Index. In short they are libraries necessary for our project and will be installed via pip.
+
 ```toml
 [project]
 name = "greet_me"
@@ -63,9 +68,23 @@ requires-python = ">=3.10"
 [tool.pixi.workspace]
 channels = ["conda-forge"]
 platforms = ["linux-64", "win-64"]
+
+[tool.pixi.pypi-dependencies]
+requests = ">=2.31.0,<3"
 ```
 You can specify a range or multiple supported Python versions using the syntax below.
 ```toml
-requires-python = ">=3.9, <3.12"
+requires-python = ">=3.10, <3.12"
+```
+If you were using `pixi.toml` file, the equivalent syntax would be 
+```toml
+[workspace]
+name = "greet_me"
+channels = ["conda-forge"]
+platforms = ["linux-64", "win-64"]
+
+[dependencies]
+python = ">=3.10"
 ```
 - Tasks
+Here you can specify various steps that you would want to run before making your package.
