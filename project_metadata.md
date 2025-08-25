@@ -101,3 +101,9 @@ Here you can specify various steps that you would want to run before making your
 # This command will only be defined on Windows
 greet  = { cmd = "echo 'Happy Python Packaging!'" }
 ```
+::::::::::::::::::::::::::::::::::::: keypoints
+- Need to have a `pyproject.toml` file
+- Need to have `[build-system]` section  with `requires` and `build-backend` specfied.
+- Need to have `[project]` section with atleast `name` and `version` specified.
+- Nice to have `dependencies` specified in `[project]` section.
+::::::::::::::::::::::::::::::::::::::::::::::::
