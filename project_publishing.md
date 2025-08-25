@@ -198,7 +198,7 @@ and try the steps below to upload it again.
 
 ```toml
 [tool.hatch.build.targets.wheel]
-packages = ["src/po_greet_me"]
+packages = ["my_package"]
 ```
 
 ```bash
