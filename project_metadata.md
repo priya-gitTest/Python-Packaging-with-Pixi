@@ -27,7 +27,9 @@ To add `pyproject.toml` file, we give the following command :
 ```bash
 pixi init --format pyproject
 ```
-
+```output
+✔ Created .../greet_me/pyproject.toml
+```
 ## Whats inside `pyproject.toml`
 
 - Manifest metadata
