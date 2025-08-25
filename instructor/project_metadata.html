@@ -318,7 +318,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Metadata for Python packging</h1>
-        <p>Last updated on 2025-08-24 |
+        <p>Last updated on 2025-08-25 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/project_metadata.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -404,8 +404,29 @@ environment.</li>
 </h3>
 <pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>  <span class="dt">pixi_py</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">path</span><span class="op"> =</span> <span class="st">"."</span><span class="op">, </span><span class="dt">editable</span><span class="op"> =</span> <span class="cn">true</span><span class="op"> }</span></span></code></pre>
 </div>
-<ul><li>Dependency handling</li>
-<li>Tasks</li>
+<ul><li>Dependency handling For dependency management, following lines are
+necessary in your <code>pyproject.toml</code> file.
+<code>requires_python</code> tag is used to specify the version of
+Python.</li>
+</ul><div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">[project]</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"greet_me"</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.10"</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="kw">[tool.pixi.workspace]</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"conda-forge"</span><span class="op">]</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"linux-64"</span><span class="op">,</span> <span class="st">"win-64"</span><span class="op">]</span></span></code></pre>
+</div>
+<p>You can specify a range or multiple supported Python versions using
+the syntax below.</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.9, &lt;3.12"</span></span></code></pre>
+</div>
+<ul><li>Tasks</li>
 </ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -467,8 +488,8 @@ any links that you are not going to use.
   "url": "https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/project_metadata.html",
   "identifier": "https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/project_metadata.html",
   "dateCreated": "2025-08-19",
-  "dateModified": "2025-08-24",
-  "datePublished": "2025-08-24"
+  "dateModified": "2025-08-25",
+  "datePublished": "2025-08-25"
 }
 
   </script><script>
