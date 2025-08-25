@@ -794,6 +794,26 @@ command :</p>
 <span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.10"</span></span>
 <span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[]</span></span></code></pre>
 </div>
+<p>The <code>[build-system]</code> table in a pyproject.toml file tells
+packaging tools like pip what software is needed to build your Python
+project. It specifies the build backend that will be used to create
+distributable packages, like wheels (.whl) or source distributions
+(.sdist).</p>
+<p>This section was introduced by PEP 518 and is essential for modern
+Python packaging. The <code>[build-system]</code> table has two main
+keys:</p>
+<ol style="list-style-type: decimal">
+<li>
+<code>requires</code>: This is a list of strings specifying the
+packages needed to build your project. These packages will be downloaded
+and installed into a temporary, isolated environment before the build
+process begins. You must include the build backend itself here.</li>
+<li>
+<code>build-backend</code>: This is a string that points to the
+specific Python object (the “backend”) that packaging tools will use to
+execute the build. It’s the entry point for creating your project’s
+packages.</li>
+</ol>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -814,11 +834,11 @@ environment.</li>
 <pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>  <span class="dt">pixi_py</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">path</span><span class="op"> =</span> <span class="st">"."</span><span class="op">, </span><span class="dt">editable</span><span class="op"> =</span> <span class="cn">true</span><span class="op"> }</span></span></code></pre>
 </div>
 <ul>
-<li>Dependency handling For dependency management, following lines are
-necessary in your <code>pyproject.toml</code> file.
+<li>
+<p>Dependency handling For dependency management, following lines
+are necessary in your <code>pyproject.toml</code> file.
 <code>requires_python</code> tag is used to specify the version of
-Python.</li>
-</ul>
+Python.</p>
 <p><code>[tool.pixi.workspace]</code>: This section controls where
 packages come from and what platforms Pixi should resolve for. It is
 also used to define project-wide settings.</p>
@@ -826,6 +846,8 @@ also used to define project-wide settings.</p>
 delare the depencecis of our project that come from Python Package
 Index. In short they are libraries necessary for our project and will be
 installed via pip.</p>
+</li>
+</ul>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
