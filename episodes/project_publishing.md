@@ -122,6 +122,7 @@ https://test.pypi.org/project/po-greet-me/0.1.1/
   ```
 
   That's it! After the upload is successful, your package will be available on TestPyPI. E.g. : https://test.pypi.org/project/po-greet-me/0.1.1/
+<img width="1619" height="854" alt="image" src="https://github.com/user-attachments/assets/980a83e1-dfce-4902-bb85-e44d47af9088" />
 
   It is possible that the name of your project already exists or is simialr to an existing project. In that case you may end up in an error like this : 
   ```output
