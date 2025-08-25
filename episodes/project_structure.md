@@ -108,7 +108,7 @@ pixi update
 ```output
 ✔ Lock-file was already up-to-date
 ```
-Let us not create a folder named my_package and add 3 files inside it namely `happy.py`, `sad.py` and `__init__.py`
+Let us now create a folder named my_package and add 3 files inside it namely `happy.py`, `sad.py` and `__init__.py`
 
 ```python
 # happy.py <- A module
