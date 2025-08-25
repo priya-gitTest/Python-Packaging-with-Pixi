@@ -933,13 +933,15 @@ would be</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="kw">[workspace]</span></span>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="kw">[tool.pixi.workspace]</span></span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"greet_me"</span></span>
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"conda-forge"</span><span class="op">]</span></span>
 <span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"linux-64"</span><span class="op">,</span> <span class="st">"win-64"</span><span class="op">]</span></span>
 <span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="kw">[dependencies]</span></span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="dt">python</span> <span class="op">=</span> <span class="st">"&gt;=3.11"</span></span></code></pre>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="kw">[tool.pixi.pypi-dependencies]</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="dt">python</span> <span class="op">=</span> <span class="st">"&gt;=3.11"</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="kw">[tool.pixi.tasks]</span></span></code></pre>
 </div>
 <ul>
 <li>Tasks</li>
