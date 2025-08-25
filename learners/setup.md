@@ -56,6 +56,7 @@ The 'pixi' binary is installed into '/home/codespace/.pixi/bin'
 Updating '/home/codespace/.bashrc'
 Please restart or source your shell.
 ```
+To restart the shell, use this command, if needed.
 ```bash
 source ~/.bashrc
 ```
