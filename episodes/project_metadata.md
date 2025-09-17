@@ -103,7 +103,8 @@ python = ">=3.11"
 ```
 - Tasks
 
-Here you can specify various steps that you would want to run before making your package. It ususally lets you define and run custom cammands or scripts for your project.
+Here you can specify various steps that you would want to run before making your package. It ususally lets you define and run custom commands or scripts for your project. You can specify `inputs`, `outputs` or `depends-on` tasks.
+
 ```toml
 [tool.pixi.tasks]
 # This command will only be defined on Windows
