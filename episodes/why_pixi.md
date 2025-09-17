@@ -27,8 +27,8 @@ exercises: 0
 Pixi is a fast and reproducible package management tool. It has lots of [features](https://pixi.sh/latest/#what-is-the-difference-with-pixi) which are not all present in a single tool at this point in time. Hence we choose this tool.
 It comes with following features : 
 
-- Native supprt for both PyPI packages and conda
-- Modern
+- Support for both PyPI and Conda packages.
+- Modern & fast.
 - Support for multi-language dependency ( E.g. RUST + Python, or Python + C++)
 - Uses `uv` under the hood.
 - Helps with reproducibility via `pixi.lock`
@@ -40,6 +40,6 @@ It comes with following features :
 
 ## Multi-environment support
 
-You can specify the installation of certain tools and packages specific to a particular OS or environmentsl like ( dev, test prod) etc.
+You can specify the installation of certain tools and packages specific to a particular OS [Windows, MacOS, Linux] or environmentsl like ( dev, test prod) etc.
 
 
