@@ -774,7 +774,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-project_metadata"><p>Content from <a href="project_metadata.html">Metadata for Python packging</a></p>
 <hr>
-<p>Last updated on 2025-08-25 |
+<p>Last updated on 2025-09-17 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/project_metadata.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
@@ -790,8 +790,7 @@ any links that you are not going to use.
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>What is <code>pyproject.toml</code>?</li>
-<li>
-</li>
+<li>What is a lock file and why do I need one?</li>
 </ul>
 </div>
 </div>
@@ -803,6 +802,7 @@ any links that you are not going to use.
 <ul>
 <li>To understand the structure of <code>pyproject.toml</code>
 </li>
+<li>To understand the need for a lock file</li>
 </ul>
 </div>
 </div>
@@ -987,6 +987,12 @@ reference.</p>
 <span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a><span class="kw">[tool.pixi.tasks]</span></span>
 <span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a><span class="dt">greet</span>  <span class="op">=</span> <span class="op">{ </span><span class="dt">cmd</span><span class="op"> =</span> <span class="st">"echo 'Happy Python Packaging!'"</span><span class="op"> }</span></span></code></pre>
 </div>
+</section><section><h2 class="section-heading" id="lockfiles">Lockfiles<a class="anchor" aria-label="anchor" href="#lockfiles"></a>
+</h2>
+<hr class="half-width">
+<p>It has everything we need, to reporoduce our project environment. It
+is generated from the dependeicines specidied in the <code>.toml</code>
+file.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
