@@ -6,7 +6,7 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- How to use Pixi run Start
+- How to use pixi run start
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -17,3 +17,10 @@ exercises: 10
 ::::::::::::::::::::::::::::::::::::::::::::::::
  
 ## Introduction
+
+`git clone project.git && cd project`
+`pixi run start`
+::::::::::::::::::::::::::::::::::::: keypoints
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
