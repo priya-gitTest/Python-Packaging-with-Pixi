@@ -19,7 +19,9 @@ exercises: 10
 ## Introduction
 
 `git clone project.git && cd project`
+
 `pixi run start`
+
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 
