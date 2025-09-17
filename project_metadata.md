@@ -7,13 +7,14 @@ exercises: 10
 :::::::::::::::::::::::::::::::::::::: questions
 
 - What is `pyproject.toml`?
-- 
+- What is a lock file and why do I need one? 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - To understand the structure of `pyproject.toml`
+- To understand the need for a lock file
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -137,6 +138,9 @@ requests = ">=2.32.5,<3"
 [tool.pixi.tasks]
 greet  = { cmd = "echo 'Happy Python Packaging!'" }
 ```
+## Lockfiles
+It has everything we need, to reporoduce our project environment. It is generated from the dependeicines specidied in the `.toml` file.
+
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Need to have a `pyproject.toml` file
 - Need to have `[build-system]` section  with `requires` and `build-backend` specfied.
