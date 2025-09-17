@@ -206,12 +206,19 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         1. Why Python Packages?
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#introduction">Introduction</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -352,12 +359,13 @@
 </div>
 </div>
 <p><img width="983" height="974" alt="image" src="https://github.com/user-attachments/assets/5df6c1a0-bee9-4b38-99e3-725ada1b5d3c" class="figure">
-Ref : <a href="https://xkcd.com/1987/" class="external-link uri">https://xkcd.com/1987/</a> ## Introduction We all love to
-write code, to solve interesting problems. What if we have our code
-ready and we want to share it across the world. Well there are many ways
-to do that ofcourse ! By doing this course we will learn to distribute
-our code via Python Packaging using a tool call Pixi. You can think of
-the package as setup.exe from yester years.</p>
+Ref : <a href="https://xkcd.com/1987/" class="external-link uri">https://xkcd.com/1987/</a></p>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
+<hr class="half-width"><p>We all love to write code, to solve interesting problems. What if we
+have our code ready and we want to share it across the world. Well there
+are many ways to do that ofcourse ! By doing this course we will learn
+to distribute our code via Python Packaging using a tool call Pixi. You
+can think of the package as setup.exe from yester years.</p>
 <p>When we make a package, we solve some key challenges like
 reproducibility, making it platform independent and also make it multi-
 environment. Distributing our code as package is better than sharing the
@@ -411,10 +419,7 @@ or TestPyPI, we need to package our code.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/why_pixi.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
