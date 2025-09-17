@@ -21,7 +21,8 @@ exercises: 10
 - understand the build process
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
+<img width="983" height="974" alt="image" src="https://github.com/user-attachments/assets/5df6c1a0-bee9-4b38-99e3-725ada1b5d3c" />
+ Ref : https://xkcd.com/1987/
 ## Introduction
 We all love to write code, to solve interesting problems. What if we have our code ready and we want to share it across the world. Well there are many ways to do that ofcourse ! By doing this course we will learn to distribute our code via Python Packaging using a tool call Pixi. You can think of the package as setup.exe from yester years.
 
