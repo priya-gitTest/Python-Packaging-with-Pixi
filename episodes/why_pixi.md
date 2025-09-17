@@ -40,6 +40,6 @@ It comes with following features :
 
 ## Multi-environment support
 
-You can specify the installation of certain tools and packages specific to a particular OS [Windows, MacOS, Linux] or environmentsl like ( dev, test prod) etc.
+You can specify the installation of certain tools and packages specific to a particular OS [Windows, MacOS, Linux] or environmentsl like ( dev, test, prod) etc.
 
 
