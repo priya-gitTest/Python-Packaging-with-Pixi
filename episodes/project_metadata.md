@@ -140,7 +140,7 @@ requests = ">=2.32.5,<3"
 greet  = { cmd = "echo 'Happy Python Packaging!'" }
 ```
 ## Lockfiles
-It has everything we need, to reporoduce the project environment. It is generated from the dependeicines specidied in the `.toml` file.
+A lockfile contains everything needed to reproduce the project environment. It is generated from the dependencies specified in the `.toml` file.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Need to have a `pyproject.toml` file
