@@ -358,7 +358,7 @@
         
 <section id="aio-intoduction_python_packaging"><p>Content from <a href="intoduction_python_packaging.html">Why Python Packages?</a></p>
 <hr>
-<p>Last updated on 2025-09-17 |
+<p>Last updated on 2025-09-19 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/intoduction_python_packaging.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -372,9 +372,10 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>Why do you need to package your python code?</li>
-<li>What can you actually package?</li>
-<li>What is Python Package Index (PyPI) and its purpose?</li>
+<li>Why must we package our Python code?</li>
+<li>What precisely may be packaged?</li>
+<li>What is the Python Package Index (PyPI), and what purpose does it
+serve?</li>
 <li>What is a build?</li>
 </ul>
 </div>
@@ -385,10 +386,11 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>benefits of python packaging</li>
-<li>does it fit your use case</li>
-<li>understand some componets of python packaing like PyPi</li>
-<li>understand the build process</li>
+<li>To understand the benefits of Python packaging.</li>
+<li>To determine whether packaging is suitable for your use case.</li>
+<li>To acquire knowledge of components of Python packaging such as
+PyPI.</li>
+<li>To become familiar with the build process.</li>
 </ul>
 </div>
 </div>
@@ -400,47 +402,45 @@ Ref : <a href="https://xkcd.com/1987/" class="external-link uri">https://xkcd.co
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>We all love to write code, to solve interesting problems. What if we
-have our code ready and we want to share it across the world. Well there
-are many ways to do that ofcourse ! By doing this course we will learn
-to distribute our code via Python Packaging using a tool call Pixi. You
-can think of the package as setup.exe from yester years.</p>
-<p>When we make a package, we solve some key challenges like
-reproducibility, making it platform independent and also make it multi-
-environment. Distributing our code as package is better than sharing the
-souce code via for instance in a Github repository for many reasons
-:</p>
-<ul>
-<li><p>Dependency management : A Package can explicityl declare its
-deepndencies. Tools like ‘pip’ or ‘uv’ can be then used to automatically
-install them for a user.</p></li>
-<li><p>Versioning : You version your package and can make and distribute
-several versions of your code for backwards compatability.</p></li>
-<li><p>Standerdisation : Packaging is an accepted way to distribute the
-code via repositories like PyPI</p></li>
-<li>
-<p>Metadata : A package has project specific metadata which are
-important for the end users.</p>
-<h2 id="what-can-you-package">What can you package ?</h2>
+<p>Software development is a creative pursuit, and it is satisfying to
+write code that solves interesting problems. However, once our code is
+ready, how can we share it globally? This course provides instruction in
+how to distribute Python code using Pixi. You might liken a package to
+the old-style setup.exe: a standardised method of distributing
+software.</p>
+<p>By packaging code, you address several important challenges,
+including ensuring reproducibility, achieving cross-platform
+compatibility, and supporting multiple environments. Distributing code
+as a package offers many advantages over merely sharing source files,
+for example via GitHub:</p>
+<p>Dependency management: A package can explicitly declare its
+dependencies. Tools such as pip (or uv) can then automatically install
+them for the user.</p>
+<p>Versioning: You may version your package and distribute multiple
+versions, thereby supporting backwards compatibility.</p>
+<p>Standardisation: Packaging is the established method of distributing
+code via recognised repositories such as PyPI.</p>
+<p>Metadata: Packages include project-specific metadata, which is
+essential for end users.</p>
+<p>## What may be packaged ?</p>
 <p>Any .py files (modules) or directories with <strong>init</strong>.py
-(packages).</p>
-<h2 id="what-is-pypi">What is PyPI</h2>
-<p>PyPi is the repository where all the Python packages which are
-released are available for end users to use. You can visit it here to
-have a look : <a href="https://pypi.org/" class="external-link uri">https://pypi.org/</a> There is also a repository called <a href="https://test.pypi.org/" class="external-link uri">https://test.pypi.org/</a>,
-which allows us to try distribution tools and processes without
-affecting the real PyPi. In this course , we will publish our package to
+(packages) can be packaged..</p>
+<p>## What is PyPI</p>
+<p>PyPI is the repository where all released Python packages are made
+available for end users. You may explore it here: <a href="https://pypi.org/" class="external-link">PyPI</a>. There is also <a href="https://test.pypi.org/" class="external-link">TestPyPI</a>, a repository which allows us
+to experiment with distribution tools and procedures without affecting
+the live PyPI. In this course, we will publish our package to
 TestPyPI.</p>
-<h2 id="what-is-a-build">What is a build ?</h2>
-<p>It can be defined as a process of creation of distribution of your
-project from source code. This distribution can then be installed using
-tools like ‘pip’ or ‘uv’ etc. You can create a build for your project
-using the following command in the terminal : python -m build.</p>
-<p>The end product of a successful build process in a .whl or .tar.gz
-file. These can then be installed via pip or uploaded to PyPI. It is
-important to version your build and provide necessary metadata.</p>
-</li>
-</ul>
+<p>## What is a Build ?</p>
+<p>A build is the process by which your project’s source code is
+transformed into a distributable format. These build artefacts can then
+be installed using tools such as <code>pip</code>. A build may be
+created using the command in the terminal :
+<code>bash python -m build</code> The successful build process produces
+files such as a <strong>wheel</strong> (<code>.whl</code>) or a
+<strong>source archive</strong> (<code>.tar.gz</code>), which can be
+installed via <code>pip</code> or uploaded to PyPI. It is vital to
+version your build and supply the requisite metadata.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -449,11 +449,11 @@ important to version your build and provide necessary metadata.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>The code needs to be versioned.</li>
-<li>The dependencies of the projects needs to be managed.</li>
-<li>The metadata for the project needs to be managed.</li>
-<li>To make our python code installable, reusable and shareable via PyPi
-or TestPyPI, we need to package our code.</li>
+<li>The code must be versioned.</li>
+<li>Project dependencies must be managed.</li>
+<li>The project’s metadata must be clearly defined.</li>
+<li>To make Python code installable, reusable and distributable via PyPI
+or TestPyPI, one must package the code.</li>
 </ul>
 </div>
 </div>
