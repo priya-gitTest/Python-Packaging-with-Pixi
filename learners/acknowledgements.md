@@ -2,7 +2,7 @@
 title: 'Acknowledgements'
 ---
 
-- I would like to thank the Team at DRA for this patience and guidance with development of this couse.
-- I would also like to thank the team PyOpenSci for their wonderful course which they gave during PyOpenSci fall festival 2024.
+- I would like to extend my sincere thanks to the team at DRA for their patience and guidance throughout the development of this course.
+- I would also like to thank the PyOpenSci team for their excellent course delivered during the PyOpenSci Fall Festival 2024, which provided valuable inspiration and insights.
 
 
