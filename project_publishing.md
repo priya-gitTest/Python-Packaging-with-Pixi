@@ -7,30 +7,34 @@ exercises: 15
 :::::::::::::::::::::::::::::::::::::: questions
 
 - What is Twine and why is it needed
-- What is build command and what does it do ?
-- How to create and upload the Python package ?
-- How to test/ use the uploaded Python package?
+- What is `build` command and what does it do ?
+- How can we create and upload a Python package?
+- How can we test and use the uploaded Python package?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Learn the usage for tools like build and twine
-- How to upload the Python Package to repositories like TestPyPi
-- How to use the uploaded package.
+- Learn how to use tools such as `build` and `twine`.
+- Understand how to upload a Python package to repositories such as **TestPyPI**.
+- Learn how to install and test an uploaded package.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
-Once we have created our project, defined all the necessary metadata in the toml file, its time to publish our project. Let see the tools and steps we need to acheive this.
+Once a project has been created and all the necessary metadata has been defined in the TOML file, the next step is to **publish** it. This lesson introduces the tools and steps required to achieve this.
 
-We need to install the following tools i.e. `build` and `twine`
+The two key tools we need are:
 
-_Before proceeding with the steps mentioned below, kindly rename or delete the `pixi.toml` file as we will mainly focus on `pyproject.toml` for the steps mentioned below. You can also try the build with `pixi.toml` at a later point in time by deleting or renaming the `pyproject.toml` file._
+**Build** – for generating distribution files from your project.
 
-##  Create your build
+**Twine** – for securely uploading those distributions to **PyPI** or **TestPyPI**.
 
-`build` :A tool to read the `pyproject.toml` file and build the package files
+**Note**: Before proceeding, rename or remove the `pixi.tom`l file, as we will focus on `pyproject.toml`. You may experiment with `pixi.toml` later by removing or renaming `pyproject.toml`.
+
+##  Step 1: Create your build
+
+The `build` tool reads your `pyproject.toml` file and generates the package distribution files.
 
 ```bash
 pip install build
@@ -74,24 +78,23 @@ This command creates a `dist` directory containing two files:
 <img width="259" height="398" alt="image" src="https://github.com/user-attachments/assets/302f502b-34ed-470e-a4e0-884b808a6ff0" />
 
 
- ## Create an account on TestPyPI
+ ## Step 2 : Create an account on TestPyPI
      
-Visit this [URL](https://test.pypi.org/account/register/) and crete an account to generate the API keys, to be able to upload your package to TestPyPI in the next step.
-
-Once you create your account, you can visit this [link](https://test.pypi.org/manage/account/token/) to generate the API key. Please copy the same in a notepad and paste it when prompted for it in the next step below.
-
+- Visit [TestPyPI](https://test.pypi.org/account/register/) and create an account.
+- Generate an **API token** from your account settings.
+- Save the token securely, as you will use it during the upload process.
      
 <img width="1726" height="625" alt="image" src="https://github.com/user-attachments/assets/0c27a806-8fa2-469a-8b5c-fbf73c47e5e6" />
      
 
-## Upload your build
-`twine` :A tool for securely uploading packages to PyPI and TestPyPI.
+## Step 3: Upload your build
+The **Twine** tool is used to securely upload your package distributions.
    ```bash
    pip install build twine
 
    twine upload --repository testpypi dist/*
    ```
-  You'll be prompted to enter your TestPyPI username and password. It's recommended to use an API token instead of      your password. When prompted for your password, paste the token in.
+  You will be prompted for your TestPyPI username and password. Use the API token instead of your password by entering `__token__` as the username and pasting the token when prompted for a password.
 
   ```output
 Uploading distributions to https://test.pypi.org/legacy/
@@ -140,11 +143,13 @@ View at:
 https://test.pypi.org/project/po-greet-me/0.1.1/
   ```
 
-That's it! After the upload is successful, your package will be available on TestPyPI. E.g. : https://test.pypi.org/project/po-greet-me/0.1.1/
+After a successful upload, your package will be available at a URL such as: E.g. : 
+`https://test.pypi.org/project/po-greet-me/0.1.1/`
 
 <img width="1619" height="854" alt="image" src="https://github.com/user-attachments/assets/980a83e1-dfce-4902-bb85-e44d47af9088" />
-
-It is possible that the name of your project already exists or is simialr to an existing project. In that case you may end up in an error like this : 
+## Handling Errors
+If the package name is too similar to an existing project, TestPyPI may return a 403 Forbidden or 400 Bad Request error.
+In that case you may end up in an error like this : 
 
 ```output
 twine upload --repository testpypi dist/*
@@ -193,8 +198,10 @@ ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/
          Bad Request                   
 ```
 
-To fix this, rename you project e.g. to `po_greet_me` , and add the following in `pyproject.toml` file.
-and try the steps below to upload it again.
+To fix this, 
+- rename your project (e.g. from `greet_me` to `po_greet_me`).
+- Update your `pyproject.toml` accordingly.
+- Rebuild and upload the package.
 
 ```toml
 [tool.hatch.build.targets.wheel]
@@ -212,9 +219,9 @@ python -m build
 twine upload --repository testpypi dist/*
 ```
 
-## Test your package
+## Step 4: Test your package
 
-Install your package via this command : 
+Install your package from TestPyPI via this command : 
 
 ```bash
 pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple po-greet-me==0.1.1
@@ -229,14 +236,14 @@ Installing collected packages: po-greet-me
 Successfully installed po-greet-me-0.1.1
 ```
 
-Create a Python file named test_package.py
+Then create a test script : `test_package.py`:
 
 ```python
 from my_package import happy, sad
 
 print(happy.greet_happy())
 ```
-
+Run it:
 ```bash
 python test_package.py 
 ```
@@ -246,9 +253,9 @@ Yay! happy day! 😀
 ```
 
 ::::::::::::::::::::::::::::::::::::: keypoints
-- Fill all the metadata and give your project a unique name
-- Build your Project
-- Create a TestPyPI account and generate the API token
-- Upload your package via twine to TestPyPI
-- Check your package via pip install
+- Ensure all metadata is filled in and choose a **unique project name**.
+- Use `build` to generate distribution files
+- Create a TestPyPI account and generate an  **API token**
+- Use `twine upload` to securely publish your package.
+- Test your package by installing it from TestPyPI via `pip install`.
 ::::::::::::::::::::::::::::::::::::::::::::::::
