@@ -431,23 +431,25 @@ Download the [data zip file](https://example.com/FIXME) and unzip it to your Des
 <div id="details" class="callout-inner">
 <h3 class="callout-title">Details</h3>
 <div class="callout-content">
-<p>For this course, we will use GitHub Codespaces, providing a
-cloud-based development environment that runs directly in your web
-browser. This setup means no local software installation is required on
-your personal computer, simplifying our getting-started process. Your
-Codespace environment is Linux-based, so we will be using standard Linux
-commands and tools throughout</p>
+<p>For this course, we will use <strong>GitHub Codespaces</strong>,
+which provides a cloud-based development environment that runs directly
+in your web browser.</p>
+<p>This approach means that no software installation is required on your
+personal computer, making it much easier to get started.</p>
+<p>Your Codespace environment will be <strong>Linux-based</strong>, so
+we will be using standard Linux commands and tools throughout the
+lessons.</p>
 </div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="create-a-repository">1. Create a repository<a class="anchor" aria-label="anchor" href="#create-a-repository"></a></h2>
 <hr class="half-width"><ul><li><p>Log into <a href="https://github.com" class="external-link">GitHub</a> and create a new
 repository for this lesson called <code>greet_me</code>.</p></li>
-<li><p>From the top right, under the Code drop down, choose the
-Codepaces tab and click on the button : Create codespace on
-main.</p></li>
-</ul><figure><img width="416" height="353" alt="image" src="https://github.com/user-attachments/assets/15167dca-b8c3-4701-87ac-3d6cb2b1022b" class="figure mx-auto d-block"></figure><ul><li>Open the terminal inside the codepaces created for you and try the
-command below.</li>
+<li><p>From the repository page, open the <strong>Code</strong> dropdown
+menu, select the <strong>Codespaces</strong> tab, and click
+<strong>Create codespace on main</strong>.</p></li>
+</ul><figure><img width="416" height="353" alt="image" src="https://github.com/user-attachments/assets/15167dca-b8c3-4701-87ac-3d6cb2b1022b" class="figure mx-auto d-block"></figure><ul><li>Once your Codespace has been created, open the terminal inside it
+and run the following commands.</li>
 </ul><div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
@@ -458,7 +460,7 @@ command below.</li>
 </button>
 <div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
-<p>To install pixi, run:</p>
+<p>To install Pixi, run:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -478,13 +480,15 @@ The 'pixi' binary is installed into '/home/codespace/.pixi/bin'
 Updating '/home/codespace/.bashrc'
 Please restart or source your shell.</code></pre>
 </div>
-<p>To restart the shell, use this command, if needed.</p>
+<p>If required, restart your shell:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">source</span> ~/.bashrc</span></code></pre>
 </div>
-<p>Check if pixi is installed correctly</p>
+<p>Verify that Pixi has been installed correctly. <em>Please note: the
+version number displayed may differ from the example below, as newer
+releases may have been published since this course was written.</em></p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
