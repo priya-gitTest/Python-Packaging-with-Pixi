@@ -379,13 +379,13 @@ similar for pyproject.toml file</li>
 </ul></section><section id="project_metadata"><h2 class="section-heading"><a href="project_metadata.html">Metadata for Python packging</a></h2>
 <hr class="half-width">
 <ul>
-<li>Need to have a <code>pyproject.toml</code> file</li>
-<li>Need to have <code>[build-system]</code> section with
-<code>requires</code> and <code>build-backend</code> specfied.</li>
-<li>Need to have <code>[project]</code> section with atleast
-<code>name</code> and <code>version</code> specified.</li>
-<li>Nice to have <code>dependencies</code> specified in
-<code>[project]</code> section.</li>
+<li>Every project must include a <code>pyproject.toml</code> file</li>
+<li>The <code>[build-system]</code> section is required and must define
+both <code>requires</code> and <code>build-backend</code>.</li>
+<li>The <code>[project]</code> section must, at minimum, include the
+project <code>name</code> and <code>version</code>.</li>
+<li>It is recommended to specify dependencies in the
+<code>[project]</code> section for clarity and reproducibility.</li>
 </ul></section><section id="project_publishing"><h2 class="section-heading"><a href="project_publishing.html">How to publish your Python project</a></h2>
 <hr class="half-width">
 <ul>
