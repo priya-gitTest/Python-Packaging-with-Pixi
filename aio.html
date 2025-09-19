@@ -464,7 +464,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-why_pixi"><p>Content from <a href="why_pixi.html">Why choose Pixi for Python Packaging ?</a></p>
 <hr>
-<p>Last updated on 2025-09-17 |
+<p>Last updated on 2025-09-19 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/why_pixi.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -478,7 +478,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>Why Pixi ?</li>
+<li>Why use Pixi?</li>
 <li>What are the benefits of Pixi ?</li>
 </ul>
 </div>
@@ -489,14 +489,12 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>To understand the benefits offered by Pixi</li>
-<li>What is <code>pixi.toml</code> and <code>pyproject.toml</code>
+<li>To understand the advantages offered by Pixi.</li>
+<li>To learn about <code>pixi.toml</code> and
+<code>pyproject.toml</code>
 </li>
-<li>What is <code>pixi.lock</code>
-</li>
-<li>What do we mean by multi-environment support</li>
-<li>
-</li>
+<li>To understand the role of <code>pixi.lock</code>.</li>
+<li>To explore the concept of multi-environment support.</li>
 </ul>
 </div>
 </div>
@@ -506,34 +504,49 @@ any links that you are not going to use.
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>Pixi is a fast and reproducible package management tool. It has lots
-of <a href="https://pixi.sh/latest/#what-is-the-difference-with-pixi" class="external-link">features</a>
-which are not all present in a single tool at this point in time. Hence
-we choose this tool. It comes with following features :</p>
+<p>Pixi is a fast, modern and reproducible package management tool. It
+has lots of <a href="https://pixi.sh/latest/#what-is-the-difference-with-pixi" class="external-link">features</a>
+which are not all present in a single tool at this point in time. These
+capabilities make Pixi an attractive choice for managing Python and
+multi-language projects.</p>
+<p>Key features include:</p>
 <ul>
-<li>Support for both PyPI and Conda packages.</li>
-<li>Modern &amp; fast.</li>
-<li>Support for multi-language dependency ( E.g. RUST + Python, or
-Python + C++)</li>
-<li>Uses <code>uv</code> under the hood.</li>
-<li>Helps with reproducibility via <code>pixi.lock</code>
-</li>
+<li>
+<strong>Support for both PyPI and Conda packages</strong> : enabling
+flexibility in sourcing dependencies.</li>
+<li>
+<strong>Performance</strong> :lightweight and modern, designed for
+speed.</li>
+<li>
+<strong>Multi-language dependency management</strong> : e.g. Python
+with Rust, or Python with C/C++.</li>
+<li>
+<strong>Integration with <code>uv</code></strong> : leveraging a
+high-performance package installer.</li>
+<li>
+<strong>Reproducibility</strong>: guaranteed through the use of
+<code>pixi.lock</code>.</li>
+<li>
+<strong>Configuration via TOML files</strong>: supports both
+<code>pixi.toml</code> and <code>pyproject.toml</code>.</li>
 </ul></section><section><h2 class="section-heading" id="configuration-files-pixi-toml-and-pyproject-toml">Configuration files (<code>pixi.toml</code> and
 <code>pyproject.toml</code>)<a class="anchor" aria-label="anchor" href="#configuration-files-pixi-toml-and-pyproject-toml"></a>
 </h2>
 <hr class="half-width">
-<p><code>pixi.toml</code> is the file used by Pixi for defining the
-environment , dependencies and tasks. <code>pyproject.toml</code> is the
-file in Python ecosystem (PEP 518/621) for configuring the build,
-distribution and configration of python projects. It is required in
-build tools like Poetry, Hatch, Flit , setuptools. It specifies metadata
-(name, version, author). you can also specifiy dependencies here.</p>
+<p><code>pixi.toml</code>: The configuration file used by Pixi to define
+environments, dependencies, and tasks. <code>pyproject.toml</code>: A
+standard configuration file within the Python ecosystem (PEP 518/621).
+It is required by build tools such as Poetry, Hatch, Flit, and
+setuptools. This file specifies project metadata (e.g. name, version,
+author) as well as dependencies and build settings.</p>
 </section><section><h2 class="section-heading" id="multi-environment-support">Multi-environment support<a class="anchor" aria-label="anchor" href="#multi-environment-support"></a>
 </h2>
 <hr class="half-width">
-<p>You can specify the installation of certain tools and packages
-specific to a particular OS [Windows, MacOS, Linux] or environmentsl
-like ( dev, test, prod) etc.</p>
+<p>Pixi allows you to define dependencies for specific operating systems
+(e.g. Windows, macOS, Linux) or for distinct environments such as
+development, testing, and production. This makes it easier to tailor the
+project configuration to match the context in which the software is
+being deployed or developed.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
