@@ -1047,7 +1047,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-project_publishing"><p>Content from <a href="project_publishing.html">How to publish your Python project</a></p>
 <hr>
-<p>Last updated on 2025-08-25 |
+<p>Last updated on 2025-09-19 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/project_publishing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1062,9 +1062,9 @@ any links that you are not going to use.
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>What is Twine and why is it needed</li>
-<li>What is build command and what does it do ?</li>
-<li>How to create and upload the Python package ?</li>
-<li>How to test/ use the uploaded Python package?</li>
+<li>What is <code>build</code> command and what does it do ?</li>
+<li>How can we create and upload a Python package?</li>
+<li>How can we test and use the uploaded Python package?</li>
 </ul>
 </div>
 </div>
@@ -1074,9 +1074,11 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Learn the usage for tools like build and twine</li>
-<li>How to upload the Python Package to repositories like TestPyPi</li>
-<li>How to use the uploaded package.</li>
+<li>Learn how to use tools such as <code>build</code> and
+<code>twine</code>.</li>
+<li>Understand how to upload a Python package to repositories such as
+<strong>TestPyPI</strong>.</li>
+<li>Learn how to install and test an uploaded package.</li>
 </ul>
 </div>
 </div>
@@ -1086,21 +1088,25 @@ any links that you are not going to use.
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>Once we have created our project, defined all the necessary metadata
-in the toml file, its time to publish our project. Let see the tools and
-steps we need to acheive this.</p>
-<p>We need to install the following tools i.e. <code>build</code> and
-<code>twine</code></p>
-<p><em>Before proceeding with the steps mentioned below, kindly rename
-or delete the <code>pixi.toml</code> file as we will mainly focus on
-<code>pyproject.toml</code> for the steps mentioned below. You can also
-try the build with <code>pixi.toml</code> at a later point in time by
-deleting or renaming the <code>pyproject.toml</code> file.</em></p>
-</section><section><h2 class="section-heading" id="create-your-build">Create your build<a class="anchor" aria-label="anchor" href="#create-your-build"></a>
+<p>Once a project has been created and all the necessary metadata has
+been defined in the TOML file, the next step is to
+<strong>publish</strong> it. This lesson introduces the tools and steps
+required to achieve this.</p>
+<p>The two key tools we need are:</p>
+<p><strong>Build</strong> – for generating distribution files from your
+project.</p>
+<p><strong>Twine</strong> – for securely uploading those distributions
+to <strong>PyPI</strong> or <strong>TestPyPI</strong>.</p>
+<p><strong>Note</strong>: Before proceeding, rename or remove the
+<code>pixi.tom</code>l file, as we will focus on
+<code>pyproject.toml</code>. You may experiment with
+<code>pixi.toml</code> later by removing or renaming
+<code>pyproject.toml</code>.</p>
+</section><section><h2 class="section-heading" id="step-1-create-your-build">Step 1: Create your build<a class="anchor" aria-label="anchor" href="#step-1-create-your-build"></a>
 </h2>
 <hr class="half-width">
-<p><code>build</code> :A tool to read the <code>pyproject.toml</code>
-file and build the package files</p>
+<p>The <code>build</code> tool reads your <code>pyproject.toml</code>
+file and generates the package distribution files.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1143,22 +1149,23 @@ file and build the package files</p>
 <p>This command creates a <code>dist</code> directory containing two
 files: - A wheel file (<code>greet_me-0.1.0-py3-none-any.whl</code>). -
 A source archive (<code>greet_me-0.1.0.tar.gz</code>).</p>
-<figure><img width="259" height="398" alt="image" src="https://github.com/user-attachments/assets/302f502b-34ed-470e-a4e0-884b808a6ff0" class="figure mx-auto d-block"></figure><p>## Create an account on TestPyPI</p>
-<p>Visit this <a href="https://test.pypi.org/account/register/" class="external-link">URL</a>
-and crete an account to generate the API keys, to be able to upload your
-package to TestPyPI in the next step.</p>
-<p>Once you create your account, you can visit this <a href="https://test.pypi.org/manage/account/token/" class="external-link">link</a> to generate
-the API key. Please copy the same in a notepad and paste it when
-prompted for it in the next step below.</p>
-<figure><img width="1726" height="625" alt="image" src="https://github.com/user-attachments/assets/0c27a806-8fa2-469a-8b5c-fbf73c47e5e6" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="upload-your-build">Upload your build<a class="anchor" aria-label="anchor" href="#upload-your-build"></a>
+<figure><img width="259" height="398" alt="image" src="https://github.com/user-attachments/assets/302f502b-34ed-470e-a4e0-884b808a6ff0" class="figure mx-auto d-block"></figure><p>## Step 2 : Create an account on TestPyPI</p>
+<ul>
+<li>Visit <a href="https://test.pypi.org/account/register/" class="external-link">TestPyPI</a>
+and create an account.</li>
+<li>Generate an <strong>API token</strong> from your account
+settings.</li>
+<li>Save the token securely, as you will use it during the upload
+process.</li>
+</ul>
+<figure><img width="1726" height="625" alt="image" src="https://github.com/user-attachments/assets/0c27a806-8fa2-469a-8b5c-fbf73c47e5e6" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="step-3-upload-your-build">Step 3: Upload your build<a class="anchor" aria-label="anchor" href="#step-3-upload-your-build"></a>
 </h2>
 <hr class="half-width">
-<p><code>twine</code> :A tool for securely uploading packages to PyPI
-and TestPyPI. ```bash pip install build twine</p>
-<p>twine upload –repository testpypi dist/* ``` You’ll be prompted to
-enter your TestPyPI username and password. It’s recommended to use an
-API token instead of your password. When prompted for your password,
-paste the token in.</p>
+<p>The <strong>Twine</strong> tool is used to securely upload your
+package distributions. ```bash pip install build twine</p>
+<p>twine upload –repository testpypi dist/*
+``<code>You will be prompted for your TestPyPI username and password. Use the API token instead of your password by entering</code><strong>token</strong>`
+as the username and pasting the token when prompted for a password.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1207,11 +1214,13 @@ INFO     &lt;html&gt;
 View at:
 https://test.pypi.org/project/po-greet-me/0.1.1/</code></pre>
 </div>
-<p>That’s it! After the upload is successful, your package will be
-available on TestPyPI. E.g. : <a href="https://test.pypi.org/project/po-greet-me/0.1.1/" class="external-link uri">https://test.pypi.org/project/po-greet-me/0.1.1/</a></p>
-<figure><img width="1619" height="854" alt="image" src="https://github.com/user-attachments/assets/980a83e1-dfce-4902-bb85-e44d47af9088" class="figure mx-auto d-block"></figure><p>It is possible that the name of your project already exists or is
-simialr to an existing project. In that case you may end up in an error
-like this :</p>
+<p>After a successful upload, your package will be available at a URL
+such as: E.g. :
+<code>https://test.pypi.org/project/po-greet-me/0.1.1/</code></p>
+<p><img width="1619" height="854" alt="image" src="https://github.com/user-attachments/assets/980a83e1-dfce-4902-bb85-e44d47af9088" class="figure">
+## Handling Errors If the package name is too similar to an existing
+project, TestPyPI may return a 403 Forbidden or 400 Bad Request error.
+In that case you may end up in an error like this :</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1262,9 +1271,9 @@ INFO     &lt;html&gt;
 ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/
          Bad Request                   </code></pre>
 </div>
-<p>To fix this, rename you project e.g. to <code>po_greet_me</code> ,
-and add the following in <code>pyproject.toml</code> file. and try the
-steps below to upload it again.</p>
+<p>To fix this, - rename your project (e.g. from <code>greet_me</code>
+to <code>po_greet_me</code>). - Update your <code>pyproject.toml</code>
+accordingly. - Rebuild and upload the package.</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1283,10 +1292,10 @@ steps below to upload it again.</p>
 <span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co"># 3. Upload the new version to TestPyPI</span></span>
 <span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="ex">twine</span> upload <span class="at">--repository</span> testpypi dist/<span class="pp">*</span></span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="test-your-package">Test your package<a class="anchor" aria-label="anchor" href="#test-your-package"></a>
+</section><section><h2 class="section-heading" id="step-4-test-your-package">Step 4: Test your package<a class="anchor" aria-label="anchor" href="#step-4-test-your-package"></a>
 </h2>
 <hr class="half-width">
-<p>Install your package via this command :</p>
+<p>Install your package from TestPyPI via this command :</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1302,7 +1311,7 @@ Downloading https://test-files.pythonhosted.org/packages/52/85/dd6ebf4ee0a6ff766
 Installing collected packages: po-greet-me
 Successfully installed po-greet-me-0.1.1</code></pre>
 </div>
-<p>Create a Python file named test_package.py</p>
+<p>Then create a test script : <code>test_package.py</code>:</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1310,6 +1319,7 @@ Successfully installed po-greet-me-0.1.1</code></pre>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="bu">print</span>(happy.greet_happy())</span></code></pre>
 </div>
+<p>Run it:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1328,11 +1338,15 @@ Successfully installed po-greet-me-0.1.1</code></pre>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Fill all the metadata and give your project a unique name</li>
-<li>Build your Project</li>
-<li>Create a TestPyPI account and generate the API token</li>
-<li>Upload your package via twine to TestPyPI</li>
-<li>Check your package via pip install</li>
+<li>Ensure all metadata is filled in and choose a <strong>unique project
+name</strong>.</li>
+<li>Use <code>build</code> to generate distribution files</li>
+<li>Create a TestPyPI account and generate an <strong>API
+token</strong>
+</li>
+<li>Use <code>twine upload</code> to securely publish your package.</li>
+<li>Test your package by installing it from TestPyPI via
+<code>pip install</code>.</li>
 </ul>
 </div>
 </div>
