@@ -6,19 +6,19 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- Why do you need to package your python code?
-- What can you actually package?
-- What is Python Package Index (PyPI) and its purpose?
+- Why must we package our Python code?
+- What precisely may be packaged?
+- What is the Python Package Index (PyPI), and what purpose does it serve?
 - What is a build?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- benefits of python packaging
-- does it fit your use case
-- understand some componets of python packaing like PyPi
-- understand the build process
+- To understand the benefits of Python packaging.
+- To determine whether packaging is suitable for your use case.
+- To acquire knowledge of components of Python packaging such as PyPI.
+- To become familiar with the build process.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 <img width="983" height="974" alt="image" src="https://github.com/user-attachments/assets/5df6c1a0-bee9-4b38-99e3-725ada1b5d3c" />
@@ -26,40 +26,41 @@ exercises: 10
 
  
 ## Introduction
-We all love to write code, to solve interesting problems. What if we have our code ready and we want to share it across the world. Well there are many ways to do that ofcourse ! By doing this course we will learn to distribute our code via Python Packaging using a tool call Pixi. You can think of the package as setup.exe from yester years.
+Software development is a creative pursuit, and it is satisfying to write code that solves interesting problems. However, once our code is ready, how can we share it globally? This course provides instruction in how to distribute Python code using Pixi. You might liken a package to the old-style setup.exe: a standardised method of distributing software.
 
-When we make a package, we solve some key challenges like reproducibility, making it platform independent and also make it multi- environment.
-Distributing our code as package is better than sharing the souce code via for instance in a Github repository for many reasons :
+By packaging code, you address several important challenges, including ensuring reproducibility, achieving cross-platform compatibility, and supporting multiple environments. Distributing code as a package offers many advantages over merely sharing source files, for example via GitHub:
 
-- Dependency management : A Package can explicityl declare its deepndencies. Tools like 'pip' or 'uv' can be then used to automatically install them for a user.
-- Versioning : You version your package and can make and distribute several versions of your code for backwards compatability.
-- Standerdisation : Packaging is an accepted way to distribute the code via repositories like PyPI
-- Metadata : A package has project specific metadata which are important for the end users.
+Dependency management: A package can explicitly declare its dependencies. Tools such as pip (or uv) can then automatically install them for the user.
 
-  ## What can you package ?
+Versioning: You may version your package and distribute multiple versions, thereby supporting backwards compatibility.
 
-  Any .py files (modules) or directories with __init__.py (packages).
+Standardisation: Packaging is the established method of distributing code via recognised repositories such as PyPI.
+
+Metadata: Packages include project-specific metadata, which is essential for end users.
+
+  ## What may be packaged ?
+
+  Any .py files (modules) or directories with __init__.py (packages) can be packaged..
 
   ## What is PyPI
 
-  PyPi is the repository where all the Python packages which are released are available for end users to use.
-  You can visit it here to have a look : https://pypi.org/
-  There is also a repository called https://test.pypi.org/, which allows us to try distribution tools and processes without affecting the real PyPi.
-  In this course , we will publish our package to TestPyPI.
+  PyPI is the repository where all released Python packages are made available for end users. You may explore it here: [PyPI](https://pypi.org/). 
+There is also [TestPyPI](https://test.pypi.org/), a repository which allows us to experiment with distribution tools and procedures without affecting the live PyPI. In this course, we will publish our package to TestPyPI.
 
-  ## What is a build ?
+  ## What is a Build ?
 
-  It can be defined as a process of creation of distribution of your project from source code. This distribution can then be installed using tools like 'pip' or 'uv' etc.
-  You can create a build for your project using the following command in the terminal : python -m build.
-
-  The end product of a successful build process in a .whl or .tar.gz file. These can then be installed via pip or uploaded to PyPI.
-  It is important to version your build and provide necessary metadata.
+  A build is the process by which your project’s source code is transformed into a distributable format. These build artefacts can then be installed using tools such as `pip`.
+ A build may be created using the command in the terminal : 
+ ```bash
+python -m build
+```
+ The successful build process produces files such as a **wheel** (`.whl`) or a **source archive** (`.tar.gz`), which can be installed via `pip` or uploaded to PyPI. It is vital to version your build and supply the requisite metadata.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- The code needs to be versioned.
-- The dependencies of the projects needs to be managed.
-- The metadata for the project needs to be managed.
-- To make our python code installable, reusable and shareable via PyPi or TestPyPI, we need to package our code.
+- The code must be versioned.
+- Project dependencies must be managed.
+- The project’s metadata must be clearly defined.
+- To make Python code installable, reusable and distributable via PyPI or TestPyPI, one must package the code.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
