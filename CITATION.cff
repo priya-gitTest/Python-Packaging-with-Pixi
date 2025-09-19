@@ -18,22 +18,5 @@ authors:
     email: priyankaoe@gmail.com
     orcid: 'https://orcid.org/0000-0002-6844-6493'
 abstract: >-
-  Packaging is one of the most critical yet overlooked skills for Python developers. This course introduces you to modern, reliable, and reproducible packaging workflows using Pixi, a powerful tool that combines the best of PyPI and Conda*.
-
-Through hands-on lessons, you’ll learn:
-
-Why packaging matters for reproducibility, versioning, and collaboration.
-How to structure Python projects with best practices.
-Managing dependencies and lockfiles with Pixi for consistent environments.
-Writing clear and complete metadata (pyproject.toml / pixi.toml).
-Building Python packages (source + wheel distributions).
-Publishing your projects to TestPyPI and PyPI* using Twine.
-By the end of the course, you will:
-
-Understand the complete packaging workflow from idea → distribution → installation.
-Be able to confidently release your own Python packages to the community.
-Gain a reproducible, professional workflow for managing Python projects.
-This course is ideal for Python developers, data scientists, and researchers who want to share their work, ensure reproducibility, and adopt industry-standard packaging practices, without the usual complexity.
-
-* not covered in this course yet.
+  Packaging is one of the most critical yet overlooked skills for Python developers. This course introduces you to modern, reliable, and reproducible packaging workflows using Pixi, a powerful tool that combines the best of PyPI and Conda.
 license: CC-BY-4.0
