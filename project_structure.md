@@ -7,7 +7,7 @@ exercises: 0
 :::::::::::::::::::::::::::::::::::::: questions
 
 - How should we  structure our project ?
-- What is __init__.py ?
+- What is `__init__.py` ?
 - How should be name our packages ?
   
 
@@ -15,19 +15,19 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- To understand how to structure your project to be able to package it well.
-- Understand the importance of  __init__.py and where to place it.
-- Giving unique but understandable names to our packages.
+- To understand how to structure a project effectively in order to package it successfully.
+- To recognise the importance of the `__init__.py` file and know where to place it.
+- To assign unique yet meaningful names to packages.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-It is important to structure your project properly and include the necessary files, while giving unique yet understandable package names.
+It is essential to structure your project correctly, include the necessary files, and provide packages with names that are both unique and understandable.
 
-Packages are a way to organize modules in a Python project. A project can contain several modules, and grouping them into packages helps keep the code organized and maintainable.
+Packages are used to organise modules within a Python project. As projects often consist of several modules, grouping them into packages helps to keep the codebase structured, maintainable, and easy to navigate.
 
-Every package should have a special file called __init__.py in its folder. The presence of this file signals to Python that the folder is a package, allowing it to be imported later in your code.
+Each package must contain a special file named `__init__.py`. The presence of this file indicates to Python that the folder is a package, thereby allowing it to be imported into your code.
 
 ## Project Structure
 A typical project would look like :
@@ -37,7 +37,7 @@ A typical project would look like :
     ├── happy.py
     └── sad.py
 ```
-Lets create the same structure for our project in the codespace.
+Let us create a similar structure within our codespace.
 ```bash
 pixi init greet_me
 ```
@@ -45,17 +45,17 @@ pixi init greet_me
 ✔ Created ...greet_me/pixi.toml
 ```
 
-This create a following structure for us. 
+This generates the following structure:
 
 <img width="301" height="96" alt="image" src="https://github.com/user-attachments/assets/b07a9498-cd76-470b-80ad-d74a5202c061" />
 
-Please note, if you want to use a `pyproject.toml`, you need to use the syntax mentioned below. This is also our preferance and we will use this file in the next lesson.
+If you prefer to use a `pyproject.toml` file, the following syntax is required (our preferred approach, which will be demonstrated in the next lesson):
 
 ```bash
 pixi init --format pyproject
 ```
 
-`pixi.toml` : Lets view and edit the pixi.toml file generated for us.
+`pixi.toml` : The initial `pixi.toml` file generated may look like this:
 
 ```toml
 [workspace]
@@ -71,39 +71,39 @@ python = ">=3.10"
 
 [tasks]
 ```
-Lets go inside the project directory:
+Change into the project directory:
 ```bash
 cd greet_me
 ```
 
-To add libraries via pixi command use this syntax : 
+To add libraries via Pixi:
 ```bash
 pixi add requests
 ```
 ```output
 ✔ Added requests >=2.32.5,<3
 ```
-Let us see that gets added to the pixi.toml
+This will update the `[dependencies]` section in `pixi.toml`:
 
 ```toml
 [dependencies]
 requests = ">=2.32.5,<3"
 ```
-You can also generate/ update `pixi.lock` file via this command : 
+To generate or update the `pixi.lock` file:
 ```bash
 pixi lock
 ```
 ```output
 ✔ Lock-file was already up-to-date
 ```
-Alternatively, Lets install the dependencies now, which wiil generate the `pixi.lock` file. This is also useful when you clone someone else repo, the dependencies are installed via the `pixi.lock` file
+Alternatively, when cloning a repository, you can install dependencies from the `pixi.lock` file:
 ```bash
 pixi install
 ```
 ```output
 ✔ The default environment has been installed.
 ```
-There is also a command to update your dependencies to newer versions where possible with latest compatible versions. 
+To upgrade dependencies to the latest compatible versions: 
 ```bash
 pixi update
 ```
@@ -114,7 +114,8 @@ pixi update
 ```output
 ✔ Lock-file was already up-to-date
 ```
-Let us now create a folder named `my_package` and add 3 files inside it namely `happy.py`, `sad.py` and `__init__.py`
+## Adding Modules
+Create a folder named `my_package` and add three files: `happy.py`, `sad.py`, and `__init__.py`.
 
 ```python
 # happy.py <- A module
@@ -126,7 +127,7 @@ def greet_happy():
 def greet_sad():
     return "Oh no… I’m feeling a bit down today. 😢"
 ```
-Ultimately, our project structure should look like this : 
+The overall project structure should then resemble:
 ```
 greet_me/
 ├── LICENSE
@@ -141,14 +142,15 @@ greet_me/
     ├── happy.py
     └── sad.py
 ```
-Add the following task to the pixi.toml file and then run via pixi
+## Running a Task
+Add the following task to your `pixi.toml` file:
 
 ```toml
 
 [tasks]
 start = "python -c 'from my_package  import happy; print(happy.greet_happy())'"
 ```
-
+Then execute:
 ```bash
 pixi run start
 ```
@@ -156,9 +158,9 @@ pixi run start
 Yay! happy day! 😀
 ```
 ::::::::::::::::::::::::::::::::::::: keypoints
-- Follow the folder structure
-- Don't forget to add the __init__.py file.
-- Sequence of pixi commands : init -> add -> run -> lock ->install -> update
-- Define [project], [tasks], [dependencies] in your pixi.toml file or similar for pyproject.toml file
+- Follow the appropriate folder structure.
+- Always include the `__init__.py` file in packages.
+- Sequence of Pixi commands: **init** → **add** → **run** → **lock** → **install** → **update**.
+- Define `[project]`, `[tasks]`, and `[dependencies]` in your `pixi.toml` file (or the equivalent in `pyproject.toml`).
   
 ::::::::::::::::::::::::::::::::::::::::::::::::
