@@ -59,21 +59,25 @@ It has two main keys:
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 ```
-- Editable project install
+- Editable Installation
 
-This means that the package is installed in editable mode, so you can make changes to the package and see the changes reflected in the environment, without having to re-install the environment. The `greet_me` package itself is added as an editable dependency.
+Projects may be installed in editable mode, which allows you to make changes to the source code and have them reflected immediately in the environment without reinstallation. For example, the `greet_me` package can be added as an editable dependency.
   
 ```toml
 [tool.pixi.pypi-dependencies]
 greet_me = { path = ".", editable = true }
 ```
   
-- Dependency handling
-  For dependency management, following lines are necessary in your `pyproject.toml` file. `requires_python` tag is used to specify the version of Python.
-  
-  `[tool.pixi.workspace]`: This section controls where packages come from and what platforms Pixi should resolve for. It is also used to define project-wide settings.
-  
-  `[tool.pixi.pypi-dependencies]` : This section is used to delare the dependencies of our project that will be installed via Pip or similar tools from Python Package Index. In short they are libraries necessary for our project and will be installed via pip.
+- Dependency Management
+  For dependency handling, the pyproject.toml file should include the requires-python field, which specifies the supported Python versions. For example:
+```toml
+requires-python = ">=3.11, <3.12"
+```
+ In a `pixi.toml` file, the syntax would differ slightly, but the purpose remains the same.
+ 
+ Additional sections in `pyproject.toml` may include:
+  `[tool.pixi.workspace]`: Defines project-wide settings, including package sources and target platforms for resolution.  
+  `[tool.pixi.pypi-dependencies]` : Declares the dependencies to be installed from PyPI (or equivalent sources). These are the external libraries required by the project.
 
 ```toml
 [project]
@@ -105,7 +109,7 @@ python = ">=3.11"
 ```
 - Tasks
 
-Here you can specify various steps that you would want to run before making your package. It ususally lets you define and run custom commands or scripts for your project. You can specify `inputs`, `outputs` or `depends-on` tasks.
+The `tasks` section allows you to define custom commands or scripts that should be executed before packaging. These tasks may specify inputs, outputs, or dependencies, enabling you to automate steps in your workflow. You can specify `inputs`, `outputs` or `depends-on` tasks.
 
 ```toml
 [tool.pixi.tasks]
@@ -142,12 +146,12 @@ requests = ">=2.32.5,<3"
 greet  = { cmd = "echo 'Happy Python Packaging!'" }
 ```
 ## Lockfiles
-A lockfile contains everything needed to reproduce the project environment. It is generated from the dependencies specified in the `.toml` file.
+A **lockfile** contains the complete set of dependencies, including specific versions, required to reproduce the project environment. It is automatically generated based on the dependencies listed in the `.toml` file, ensuring that builds remain consistent and reproducible.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
-- Need to have a `pyproject.toml` file
-- Need to have `[build-system]` section  with `requires` and `build-backend` specfied.
-- Need to have `[project]` section with atleast `name` and `version` specified.
-- Nice to have `dependencies` specified in `[project]` section.
+- Every project must include a `pyproject.toml` file
+- The `[build-system]` section is required and must define both `requires` and `build-backend`.
+- The `[project]` section must, at minimum, include the project `name` and `version`.
+- It is recommended to specify dependencies in the `[project]` section for clarity and reproducibility.
   
 ::::::::::::::::::::::::::::::::::::::::::::::::
