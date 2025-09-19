@@ -6,40 +6,40 @@ exercises: 0
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- Why Pixi ?
+- Why use Pixi?
 - What are the benefits of Pixi ?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- To understand the benefits offered by Pixi
--  What is `pixi.toml` and `pyproject.toml`
--  What is `pixi.lock`
--  What do we mean by multi-environment support
--  
-
+- To understand the advantages offered by Pixi.
+-  To learn about `pixi.toml` and `pyproject.toml`
+-  To understand the role of `pixi.lock`.
+-  To explore the concept of multi-environment support.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-Pixi is a fast and reproducible package management tool. It has lots of [features](https://pixi.sh/latest/#what-is-the-difference-with-pixi) which are not all present in a single tool at this point in time. Hence we choose this tool.
-It comes with following features : 
+Pixi is a fast, modern and reproducible package management tool. It has lots of [features](https://pixi.sh/latest/#what-is-the-difference-with-pixi) which are not all present in a single tool at this point in time. These capabilities make Pixi an attractive choice for managing Python and multi-language projects.
 
-- Support for both PyPI and Conda packages.
-- Modern & fast.
-- Support for multi-language dependency ( E.g. RUST + Python, or Python + C++)
-- Uses `uv` under the hood.
-- Helps with reproducibility via `pixi.lock`
+Key features include:
+
+- **Support for both PyPI and Conda packages** : enabling flexibility in sourcing dependencies.
+- **Performance** :lightweight and modern, designed for speed.
+- **Multi-language dependency management** : e.g. Python with Rust, or Python with C/C++.
+- **Integration with `uv`** : leveraging a high-performance package installer.
+- **Reproducibility**: guaranteed through the use of `pixi.lock`.
+- **Configuration via TOML files**: supports both `pixi.toml` and `pyproject.toml`.
    
 ## Configuration files (`pixi.toml` and `pyproject.toml`)
 
-`pixi.toml` is the file used by Pixi for defining the environment , dependencies and tasks.
-`pyproject.toml` is the file in Python ecosystem (PEP 518/621) for configuring the build, distribution and configration of python projects. It is required in build tools like Poetry, Hatch, Flit , setuptools. It specifies metadata (name, version, author). you can also specifiy dependencies here.
+`pixi.toml`: The configuration file used by Pixi to define environments, dependencies, and tasks.
+`pyproject.toml`: A standard configuration file within the Python ecosystem (PEP 518/621). It is required by build tools such as Poetry, Hatch, Flit, and setuptools. This file specifies project metadata (e.g. name, version, author) as well as dependencies and build settings.
 
 ## Multi-environment support
 
-You can specify the installation of certain tools and packages specific to a particular OS [Windows, MacOS, Linux] or environmentsl like ( dev, test, prod) etc.
+Pixi allows you to define dependencies for specific operating systems (e.g. Windows, macOS, Linux) or for distinct environments such as development, testing, and production. This makes it easier to tailor the project configuration to match the context in which the software is being deployed or developed.
 
 
