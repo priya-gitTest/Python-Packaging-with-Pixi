@@ -245,6 +245,7 @@
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
 <li><a href="#whats-inside-pyproject.toml">Whats inside <code>pyproject.toml</code></a></li>
+<li><a href="#the-build-system-table">The <code>[build-system]</code> table</a></li>
 <li><a href="#lockfiles">Lockfiles</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -319,7 +320,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Metadata for Python packging</h1>
-        <p>Last updated on 2025-09-17 |
+        <p>Last updated on 2025-09-19 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/project_metadata.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -341,7 +342,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul><li>What is <code>pyproject.toml</code>?</li>
-<li>What is a lock file and why do I need one?</li>
+<li>What is a lockfile, and why is it necessary?</li>
 </ul></div>
 </div>
 </div>
@@ -349,24 +350,25 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>To understand the structure of <code>pyproject.toml</code>
+<ul><li>To understand the structure and purpose of
+<code>pyproject.toml</code>
 </li>
-<li>To understand the need for a lock file</li>
+<li>To appreciate the role and necessity of a lockfile.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
-<hr class="half-width"><p>In the previos lesson, we touched upon <code>pixi.toml</code>
-briefly. In this lesson, we will learn about
-<code>pyproject.toml</code>. <code>pyproject.toml</code> is the most
-common format for Python projects. Please not, for a project maintained
-using pixi, either of the 2 i.e. <code>pyproject.toml</code> or
-<code>pixi.toml</code> are fine. You just need to take care of some
-specific syntaxes.</p>
-<p>To add <code>pyproject.toml</code> file, we give the following
-command :</p>
+<hr class="half-width"><p>In the previous lesson, we briefly introduced <code>pixi.toml</code>.
+In this lesson, we shall focus on <code>pyproject.toml</code>, which is
+the most widely used configuration format for Python projects. Please
+note, for projects managed with Pixi, either <code>pyproject.toml</code>
+or <code>pixi.toml</code> may be employed. The primary distinction lies
+in syntax, so you need only ensure that you follow the appropriate
+conventions.</p>
+<p>To initialise a project using <code>pyproject.toml</code>, run the
+following command:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -393,24 +395,23 @@ command :</p>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.11"</span></span>
 <span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[]</span></span></code></pre>
 </div>
-<p>The <code>[build-system]</code> table in a pyproject.toml file tells
-packaging tools like pip what software is needed to build your Python
-project. It specifies the build backend that will be used to create
-distributable packages, like wheels (.whl) or source distributions
-(.sdist).</p>
-<p>This section was introduced by PEP 518 and is essential for modern
-Python packaging. The <code>[build-system]</code> table has two main
-keys:</p>
+</section><section><h2 class="section-heading" id="the-build-system-table">The <code>[build-system]</code> table<a class="anchor" aria-label="anchor" href="#the-build-system-table"></a></h2>
+<hr class="half-width"><p>This section of a <code>pyproject.toml</code> file informs packaging
+tools such as <code>pip</code> which software is required to build your
+project. It specifies the <strong>build backend</strong> responsible for
+producing distributable packages such as wheels (<code>.whl</code>) or
+source distributions (<code>.sdist</code>).</p>
+<p>This section was introduced by <strong>PEP 518</strong> and is
+essential for modern Python packaging. It has two main keys:</p>
 <ol style="list-style-type: decimal"><li>
-<code>requires</code>: This is a list of strings specifying the
-packages needed to build your project. These packages will be downloaded
-and installed into a temporary, isolated environment before the build
-process begins. You must include the build backend itself here.</li>
+<code>requires</code>: A list of packages required to build the
+project. These are downloaded and installed into a temporary, isolated
+environment prior to the build process. The build backend itself must
+also be listed here.</li>
 <li>
-<code>build-backend</code>: This is a string that points to the
-specific Python object (the “backend”) that packaging tools will use to
-execute the build. It’s the entry point for creating your project’s
-packages.</li>
+<code>build-backend</code>: A string reference to the Python object
+(the “backend”) that will be invoked by packaging tools to create the
+distributable packages.</li>
 </ol><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -605,7 +606,7 @@ any links that you are not going to use.
   "url": "https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/project_metadata.html",
   "identifier": "https://priya-gitTest.github.io/Python-Packaging-with-Pixi/instructor/project_metadata.html",
   "dateCreated": "2025-08-19",
-  "dateModified": "2025-09-17",
+  "dateModified": "2025-09-19",
   "datePublished": "2025-09-19"
 }
 
