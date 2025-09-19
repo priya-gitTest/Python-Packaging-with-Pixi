@@ -7,24 +7,23 @@ exercises: 10
 :::::::::::::::::::::::::::::::::::::: questions
 
 - What is `pyproject.toml`?
-- What is a lock file and why do I need one? 
+- What is a lockfile, and why is it necessary? 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- To understand the structure of `pyproject.toml`
-- To understand the need for a lock file
+- To understand the structure and purpose of `pyproject.toml`
+- To appreciate the role and necessity of a lockfile.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-In the previos lesson, we touched upon `pixi.toml` briefly. In this lesson, we will learn about `pyproject.toml`.
-`pyproject.toml` is the most common format for Python projects.
-Please not, for a project maintained using pixi, either of the 2 i.e. `pyproject.toml` or `pixi.toml` are fine. You just need to take care of some specific syntaxes.
+In the previous lesson, we briefly introduced `pixi.toml`. In this lesson, we shall focus on `pyproject.toml`, which is the most widely used configuration format for Python projects.
+Please note, for projects managed with Pixi, either `pyproject.toml` or `pixi.toml` may be employed. The primary distinction lies in syntax, so you need only ensure that you follow the appropriate conventions.
 
-To add `pyproject.toml` file, we give the following command : 
+To initialise a project using `pyproject.toml`, run the following command:
 ```bash
 pixi init --format pyproject
 ```
@@ -45,13 +44,16 @@ license = { text = "MIT" }
 requires-python = ">=3.11"
 dependencies = []
 ```
-The `[build-system]` table in a pyproject.toml file tells packaging tools like pip what software is needed to build your Python project. It specifies the build backend that will be used to create distributable packages, like wheels (.whl) or source distributions (.sdist).
+## The `[build-system]` table
 
-This section was introduced by PEP 518 and is essential for modern Python packaging.
-The `[build-system]` table has two main keys:
+This section of a `pyproject.toml` file informs packaging tools such as `pip` which software is required to build your project. It specifies the **build backend** responsible for producing distributable packages such as wheels (`.whl`) or source distributions (`.sdist`).
 
-1. `requires`: This is a list of strings specifying the packages needed to build your project. These packages will be downloaded and installed into a temporary, isolated environment before the build process begins. You must include the build backend itself here.
-2. `build-backend`: This is a string that points to the specific Python object (the "backend") that packaging tools will use to execute the build. It's the entry point for creating your project's packages.
+This section was introduced by **PEP 518** and is essential for modern Python packaging.
+It has two main keys:
+
+1. `requires`: A list of packages required to build the project. These are downloaded and installed into a temporary, isolated environment prior to the build process. The build backend itself must also be listed here.
+2. `build-backend`: A string reference to the Python object (the “backend”) that will be invoked by packaging tools to create the distributable packages.
+   
 ```toml
 [build-system]
 requires = ["hatchling"]
