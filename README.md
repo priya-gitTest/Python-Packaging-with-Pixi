@@ -5,6 +5,7 @@ This lesson introduces the basics of Python packaging using a tool called [Pixi]
 This course is designed for intermediate Python users.
 
 ======= Abstract========
+
 Packaging is one of the most critical yet overlooked skills for Python developers. This course introduces you to **modern, reliable, and reproducible packaging workflows** using **Pixi**, a powerful tool that combines the best of PyPI and Conda<sup>*</sup>.
 
 Through hands-on lessons, you’ll learn:
