@@ -20,9 +20,11 @@ Download the [data zip file](https://example.com/FIXME) and unzip it to your Des
 
 ### Details
 
-For this course, we will use GitHub Codespaces, providing a cloud-based development environment that runs directly in your web browser.
-This setup means no local software installation is required on your personal computer, simplifying our getting-started process.
-Your Codespace environment is Linux-based, so we will be using standard Linux commands and tools throughout 
+For this course, we will use **GitHub Codespaces**, which provides a cloud-based development environment that runs directly in your web browser.
+
+This approach means that no software installation is required on your personal computer, making it much easier to get started.
+
+Your Codespace environment will be **Linux-based**, so we will be using standard Linux commands and tools throughout the lessons.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -30,17 +32,17 @@ Your Codespace environment is Linux-based, so we will be using standard Linux co
 
 - Log into [GitHub](https://github.com) and create a new repository for this lesson called `greet_me`.
 
-- From the top right, under the Code drop down, choose the Codepaces tab and click on the button : Create codespace on main.
+- From the repository page, open the **Code** dropdown menu, select the **Codespaces** tab, and click **Create codespace on main**.
 
 <img width="416" height="353" alt="image" src="https://github.com/user-attachments/assets/15167dca-b8c3-4701-87ac-3d6cb2b1022b" />
 
- - Open the terminal inside the codepaces created for you and try the command below.
+ - Once your Codespace has been created, open the terminal inside it and run the following commands.
    
 :::::::::::::::: spoiler
 
 ### Linux
 
-To install pixi, run:
+To install Pixi, run:
 ```bash
 curl -fsSL https://pixi.sh/install.sh | sh
 ```
@@ -56,11 +58,12 @@ The 'pixi' binary is installed into '/home/codespace/.pixi/bin'
 Updating '/home/codespace/.bashrc'
 Please restart or source your shell.
 ```
-To restart the shell, use this command, if needed.
+If required, restart your shell:
 ```bash
 source ~/.bashrc
 ```
-Check if pixi is installed correctly
+Verify that Pixi has been installed correctly.
+_Please note: the version number displayed may differ from the example below, as newer releases may have been published since this course was written._
 ```bash
 pixi --version
 ```
