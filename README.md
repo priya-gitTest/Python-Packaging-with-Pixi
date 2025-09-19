@@ -25,7 +25,7 @@ By the end of the course, you will:
 
 This course is ideal for Python developers, data scientists, and researchers who want to share their work, ensure reproducibility, and adopt industry-standard packaging practices, without the usual complexity.
 
-<sup>*</sup> not covered in this course yet
+<sup>*</sup> not covered in this course yet.
 
 ================ Section below to be deleted =====================
 # The Carpentries Workbench Template Markdown Lesson
