@@ -5,7 +5,8 @@ title: 'Reference'
 1. [Using Python Projects With Pixi](https://prefix.dev/blog/using_python_projects_with_pixi)
 2. [Packaging Python Projects](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
 3. [ff-2024-create-python-package](https://github.com/pyOpenSci/ff-2024-create-python-package)
-4. [Building and Publishing](https://packaging.python.org/en/latest/guides/section-build-and-publish/)
+4. [pyOpenSci Python Package Guide](https://www.pyopensci.org/python-package-guide/index.html)
+5. [Building and Publishing](https://packaging.python.org/en/latest/guides/section-build-and-publish/)
 
 ## Glossary
 
