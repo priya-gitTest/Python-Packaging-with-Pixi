@@ -302,6 +302,18 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="extra.html">6. Extra</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -1354,6 +1366,76 @@ token</strong>
 <li>Use <code>twine upload</code> to securely publish your package.</li>
 <li>Test your package by installing it from TestPyPI via
 <code>pip install</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-extra"><p>Content from <a href="extra.html">Extra</a></p>
+<hr>
+<p>Last updated on 2025-09-29 |
+
+        <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/extra.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How can we use <code>pixi run start</code>?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Learn how to use Pixi to run your project.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>After cloning a project, Pixi makes it simple to run predefined
+tasks. If your <code>pixi.toml</code> (or <code>pyproject.toml</code>)
+contains a task named start, you can execute it directly using:</p>
+<p><code>git clone project.git &amp;&amp; cd project</code></p>
+<p><code>pixi run start</code></p>
+<p>This command will: - Ensure that the required environment is
+installed (creating or updating it if necessary). - Run the start task
+exactly as defined in your configuration file.</p>
+<p>This provides a convenient and reproducible way to launch your
+project without needing to manually manage dependencies or commands.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Define tasks such as <code>start</code> in your
+<code>pixi.toml</code> or <code>pyproject.toml</code>.</li>
+<li>Use <code>pixi run &lt;task-name&gt;</code> to execute those
+tasks.</li>
+<li>
+<code>pixi run start</code> ensures consistency and reproducibility
+when launching a project.</li>
 </ul>
 </div>
 </div>
