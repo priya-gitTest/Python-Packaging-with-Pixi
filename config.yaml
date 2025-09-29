@@ -90,6 +90,6 @@ profiles:
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
 
-varnish: priya-gitTest/varnish
+varnish: priya-gitTest/po-varnish
 url: 'https://priya-gittest.github.io/Python-Packaging-with-Pixi/'
 
