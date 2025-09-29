@@ -19,7 +19,7 @@ Through hands-on lessons, you’ll learn:
 
 By the end of the course, you will:
 
-- Understand the complete packaging workflow from idea → distribution → installation.
+- Understand the complete packaging workflow from code → distribution → installation.
 - Be able to confidently release your own Python packages to the community.
 - Gain a reproducible, professional workflow for managing Python projects.
 
