@@ -16,8 +16,8 @@ It is a roughly 2 hour course.
 
 - Explain why packaging matters for reproducibility, versioning, and collaboration.
 - Structure a Python project following modern best practices.
-- Manage dependencies and lockfiles using Pixi to ensure consistent environments.
 - Define clear and complete project metadata in pyproject.toml / pixi.toml.
+- Manage dependencies and lockfiles using Pixi to ensure consistent environments.
 - Build source and wheel distributions of a Python package..
 - Publish a package to Test Python Package Index (TestPyPI) using Twine.
 - Install a package from TestPyPI using pip.
