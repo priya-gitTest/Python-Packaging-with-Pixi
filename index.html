@@ -326,15 +326,16 @@
 basics of Python packaging and how to do that using pixi It is a roughly
 2 hour course.</p>
 <section><h2 class="section-heading" id="learning-objectives">Learning Objectives<a class="anchor" aria-label="anchor" href="#learning-objectives"></a></h2>
-<hr class="half-width"><ul><li>Explain why packaging code is beneficial for collaboration and
-reproducibility.</li>
-<li>Structure a Python project in a standard, recognizable way.</li>
-<li>Define project metadata required for packaging.</li>
-<li>Build a distributable package from source files.</li>
-<li>Install a package locally for testing and development.</li>
-<li>Write and run a simple unit test for the package’s
-functionality.</li>
-<li>Upload a package to the Test Python Package Index (TestPyPI).</li>
+<hr class="half-width"><ul><li>Explain why packaging matters for reproducibility, versioning, and
+collaboration.</li>
+<li>Structure a Python project following modern best practices.</li>
+<li>Manage dependencies and lockfiles using Pixi to ensure consistent
+environments.</li>
+<li>Define clear and complete project metadata in pyproject.toml /
+pixi.toml.</li>
+<li>Build source and wheel distributions of a Python package..</li>
+<li>Publish a package to Test Python Package Index (TestPyPI) using
+Twine.</li>
 <li>Install a package from TestPyPI using pip.</li>
 </ul><div id="prerequisites" class="callout prereq">
 <div class="callout-square">
@@ -401,7 +402,7 @@ and run the following commands.</li>
   Linux
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>To install Pixi, run:</p>
 <div class="codewrapper sourceCode" id="cb1">
