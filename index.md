@@ -14,13 +14,12 @@ It is a roughly 2 hour course.
 
 ## Learning Objectives
 
-- Explain why packaging code is beneficial for collaboration and reproducibility.
-- Structure a Python project in a standard, recognizable way.
-- Define project metadata required for packaging.
-- Build a distributable package from source files.
-- Install a package locally for testing and development.
-- Write and run a simple unit test for the package's functionality.
-- Upload a package to the Test Python Package Index (TestPyPI).
+- Explain why packaging matters for reproducibility, versioning, and collaboration.
+- Structure a Python project following modern best practices.
+- Manage dependencies and lockfiles using Pixi to ensure consistent environments.
+- Define clear and complete project metadata in pyproject.toml / pixi.toml.
+- Build source and wheel distributions of a Python package..
+- Publish a package to Test Python Package Index (TestPyPI) using Twine.
 - Install a package from TestPyPI using pip.
 
 :::::::::::::::::::::::::::::::::::::::::: prereq
