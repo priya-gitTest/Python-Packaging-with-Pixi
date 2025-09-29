@@ -28,7 +28,7 @@ Your Codespace environment will be **Linux-based**, so we will be using standard
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## 1. Create a repository 
+## Create a repository 
 
 - Log into [GitHub](https://github.com) and create a new repository for this lesson called `greet_me`.
 
