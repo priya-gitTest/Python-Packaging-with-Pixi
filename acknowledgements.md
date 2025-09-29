@@ -3,7 +3,8 @@ title: 'Acknowledgements'
 ---
 
 **Funding**
-I would like to extend my sincere thanks to the team at DRA for their patience and guidance throughout the development of this course, which may in future be paid via DRA for delivering it through their network.
+
+* I would like to extend my sincere thanks to the team at DRA for their patience and guidance throughout the development of this course, which may in future be paid via DRA for delivering it through their network.
 
 **Authorship**  
 
