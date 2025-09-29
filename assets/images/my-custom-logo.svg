@@ -1,0 +1,14 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Hat body -->
+  <path d="M150 20 C100 100, 50 200, 150 280 C250 200, 200 100, 150 20 Z" fill="purple" stroke="black" stroke-width="3"/>
+  
+  <!-- Hat brim -->
+  <ellipse cx="150" cy="270" rx="100" ry="20" fill="purple" stroke="black" stroke-width="3"/>
+  
+  <!-- Stars -->
+  <polygon points="150,60 155,75 170,75 158,85 163,100 150,90 137,100 142,85 130,75 145,75" fill="silver"/>
+  <polygon points="110,140 115,155 130,155 118,165 123,180 110,170 97,180 102,165 90,155 105,155" fill="silver"/>
+  <polygon points="190,140 195,155 210,155 198,165 203,180 190,170 177,180 182,165 170,155 185,155" fill="silver"/>
+  <polygon points="150,200 155,215 170,215 158,225 163,240 150,230 137,240 142,225 130,215 145,215" fill="silver"/>
+</svg>
