@@ -13,6 +13,6 @@ title: 'Acknowledgements'
 * ChatGPT was used for language consistency and corrections.
 
 **Resources**
-* I would also like to thank the PyOpenSci team for their excellent course delivered during the [PyOpenSci Fall Festival 2024](https://github.com/pyOpenSci/ff-2024-create-python-package), which provided valuable inspiration and insights.
+* I would like to thank the PyOpenSci team for their excellent course delivered during the [PyOpenSci Fall Festival 2024](https://github.com/pyOpenSci/ff-2024-create-python-package), which provided valuable inspiration and insights.
 
 
