@@ -37,6 +37,16 @@ Versioning: You may version your package and distribute multiple versions, there
 Standardisation: Packaging is the established method of distributing code via recognised repositories such as PyPI.
 
 Metadata: Packages include project-specific metadata, which is essential for end users.
+```mermaid
+graph LR
+    A["Write Your Python Code"] --> B["Create Packaging Files(pyproject.toml)"]
+    B --> C["Build the Package<br/>(e.g., python -m build)"]
+    C --> D["Publish to PyPI<br/>(e.g., twine upload dist/*)"]
+    D --> E["User Installs via pip<br/>(pip install your-package)"]
+    E --> F["✅ User Can Import and Use Your Code"]
+
+```
+
 
   ## What may be packaged ?
 
