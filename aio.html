@@ -373,7 +373,7 @@
         
 <section id="aio-intoduction_python_packaging"><p>Content from <a href="intoduction_python_packaging.html">Why Python Packages?</a></p>
 <hr>
-<p>Last updated on 2025-09-19 |
+<p>Last updated on 2025-10-20 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/intoduction_python_packaging.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -437,6 +437,13 @@ versions, thereby supporting backwards compatibility.</p>
 code via recognised repositories such as PyPI.</p>
 <p>Metadata: Packages include project-specific metadata, which is
 essential for end users.</p>
+<pre class="mermaid"><code>graph LR
+    A["Write Your Python Code"] --&gt; B["Create Packaging Files(pyproject.toml)"]
+    B --&gt; C["Build the Package&lt;br/&gt;(e.g., python -m build)"]
+    C --&gt; D["Publish to PyPI&lt;br/&gt;(e.g., twine upload dist/*)"]
+    D --&gt; E["User Installs via pip&lt;br/&gt;(pip install your-package)"]
+    E --&gt; F["✅ User Can Import and Use Your Code"]
+</code></pre>
 <p>## What may be packaged ?</p>
 <p>Any .py files (modules) or directories with <strong>init</strong>.py
 (packages) can be packaged..</p>
@@ -1487,8 +1494,8 @@ any links that you are not going to use.
   "url": "https://priya-gittest.github.io/Python-Packaging-with-Pixi/aio.html",
   "identifier": "https://priya-gittest.github.io/Python-Packaging-with-Pixi/aio.html",
   "dateCreated": "2025-08-19",
-  "dateModified": "2025-10-14",
-  "datePublished": "2025-10-14"
+  "dateModified": "2025-10-20",
+  "datePublished": "2025-10-20"
 }
 
   </script><script>
