@@ -39,43 +39,13 @@ Standardisation: Packaging is the established method of distributing code via re
 Metadata: Packages include project-specific metadata, which is essential for end users.
 ```mermaid
 graph LR
-    A["Write Your Python Code"] --> B["Create Packaging Files(pyproject.toml)"]
+    A["Python Code"] --> B["Create Packaging Files(pyproject.toml)"]
     B --> C["Build the Package<br/>(e.g., python -m build)"]
     C --> D["Publish to PyPI<br/>(e.g., twine upload dist/*)"]
     D --> E["User Installs via pip<br/>(pip install your-package)"]
     E --> F["User Can Import and Use Your Code"]
+    F --> A
 
-```
-
-```mermaid
-graph TD
-    A[1. Code]
-    B[2. Build (sdist/wheel)]
-    C[3. Upload / Publish (PyPI)]
-    D[4. Install (pip)]
-    E[5. Import / Use]
-
-    %% Define the flow in a cycle
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> A
-    
-    %% Style the nodes to make them stand out
-    style A fill:#D9E8F5, stroke:#3A8BCF, stroke-width:2px
-    style B fill:#E6F5D9, stroke:#6AAF3A, stroke-width:2px
-    style C fill:#FFEEDD, stroke:#F5A623, stroke-width:2px
-    style D fill:#F5D9D9, stroke:#CF3A3A, stroke-width:2px
-    style E fill:#F5D9E8, stroke:#A03ACF, stroke-width:2px
-
-    subgraph The Development & Consumption Cycle
-        A
-        B
-        C
-        D
-        E
-    end
 ```
 
   ## What may be packaged ?
