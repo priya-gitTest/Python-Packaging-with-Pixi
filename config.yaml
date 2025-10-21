@@ -66,12 +66,12 @@ contact: 'priyankaoe@gmail.com,hello@digiresacademy.org'
 
 # Order of episodes in your lesson
 episodes: 
-- intoduction_python_packaging.md
-- why_pixi.md
-- project_structure.md
-- project_metadata.md
-- project_publishing.md
-- extra.md
+- 1_intoduction_python_packaging.md
+- 2_why_pixi.md
+- 3_project_structure.md
+- 4_project_metadata.md
+- 5_project_publishing.md
+- 6_extra.md
 
 # Information for Learners
 learners: 
