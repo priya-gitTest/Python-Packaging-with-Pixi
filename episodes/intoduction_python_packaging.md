@@ -39,13 +39,11 @@ Standardisation: Packaging is the established method of distributing code via re
 Metadata: Packages include project-specific metadata, which is essential for end users.
 ```mermaid
 graph LR
-    A["Python Code"] --> B["Create Packaging Files(pyproject.toml)"]
-    B --> C["Build the Package<br/>(e.g., python -m build)"]
-    C --> D["Publish to PyPI<br/>(e.g., twine upload dist/*)"]
-    D --> E["User Installs via pip<br/>(pip install your-package)"]
-    E --> F["User Can Import and Use Your Code"]
-    F --> A
-
+    A[1. Python Code] --> B[2. Build the Package\n(e.g., python -m build)]
+    B --> C[3. Publish to PyPI\n(e.g., twine upload dist/*)]
+    C --> D[4. Install (pip/pixi/uv)\n(e.g., pip install <package>)]
+    D --> E[5. Import and Use]
+    E --> A
 ```
 
   ## What may be packaged ?
