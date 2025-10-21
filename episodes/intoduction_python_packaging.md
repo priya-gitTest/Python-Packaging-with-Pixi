@@ -48,27 +48,6 @@ graph LR
 ```
 
 ```mermaid
-graph TD
-    A[1. Code]
-    B[2. Build (sdist/wheel)]
-    C[3. Upload / Publish (PyPI)]
-    D[4. Install (pip)]
-    E[5. Import / Use]
-
-    %% Define the flow in a cycle
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> A
-    
-    subgraph The Development & Consumption Cycle
-        A
-        B
-        C
-        D
-        E
-    end
 ```
 
   ## What may be packaged ?
