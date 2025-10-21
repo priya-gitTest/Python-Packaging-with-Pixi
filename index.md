@@ -28,5 +28,6 @@ It is a roughly 2 hour course.
   - Basic knowledge of Python
   - Basic knowledge of [GIT](https://swcarpentry.github.io/git-novice/)
   - A GitHub account
+  - A PyPI or TestPyPI API token
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
