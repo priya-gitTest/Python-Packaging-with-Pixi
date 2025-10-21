@@ -38,9 +38,6 @@ Your Codespace environment will be **Linux-based**, so we will be using standard
 
  - Once your Codespace has been created, open the terminal inside it and run the following commands.
    
-:::::::::::::::: spoiler
-
-### Linux
 
 To install Pixi, run:
 ```bash
