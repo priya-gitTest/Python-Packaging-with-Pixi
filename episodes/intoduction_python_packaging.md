@@ -43,7 +43,7 @@ graph LR
     B --> C["3. Publish to PyPI<br/>(e.g., twine upload dist/*)"]
     C --> D["4. Install (pip/pixi/uv)<br/>(e.g., pip install <package>)"]
     D --> E["5. Import and Use"]
-    E --> A["6. Create new code"]
+    E --> A
 ```
 
   ## What may be packaged ?
