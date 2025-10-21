@@ -37,11 +37,13 @@ Your Codespace environment will be **Linux-based**, so we will be using standard
 <img width="416" height="353" alt="image" src="https://github.com/user-attachments/assets/15167dca-b8c3-4701-87ac-3d6cb2b1022b" />
 
  - Once your Codespace has been created, open the terminal inside it and run the following commands.
+   
 :::::::::::::::: spoiler
 
-### Linux   
+### Install Pixi
 
-To install Pixi, run:
+Run the following
+
 ```bash
 curl -fsSL https://pixi.sh/install.sh | sh
 ```
