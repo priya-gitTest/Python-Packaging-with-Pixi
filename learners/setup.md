@@ -69,7 +69,7 @@ _Please note: the version number displayed may differ from the example below, as
 pixi --version
 ```
 ```output
-pixi 0.53.0
+pixi 0.57.0
 ```
 ::::::::::::::::::::::::
 
