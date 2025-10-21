@@ -39,21 +39,22 @@ Standardisation: Packaging is the established method of distributing code via re
 Metadata: Packages include project-specific metadata, which is essential for end users.
 
 ## Steps to create a Python Package :
+
 <img width="1298" height="250" alt="image" src="https://github.com/user-attachments/assets/be6f94ec-599b-4a1e-bd5b-63c2dfad720c" />
 
 
-  ## What may be packaged ?
+## What may be packaged ?
 
-  Any .py files (modules) or directories with __init__.py (packages) can be packaged..
+Any .py files (modules) or directories with __init__.py (packages) can be packaged..
 
-  ## What is PyPI
+## What is PyPI
 
-  PyPI is the repository where all released Python packages are made available for end users. You may explore it here: [PyPI](https://pypi.org/). 
+PyPI is the repository where all released Python packages are made available for end users. You may explore it here: [PyPI](https://pypi.org/). 
 There is also [TestPyPI](https://test.pypi.org/), a repository which allows us to experiment with distribution tools and procedures without affecting the live PyPI. In this course, we will publish our package to TestPyPI.
 
-  ## What is a Build ?
+## What is a Build ?
 
-  A build is the process by which your project’s source code is transformed into a distributable format. These build artefacts can then be installed using tools such as `pip`.
+A build is the process by which your project’s source code is transformed into a distributable format. These build artefacts can then be installed using tools such as `pip`.
  A build may be created using the command in the terminal : 
  ```bash
 python -m build
