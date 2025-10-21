@@ -43,7 +43,7 @@ graph LR
     B --> C["Build the Package<br/>(e.g., python -m build)"]
     C --> D["Publish to PyPI<br/>(e.g., twine upload dist/*)"]
     D --> E["User Installs via pip<br/>(pip install your-package)"]
-    E --> F["✅ User Can Import and Use Your Code"]
+    E --> F["User Can Import and Use Your Code"]
 
 ```
 
