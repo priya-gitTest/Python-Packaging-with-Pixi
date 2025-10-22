@@ -1,7 +1,7 @@
 ---
 title: "Extra"
-teaching: 15
-exercises: 10
+teaching: 1
+exercises: 5
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
