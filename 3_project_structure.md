@@ -31,49 +31,48 @@ Each package must contain a special file named `__init__.py`. The presence of th
 
 ## Project Structure
 A typical project would look like :
-```greet_me/
-└── my_package/
+```
+greet_me/
+└── src/my_package/
     ├── __init__.py
     ├── happy.py
     └── sad.py
 ```
 Let us create a similar structure within our codespace.
 ```bash
-pixi init greet_me
+pixi init --format pyproject
 ```
 ```output
-✔ Created ...greet_me/pixi.toml
+✔ Created /workspaces/pixi_demo/pyproject.toml
 ```
 
 This generates the following structure:
 
-<img width="301" height="96" alt="image" src="https://github.com/user-attachments/assets/b07a9498-cd76-470b-80ad-d74a5202c061" />
+<img width="194" height="213" alt="image" src="https://github.com/user-attachments/assets/cf77b5b3-2b66-413e-9d80-f67ecebc45fa" />
 
-If you prefer to use a `pyproject.toml` file, the following syntax is required (our preferred approach, which will be demonstrated in the next lesson):
 
-```bash
-pixi init --format pyproject
-```
-
-`pixi.toml` : The initial `pixi.toml` file generated may look like this:
+`pyproject.toml` : The initial `pyproject.toml` file generated may look like this:
 
 ```toml
-[workspace]
-authors = ["Priyanka O"]
-channels = ["conda-forge"]
+[project]
+authors = [{name = "Priyanka Demo", email = "demo@users.noreply.github.com"}]
+dependencies = []
 name = "greet_me"
+requires-python = ">= 3.11"
 version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"] #Download and install Conda packages from the conda-forge channel
 platforms = ["linux-64"]
-description = "A simple greeting package."
 
-[dependencies]
-python = ">=3.10"
+[tool.pixi.pypi-dependencies] #Add dependencies here which needs to be installed from PyPI
+greet_me = { path = ".", editable = true }
 
-[tasks]
-```
-Change into the project directory:
-```bash
-cd greet_me
+[tool.pixi.tasks]
 ```
 
 To add libraries via Pixi:
@@ -83,12 +82,52 @@ pixi add requests
 ```output
 ✔ Added requests >=2.32.5,<3
 ```
-This will update the `[dependencies]` section in `pixi.toml`:
+This will create/update the `[tool.pixi.dependencies]` section in `pyproject.toml`.
 
 ```toml
-[dependencies]
+[tool.pixi.dependencies]
 requests = ">=2.32.5,<3"
 ```
+It also generates a `pixi.lock` file which may look somewhat like the image below.
+
+<img width="590" height="262" alt="image" src="https://github.com/user-attachments/assets/3955c422-99ab-4690-a54f-b0c66decfa61" />
+
+
+To remove a package, use this command and check that `pyproject.toml` is corrected and the package is removed from there.
+```bash
+pixi remove requests
+```
+```output
+✔ Removed requests
+```
+To add libraries from PyPI via Pixi:
+```bash
+pixi add --pypi requests
+```
+```output
+✔ Added requests >=2.32.5, <3
+Added these as pypi-dependencies.
+```
+Check the `pyproject.toml` file. These get added under the `[project]` section 
+```toml
+[project]
+dependencies = ["requests>=2.32.5,<3"]
+name = "greet_me"
+```
+Please note : this wont create a problem when uploading the build but can create problems, when installing the builds.
+So best to keep it empty for now and move this to `[tool.pixi.pypi-dependencies]` section , for all projects which need to come from via PyPI namely **build** and **twine** which are used to create and upload build respectively.
+```toml
+[project]
+dependencies = []
+name = "greet_me"
+...
+[tool.pixi.pypi-dependencies]
+requests = ">=2.32.5,<3"
+greet_me = { path = ".", editable = true }
+```
+
+Other commands, that can be later explored : 
+
 To generate or update the `pixi.lock` file:
 ```bash
 pixi lock
@@ -115,7 +154,11 @@ pixi update
 ✔ Lock-file was already up-to-date
 ```
 ## Adding Modules
-Create a folder named `my_package` and add three files: `happy.py`, `sad.py`, and `__init__.py`.
+Lets create these 2 files: `happy.py`, `sad.py` in the folder src/greet_me.
+
+Please note, in VSCode inside GitHub codepsaces, you mabe be prompted for below, when creating a python file. So just Install it.
+<img width="650" height="156" alt="image" src="https://github.com/user-attachments/assets/c3f5975a-61fb-4a41-99f9-5064c3c40e22" />
+
 
 ```python
 # happy.py <- A module
@@ -133,22 +176,30 @@ greet_me/
 ├── LICENSE
 ├── pyproject.toml
 ├── README.md
-├── pixi.toml
 ├── pixi.lock         # auto-generated, do not edit
-├── tests/
-│   └── test_greetings.py
-└── my_package/
+└── src/greet_me/
     ├── __init__.py
     ├── happy.py
     └── sad.py
 ```
+<img width="203" height="393" alt="image" src="https://github.com/user-attachments/assets/6acc1213-b9f6-48f9-b385-a3c10268ccd9" />
+
+
 ## Running a Task
-Add the following task to your `pixi.toml` file:
+
+Task is a command alias that you can execute easily via the CLI (e.g., pixi run <task-name>). 
+
+Run the following command to add a task and observe the changes in `pyproject.toml` file:
+```bash
+pixi task add start "python -c 'from greet_me import happy; print(happy.greet_happy())'"
+```
+
+`pyproject.toml` file:
 
 ```toml
 
-[tasks]
-start = "python -c 'from my_package  import happy; print(happy.greet_happy())'"
+[tool.pixi.tasks]
+start = "python -c 'from greet_me import happy; print(happy.greet_happy())'"
 ```
 Then execute:
 ```bash
@@ -157,10 +208,13 @@ pixi run start
 ```output
 Yay! happy day! 😀
 ```
+
+You can read more about tasks [here](https://pixi.sh/dev/workspace/advanced_tasks/), which contains all the advanced use cases needed in a professional setting.
+
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Follow the appropriate folder structure.
 - Always include the `__init__.py` file in packages.
 - Sequence of Pixi commands: **init** → **add** → **run** → **lock** → **install** → **update**.
-- Define `[project]`, `[tasks]`, and `[dependencies]` in your `pixi.toml` file (or the equivalent in `pyproject.toml`).
+- Define / check `[project]`, `[dependencies]` and `[tasks]` in your `pyproject.toml` file .
   
 ::::::::::::::::::::::::::::::::::::::::::::::::

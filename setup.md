@@ -30,7 +30,7 @@ Your Codespace environment will be **Linux-based**, so we will be using standard
 
 ## Create a repository 
 
-- Log into [GitHub](https://github.com) and create a new repository for this lesson called `greet_me`.
+- Log into [GitHub](https://github.com) and create a new repository for this lesson called `greet_me` and add a Licence File when creating the repository.
 
 - From the repository page, open the **Code** dropdown menu, select the **Codespaces** tab, and click **Create codespace on main**.
 

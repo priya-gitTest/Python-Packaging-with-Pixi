@@ -37,45 +37,48 @@ The two key tools we need are:
 The `build` tool reads your `pyproject.toml` file and generates the package distribution files.
 
 ```bash
-pip install build
+pixi add --pypi build
 ```
      
 ```output
-Collecting build
-   Downloading build-1.3.0-py3-none-any.whl.metadata (5.6 kB)
- Requirement already satisfied: packaging>=19.1 in /home/codespace/.local/lib/python3.12/site-packages (from build) (25.0)
- Collecting pyproject_hooks (from build)
-   Downloading pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
- Downloading build-1.3.0-py3-none-any.whl (23 kB)
- Downloading pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
- Installing collected packages: pyproject_hooks, build
- Successfully installed build-1.3.0 pyproject_hooks-1.2.0
+✔ Added build >=1.3.0, <2
+Added these as pypi-dependencies.
 ```
-     
+Empty the depenencies under `[project]` and move/edit them to `[tool.pixi.pypi-dependencies]` section, like shown below : 
+
+```toml
+[project]
+dependencies = []
+
+[tool.pixi.pypi-dependencies]
+requests = ">=2.32.5,<3"
+build = ">=1.3.0,<2"
+```
+
 ```bash
-python -m build
+pixi run python -m build
 ```
      
 ```output
  * Creating isolated environment: venv+pip...
- * Installing packages in isolated environment:
-   - hatchling
- * Getting build dependencies for sdist...
- * Building sdist...
- * Building wheel from sdist
- * Creating isolated environment: venv+pip...
- * Installing packages in isolated environment:
-   - hatchling
- * Getting build dependencies for wheel...
- * Building wheel...
- Successfully built greet_me-0.1.0.tar.gz and greet_me-0.1.0-py3-none-any.whl
+* Installing packages in isolated environment:
+  - hatchling
+* Getting build dependencies for sdist...
+* Building sdist...
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - hatchling
+* Getting build dependencies for wheel...
+* Building wheel...
+Successfully built greet_me-0.1.0.tar.gz and greet_me-0.1.0-py3-none-any.whl
  ```
       
 This command creates a `dist` directory containing two files:
 - A wheel file (`greet_me-0.1.0-py3-none-any.whl`).
 - A source archive (`greet_me-0.1.0.tar.gz`).
      
-<img width="259" height="398" alt="image" src="https://github.com/user-attachments/assets/302f502b-34ed-470e-a4e0-884b808a6ff0" />
+<img width="306" height="533" alt="image" src="https://github.com/user-attachments/assets/503697e4-b93b-45e9-9904-229bd892b47a" />
 
 
  ## Step 2 : Create an account on TestPyPI
@@ -89,64 +92,45 @@ This command creates a `dist` directory containing two files:
 
 ## Step 3: Upload your build
 The **Twine** tool is used to securely upload your package distributions.
-   ```bash
-   pip install build twine
+Install `twine` and modify the `pyroject.toml` file simmilar to what you did for `build` tool above.
+ 
+```bash
+pixi add --pypi twine
+```
 
-   twine upload --repository testpypi dist/*
-   ```
-  You will be prompted for your TestPyPI username and password. Use the API token instead of your password by entering `__token__` as the username and pasting the token when prompted for a password.
+```toml
+     [project]
+     dependencies = []
+     
+     [tool.pixi.pypi-dependencies]
+     requests = ">=2.32.5,<3"
+     build = ">=1.3.0,<2"
+```
+Now upload the package to TestPyI
+```bash
+   pixi run twine upload --repository testpypi dist/*
+```
+  You will be prompted for your TestPyPI API Token, so keep it handy and paste it, when prompted. Use the API token instead of your password by entering `__token__` as the username and pasting the token when prompted for a password.
 
   ```output
 Uploading distributions to https://test.pypi.org/legacy/
-INFO     dist/po_greet_me-0.1.1-py3-none-any.whl (0.8 KB)                                                                                                                                                                  
-INFO     dist/po_greet_me-0.1.1.tar.gz (5.0 KB)                                                                                                                                                                            
-INFO     username set by command options                                                                                                                                                                                   
-INFO     Querying keyring for password                                                                                                                                                                                     
-INFO     No keyring backend found                                                                                                                                                                                          
+WARNING  This environment is not supported for trusted publishing                                                     
 Enter your API token: 
-INFO     username: __token__                                                                                                                                                                                               
-INFO     password: <hidden>                                                                                                                                                                                                
-Uploading po_greet_me-0.1.1-py3-none-any.whl
-100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 kB • 00:00 • ?
-INFO     Response from https://test.pypi.org/legacy/:                                                                                                                                                                      
-         200 OK                                                                                                                                                                                                            
-INFO     <html>                                                                                                                                                                                                            
-          <head>                                                                                                                                                                                                           
-           <title>200 OK</title>                                                                                                                                                                                           
-          </head>                                                                                                                                                                                                          
-          <body>                                                                                                                                                                                                           
-           <h1>200 OK</h1>                                                                                                                                                                                                 
-           <br/><br/>                                                                                                                                                                                                      
-                                                                                                                                                                                                                           
-                                                                                                                                                                                                                           
-                                                                                                                                                                                                                           
-          </body>                                                                                                                                                                                                          
-         </html>                                                                                                                                                                                                           
-Uploading po_greet_me-0.1.1.tar.gz
-100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.7/6.7 kB • 00:00 • ?
-INFO     Response from https://test.pypi.org/legacy/:                                                                                                                                                                      
-         200 OK                                                                                                                                                                                                            
-INFO     <html>                                                                                                                                                                                                            
-          <head>                                                                                                                                                                                                           
-           <title>200 OK</title>                                                                                                                                                                                           
-          </head>                                                                                                                                                                                                          
-          <body>                                                                                                                                                                                                           
-           <h1>200 OK</h1>                                                                                                                                                                                                 
-           <br/><br/>                                                                                                                                                                                                      
-                                                                                                                                                                                                                           
-                                                                                                                                                                                                                           
-                                                                                                                                                                                                                           
-          </body>                                                                                                                                                                                                          
-         </html>                                                                                                                                                                                                           
+Uploading greet_me1-0.1.7-py3-none-any.whl
+100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 kB • 00:00 • ?
+Uploading greet_me1-0.1.7.tar.gz
+100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 kB • 00:00 • ?
 
 View at:
-https://test.pypi.org/project/po-greet-me/0.1.1/
+https://test.pypi.org/project/greet-me1/0.1.7/
   ```
 
 After a successful upload, your package will be available at a URL such as: E.g. : 
-`https://test.pypi.org/project/po-greet-me/0.1.1/`
+`[https://test.pypi.org/project/po-greet-me/0.1.1/](https://test.pypi.org/project/greet-me1/0.1.7/)`
 
-<img width="1619" height="854" alt="image" src="https://github.com/user-attachments/assets/980a83e1-dfce-4902-bb85-e44d47af9088" />
+<img width="1743" height="973" alt="image" src="https://github.com/user-attachments/assets/d41cc3d8-1d9a-4a4e-bdaa-a600fe9d2b1a" />
+
+
 ## Handling Errors
 If the package name is too similar to an existing project, TestPyPI may return a 403 Forbidden or 400 Bad Request error.
 In that case you may end up in an error like this : 
@@ -165,81 +149,91 @@ ERROR    HTTPError: 403 Forbidden from https://test.pypi.org/legacy/
 This isnt always helpful and you should try this command as tipped in the error message above to know more.
 
 ```bash
-twine upload --repository testpypi dist/* --verbose
+pixi run twine upload --repository testpypi dist/* --verbose
 ```
 
 ```output
 Uploading distributions to https://test.pypi.org/legacy/
-INFO     dist/greet_me-0.1.1-py3-none-any.whl (0.9 KB)                                                                                                                                                                     
-INFO     dist/greet_me-0.1.1.tar.gz (4.9 KB)                                                                                                                                                                               
-INFO     username set by command options                                                                                                                                                                                   
-INFO     Querying keyring for password                                                                                                                                                                                     
-INFO     No keyring backend found                                                                                                                                                                                          
+INFO     dist/greet_me-0.1.7-py3-none-any.whl (2.3 KB)                                                                
+INFO     dist/greet_me-0.1.7.tar.gz (10.7 KB)                                                                         
+INFO     username set by command options                                                                              
+INFO     Querying keyring for password                                                                                
+INFO     No keyring backend found                                                                                     
+INFO     Trying to use trusted publishing (no token was explicitly provided)                                          
+WARNING  This environment is not supported for trusted publishing                                                     
 Enter your API token: 
-INFO     username: __token__                                                                                                                                                                                               
-INFO     password: <hidden>                                                                                                                                                                                                
-Uploading greet_me-0.1.1-py3-none-any.whl
-100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 kB • 00:00 • ?
-INFO     Response from https://test.pypi.org/legacy/:                                                                                                                                                                      
-         400 Bad Request                                                                                                                                                                                                   
-INFO     <html>                                                                                                                                                                                                            
-          <head>                                                                                                                                                                                                           
-           <title>400 The name 'greet-me' is too similar to an existing project. See https://test.pypi.org/help/#project-name for more information.</title>                                                                
-          </head>                                                                                                                                                                                                          
-          <body>                                                                                                                                                                                                           
-           <h1>400 The name 'greet-me' is too similar to an existing project. See https://test.pypi.org/help/#project-name for more information.</h1>                                                                      
-           The server could not comply with the request since it is either malformed or otherwise incorrect.<br/><br/>                                                                                                     
-         The name &#x27;greet-me&#x27; is too similar to an existing project. See https://test.pypi.org/help/#project-name for more information.                                                                           
-                                                                                                                                                                                                                           
-                                                                                                                                                                                                                           
-          </body>                                                                                                                                                                                                          
-         </html>                                                                                                                                                                                                           
-ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/                                                                                                                                                     
-         Bad Request                   
+INFO     username: __token__                                                                                          
+INFO     password: <hidden>                                                                                           
+Uploading greet_me-0.1.7-py3-none-any.whl
+100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 kB • 00:00 • ?
+INFO     Response from https://test.pypi.org/legacy/:                                                                 
+         400 Bad Request                                                                                              
+INFO     <html>                                                                                                       
+          <head>                                                                                                      
+           <title>400 The name 'greet-me' is too similar to an existing project. See                                  
+         https://test.pypi.org/help/#project-name for more information.</title>                                       
+          </head>                                                                                                     
+          <body>                                                                                                      
+           <h1>400 The name 'greet-me' is too similar to an existing project. See                                     
+         https://test.pypi.org/help/#project-name for more information.</h1>                                          
+           The server could not comply with the request since it is either malformed or otherwise incorrect.<br/><br/>
+         The name &#x27;greet-me&#x27; is too similar to an existing project. See                                     
+         https://test.pypi.org/help/#project-name for more information.                                               
+                                                                                                                      
+                                                                                                                      
+          </body>                                                                                                     
+         </html>                                                                                                      
+ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/                                                
+         Bad Request                    
 ```
 
 To fix this, 
-- rename your project (e.g. from `greet_me` to `po_greet_me`).
-- Update your `pyproject.toml` accordingly.
-- Rebuild and upload the package.
-
+- Rename your  Package Folder, [project].name (e.g. from `greet_me` to `greet_me1`) and also change this section, `[tool.pixi.pypi-dependencies]`
+  
 ```toml
-[tool.hatch.build.targets.wheel]
-packages = ["my_package"]
+[project]
+name = "greet-me1" # Changed
+
+[tool.pixi.pypi-dependencies]
+requests = ">=2.32.5,<3"
+build = ">=1.3.0,<2"
+twine = ">=6.2.0,<7"
+greet_me1 = { path = ".", editable = true } # Changed
 ```
+- Rebuild and upload the package.
 
 ```bash
 # 1. (Recommended) Remove the old build directory
 rm -rf dist
 
 # 2. Re-build your package with the new name
-python -m build
+pixi run python -m build
 
 # 3. Upload the new version to TestPyPI
-twine upload --repository testpypi dist/*
+pixi run twine upload --repository testpypi dist/* 
 ```
 
 ## Step 4: Test your package
 
-Install your package from TestPyPI via this command : 
+Create a new Repository with a readme file and install your package from TestPyPI via this command : 
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple po-greet-me==0.1.1
+pip install -i https://test.pypi.org/simple/ greet-me1==0.1.7
 ```
 
 ```output
-Looking in indexes: https://test.pypi.org/simple/, https://pypi.org/simple
-Collecting po-greet-me==0.1.1
-  Downloading https://test-files.pythonhosted.org/packages/52/85/dd6ebf4ee0a6ff76699a4c4f134059e6615b75c50e30cd40cd424370b81e/po_greet_me-0.1.1-py3-none-any.whl.metadata (137 bytes)
-Downloading https://test-files.pythonhosted.org/packages/52/85/dd6ebf4ee0a6ff76699a4c4f134059e6615b75c50e30cd40cd424370b81e/po_greet_me-0.1.1-py3-none-any.whl (815 bytes)
-Installing collected packages: po-greet-me
-Successfully installed po-greet-me-0.1.1
+Looking in indexes: https://test.pypi.org/simple/
+Collecting greet-me1==0.1.7
+  Downloading https://test-files.pythonhosted.org/packages/92/84/76afd107870f18a144fe5df0cc9fd0d7698c69e82e4c085f2ba339f99218/greet_me1-0.1.7-py3-none-any.whl.metadata (304 bytes)
+Downloading https://test-files.pythonhosted.org/packages/92/84/76afd107870f18a144fe5df0cc9fd0d7698c69e82e4c085f2ba339f99218/greet_me1-0.1.7-py3-none-any.whl (2.4 kB)
+Installing collected packages: greet-me1
+Successfully installed greet-me1-0.1.7
 ```
 
 Then create a test script : `test_package.py`:
 
 ```python
-from my_package import happy, sad
+from greet_me1 import happy, sad
 
 print(happy.greet_happy())
 ```
