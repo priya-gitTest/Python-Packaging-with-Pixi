@@ -218,22 +218,22 @@ pixi run twine upload --repository testpypi dist/*
 Create a new Repository with a readme file and install your package from TestPyPI via this command : 
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple po-greet-me==0.1.1
+pip install -i https://test.pypi.org/simple/ greet-me1==0.1.7
 ```
 
 ```output
-Looking in indexes: https://test.pypi.org/simple/, https://pypi.org/simple
-Collecting po-greet-me==0.1.1
-  Downloading https://test-files.pythonhosted.org/packages/52/85/dd6ebf4ee0a6ff76699a4c4f134059e6615b75c50e30cd40cd424370b81e/po_greet_me-0.1.1-py3-none-any.whl.metadata (137 bytes)
-Downloading https://test-files.pythonhosted.org/packages/52/85/dd6ebf4ee0a6ff76699a4c4f134059e6615b75c50e30cd40cd424370b81e/po_greet_me-0.1.1-py3-none-any.whl (815 bytes)
-Installing collected packages: po-greet-me
-Successfully installed po-greet-me-0.1.1
+Looking in indexes: https://test.pypi.org/simple/
+Collecting greet-me1==0.1.7
+  Downloading https://test-files.pythonhosted.org/packages/92/84/76afd107870f18a144fe5df0cc9fd0d7698c69e82e4c085f2ba339f99218/greet_me1-0.1.7-py3-none-any.whl.metadata (304 bytes)
+Downloading https://test-files.pythonhosted.org/packages/92/84/76afd107870f18a144fe5df0cc9fd0d7698c69e82e4c085f2ba339f99218/greet_me1-0.1.7-py3-none-any.whl (2.4 kB)
+Installing collected packages: greet-me1
+Successfully installed greet-me1-0.1.7
 ```
 
 Then create a test script : `test_package.py`:
 
 ```python
-from my_package import happy, sad
+from greet_me1 import happy, sad
 
 print(happy.greet_happy())
 ```
