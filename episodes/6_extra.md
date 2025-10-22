@@ -47,6 +47,7 @@ This command will:
 
 This provides a convenient and reproducible way to launch your project without needing to manually manage dependencies or commands.
 You can check the example project [here](https://github.com/priya-gitTest/greet_me)
+
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Define tasks such as `start` in your `pixi.toml` or `pyproject.toml`.
 - Use `pixi run <task-name>` to execute those tasks.
