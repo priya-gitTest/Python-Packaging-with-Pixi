@@ -37,38 +37,41 @@ The two key tools we need are:
 The `build` tool reads your `pyproject.toml` file and generates the package distribution files.
 
 ```bash
-pip install build
+pixi add --pypi build
 ```
      
 ```output
-Collecting build
-   Downloading build-1.3.0-py3-none-any.whl.metadata (5.6 kB)
- Requirement already satisfied: packaging>=19.1 in /home/codespace/.local/lib/python3.12/site-packages (from build) (25.0)
- Collecting pyproject_hooks (from build)
-   Downloading pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
- Downloading build-1.3.0-py3-none-any.whl (23 kB)
- Downloading pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
- Installing collected packages: pyproject_hooks, build
- Successfully installed build-1.3.0 pyproject_hooks-1.2.0
+✔ Added build >=1.3.0, <2
+Added these as pypi-dependencies.
 ```
-     
+Empty the depenencies under `[project]` and move/edit them to `[tool.pixi.pypi-dependencies]` section, like shown below : 
+
+```toml
+[project]
+dependencies = []
+
+[tool.pixi.pypi-dependencies]
+requests = ">=2.32.5,<3"
+build = ">=1.3.0,<2"
+```
+
 ```bash
-python -m build
+pixi run python -m build
 ```
      
 ```output
  * Creating isolated environment: venv+pip...
- * Installing packages in isolated environment:
-   - hatchling
- * Getting build dependencies for sdist...
- * Building sdist...
- * Building wheel from sdist
- * Creating isolated environment: venv+pip...
- * Installing packages in isolated environment:
-   - hatchling
- * Getting build dependencies for wheel...
- * Building wheel...
- Successfully built greet_me-0.1.0.tar.gz and greet_me-0.1.0-py3-none-any.whl
+* Installing packages in isolated environment:
+  - hatchling
+* Getting build dependencies for sdist...
+* Building sdist...
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - hatchling
+* Getting build dependencies for wheel...
+* Building wheel...
+Successfully built greet_me-0.1.0.tar.gz and greet_me-0.1.0-py3-none-any.whl
  ```
       
 This command creates a `dist` directory containing two files:
