@@ -52,7 +52,7 @@ Metadata: Packages include project-specific metadata, which is essential for end
 graph TD
     A[Library/Project<br/>requests] --> B[Package<br/>requests/]
     B --> C[Module<br/>api.py]
-    C --> D[Function<br/>"def post(url, data=None, json=None, **kwargs)"]
+    C --> D["Function<br/>def post(url, data=None, json=None, **kwargs)"]
 ```
 
 ## Steps to create a Python Package :
