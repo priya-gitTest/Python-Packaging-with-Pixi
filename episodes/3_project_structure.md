@@ -88,7 +88,7 @@ This will create/update the `[tool.pixi.dependencies]` section in `pyproject.tom
 [tool.pixi.dependencies]
 requests = ">=2.32.5,<3"
 ```
-It ge alsonerate a `pixi.lock` file
+It also generates a `pixi.lock` file which may look somewhat like the image below.
 
 <img width="590" height="262" alt="image" src="https://github.com/user-attachments/assets/3955c422-99ab-4690-a54f-b0c66decfa61" />
 
