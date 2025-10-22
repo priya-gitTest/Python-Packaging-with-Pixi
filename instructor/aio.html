@@ -375,7 +375,7 @@
         
 <section id="aio-1_intoduction_python_packaging"><p>Content from <a href="1_intoduction_python_packaging.html">Why Python Packages?</a></p>
 <hr>
-<p>Last updated on 2025-10-21 |
+<p>Last updated on 2025-10-22 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/1_intoduction_python_packaging.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
@@ -440,6 +440,31 @@ versions, thereby supporting backwards compatibility.</p>
 code via recognised repositories such as PyPI.</p>
 <p>Metadata: Packages include project-specific metadata, which is
 essential for end users.</p>
+</section><section><h2 class="section-heading" id="python-package-structure-hierarchy">Python Package Structure Hierarchy<a class="anchor" aria-label="anchor" href="#python-package-structure-hierarchy"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>Function : A block of reusable code that performs a single specific
+task.</li>
+<li>Module : A single Python file (.py) that groups related classes,
+functions and variables.</li>
+<li>Package : A folder/ collection containing multiple modules and an
+<strong>init</strong>.py file to organize them.</li>
+<li>The <strong>init</strong>.py files are required to make Python treat
+folders containing the file as packages</li>
+<li>Library : A collection of related packages or modules that provide
+broad functionality for reuse.</li>
+<li>Library can have Package(s), which can have module(s) which can have
+function(s). It can also be considered a Project.</li>
+<li>Python package : A Python package is a collection of related code
+modules (files) bundled with metadata describing how the package should
+be installed and used <a href="https://pydevtools.com/handbook/explanation/what-is-a-python-package/" class="external-link">*</a>
+</li>
+</ul>
+<pre class="mermaid"><code>graph TD
+    A[Library/Project&lt;br/&gt;requests] --&gt; B[Package&lt;br/&gt;requests/]
+    B --&gt; C[Module&lt;br/&gt;api.py]
+    C --&gt; D[Function&lt;br/&gt;def post]</code></pre>
 </section><section><h2 class="section-heading" id="steps-to-create-a-python-package">Steps to create a Python Package :<a class="anchor" aria-label="anchor" href="#steps-to-create-a-python-package"></a>
 </h2>
 <hr class="half-width">
@@ -1504,8 +1529,8 @@ any links that you are not going to use.
   "url": "https://priya-gittest.github.io/Python-Packaging-with-Pixi/instructor/aio.html",
   "identifier": "https://priya-gittest.github.io/Python-Packaging-with-Pixi/instructor/aio.html",
   "dateCreated": "2025-08-19",
-  "dateModified": "2025-10-21",
-  "datePublished": "2025-10-21"
+  "dateModified": "2025-10-22",
+  "datePublished": "2025-10-22"
 }
 
   </script><script>
