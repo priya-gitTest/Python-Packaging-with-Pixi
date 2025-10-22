@@ -88,7 +88,8 @@ This will create/update the `[tool.pixi.dependencies]` section in `pyproject.tom
 [tool.pixi.dependencies]
 requests = ">=2.32.5,<3"
 ```
-It will also generate a `pixi.lock` file
+It ge alsonerate a `pixi.lock` file
+
 <img width="590" height="262" alt="image" src="https://github.com/user-attachments/assets/3955c422-99ab-4690-a54f-b0c66decfa61" />
 
 To remove a package, use this command and check that `pyproject.toml` is corrected and the package is removed from there.
@@ -100,11 +101,30 @@ pixi remove requests
 ```
 To add libraries from PyPI via Pixi:
 ```bash
-pixi add requests
+pixi add --pypi requests
 ```
 ```output
-✔ Added requests >=2.32.5,<3
+✔ Added requests >=2.32.5, <3
+Added these as pypi-dependencies.
 ```
+Check the `pyproject.toml` file. These get added under the `[project]` section 
+```toml
+[project]
+dependencies = ["requests>=2.32.5,<3"]
+name = "greet_me"
+```
+Please note : this wont create a problem when uploading the build but can create problems, when installing the builds.
+So best to keep it empty for now and move this to `[tool.pixi.pypi-dependencies]` section , for all projects which need to come from via PyPI namely **build** and **twine** which are used to create and upload build respectively.
+```toml
+[project]
+dependencies = []
+name = "greet_me"
+...
+[tool.pixi.pypi-dependencies]
+requests = ">=2.32.5,<3"
+greet_me = { path = ".", editable = true }
+```
+
 Other commands, that can be later explored : 
 
 To generate or update the `pixi.lock` file:
@@ -133,7 +153,7 @@ pixi update
 ✔ Lock-file was already up-to-date
 ```
 ## Adding Modules
-Create a folder named `my_package` and add three files: `happy.py`, `sad.py`, and `__init__.py`.
+Lets create these 2 files: `happy.py`, `sad.py` in the folder src/greet_me.
 
 ```python
 # happy.py <- A module
@@ -151,17 +171,14 @@ greet_me/
 ├── LICENSE
 ├── pyproject.toml
 ├── README.md
-├── pixi.toml
 ├── pixi.lock         # auto-generated, do not edit
-├── tests/
-│   └── test_greetings.py
-└── my_package/
+└── src/greet_me/
     ├── __init__.py
     ├── happy.py
     └── sad.py
 ```
 ## Running a Task
-Add the following task to your `pixi.toml` file:
+Add the following task to your `pyproject.toml` file:
 
 ```toml
 
@@ -179,6 +196,6 @@ Yay! happy day! 😀
 - Follow the appropriate folder structure.
 - Always include the `__init__.py` file in packages.
 - Sequence of Pixi commands: **init** → **add** → **run** → **lock** → **install** → **update**.
-- Define `[project]`, `[tasks]`, and `[dependencies]` in your `pixi.toml` file (or the equivalent in `pyproject.toml`).
+- Define / check `[project]`, `[dependencies]` and `[tasks]` in your `pyproject.toml` file .
   
 ::::::::::::::::::::::::::::::::::::::::::::::::
