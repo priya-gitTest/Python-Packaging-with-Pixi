@@ -1,6 +1,6 @@
 ---
 title: "How to publish your Python project"
-teaching: 10
+teaching: 5
 exercises: 15
 ---
 
