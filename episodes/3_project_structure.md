@@ -48,33 +48,31 @@ pixi init --format pyproject
 
 This generates the following structure:
 
-<img width="301" height="96" alt="image" src="https://github.com/user-attachments/assets/b07a9498-cd76-470b-80ad-d74a5202c061" />
+<img width="194" height="213" alt="image" src="https://github.com/user-attachments/assets/cf77b5b3-2b66-413e-9d80-f67ecebc45fa" />
 
-If you prefer to use a `pyproject.toml` file, the following syntax is required (our preferred approach, which will be demonstrated in the next lesson):
 
-```bash
-pixi init --format pyproject
-```
-
-`pixi.toml` : The initial `pixi.toml` file generated may look like this:
+`pyproject.toml` : The initial `pyproject.toml` file generated may look like this:
 
 ```toml
-[workspace]
-authors = ["Priyanka O"]
-channels = ["conda-forge"]
+[project]
+authors = [{name = "Priyanka Demo", email = "demo@users.noreply.github.com"}]
+dependencies = []
 name = "greet_me"
+requires-python = ">= 3.11"
 version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"] #Download and install Conda packages from the conda-forge channel
 platforms = ["linux-64"]
-description = "A simple greeting package."
 
-[dependencies]
-python = ">=3.10"
+[tool.pixi.pypi-dependencies] #Add dependencies here which needs to be installed from PyPI
+greet_me = { path = ".", editable = true }
 
-[tasks]
-```
-Change into the project directory:
-```bash
-cd greet_me
+[tool.pixi.tasks]
 ```
 
 To add libraries via Pixi:
@@ -84,12 +82,31 @@ pixi add requests
 ```output
 ✔ Added requests >=2.32.5,<3
 ```
-This will update the `[dependencies]` section in `pixi.toml`:
+This will create/update the `[tool.pixi.dependencies]` section in `pyproject.toml`.
 
 ```toml
-[dependencies]
+[tool.pixi.dependencies]
 requests = ">=2.32.5,<3"
 ```
+It will also generate a `pixi.lock` file
+<img width="590" height="262" alt="image" src="https://github.com/user-attachments/assets/3955c422-99ab-4690-a54f-b0c66decfa61" />
+
+To remove a package, use this command and check that `pyproject.toml` is corrected and the package is removed from there.
+```bash
+pixi remove requests
+```
+```output
+✔ Removed requests
+```
+To add libraries from PyPI via Pixi:
+```bash
+pixi add requests
+```
+```output
+✔ Added requests >=2.32.5,<3
+```
+Other commands, that can be later explored : 
+
 To generate or update the `pixi.lock` file:
 ```bash
 pixi lock
