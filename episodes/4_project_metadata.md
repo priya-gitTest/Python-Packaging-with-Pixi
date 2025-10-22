@@ -41,6 +41,7 @@ build-backend = "hatchling.build"
 Some other build tools to read are 
 - [pdm.backend](https://backend.pdm-project.org) e.g. [fastapi](https://github.com/fastapi/fastapi/blob/master/pyproject.toml)
 - [mesonpy](https://mesonbuild.com/meson-python/) e.g. [numpy](https://github.com/numpy/numpy/blob/main/pyproject.toml)
+- [setuptools.build_meta]() e.g. [parselmouth](https://github.com/prefix-dev/parselmouth/blob/main/pyproject.toml)
 
 ## Editable Installation
 
