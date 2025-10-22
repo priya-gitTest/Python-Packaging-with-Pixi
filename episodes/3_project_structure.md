@@ -183,7 +183,7 @@ greet_me/
 
 ## Running a Task
 
-A "task" is a command alias that you can execute easily via the CLI (e.g., pixi run <task-name>). 
+Task is a command alias that you can execute easily via the CLI (e.g., pixi run <task-name>). 
 
 Run the following command to add a task and observe the changes in `pyproject.toml` file:
 ```bash
