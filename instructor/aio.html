@@ -1358,7 +1358,10 @@ section, <code>[tool.pixi.pypi-dependencies]</code></p>
 <span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="dt">requests</span> <span class="op">=</span> <span class="st">"&gt;=2.32.5,&lt;3"</span></span>
 <span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="dt">build</span> <span class="op">=</span> <span class="st">"&gt;=1.3.0,&lt;2"</span></span>
 <span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="dt">twine</span> <span class="op">=</span> <span class="st">"&gt;=6.2.0,&lt;7"</span></span>
-<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a><span class="dt">greet_me1</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">path</span><span class="op"> =</span> <span class="st">"."</span><span class="op">, </span><span class="dt">editable</span><span class="op"> =</span> <span class="cn">true</span><span class="op"> }</span> <span class="co"># Changed</span></span></code></pre>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a><span class="dt">greet_me1</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">path</span><span class="op"> =</span> <span class="st">"."</span><span class="op">, </span><span class="dt">editable</span><span class="op"> =</span> <span class="cn">true</span><span class="op"> }</span> <span class="co"># Changed</span></span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a><span class="kw">[tool.pixi.tasks]</span></span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a><span class="dt">start</span> <span class="op">=</span> <span class="st">"python -c 'from greet_me1 import happy; print(happy.greet_happy())'"</span> <span class="co"># Changed</span></span></code></pre>
 </div>
 <ul>
 <li>Rebuild and upload the package.</li>
