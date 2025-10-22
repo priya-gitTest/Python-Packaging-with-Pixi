@@ -192,13 +192,13 @@ To fix this,
   
 ```toml
 [project]
-**name = "greet-me1"**
+name = "greet-me1" # Changed
 
 [tool.pixi.pypi-dependencies]
 requests = ">=2.32.5,<3"
 build = ">=1.3.0,<2"
 twine = ">=6.2.0,<7"
-**greet_me1 = { path = ".", editable = true }**
+greet_me1 = { path = ".", editable = true } # Changed
 ```
 - Rebuild and upload the package.
 
