@@ -223,6 +223,7 @@
 <li><a href="#python-package-structure-hierarchy">Python Package Structure Hierarchy</a></li>
 <li><a href="#steps-to-create-a-python-package">Steps to create a Python Package :</a></li>
 <li><a href="#what-may-be-packaged">What may be packaged ?</a></li>
+<li><a href="#what-is-init.py-file-in-python">What Is <strong>init</strong>.Py File in Python?</a></li>
 <li><a href="#what-is-pypi">What is PyPI</a></li>
 <li><a href="#what-is-a-build">What is a Build ?</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -357,6 +358,7 @@
 <h3 class="card-title">Questions</h3>
 <ul><li>Why must we package our Python code?</li>
 <li>What precisely may be packaged?</li>
+<li>Why is __init_.py file important?</li>
 <li>What is the Python Package Index (PyPI), and what purpose does it
 serve?</li>
 <li>What is a build?</li>
@@ -369,8 +371,9 @@ serve?</li>
 <h3 class="card-title">Objectives</h3>
 <ul><li>To understand the benefits of Python packaging.</li>
 <li>To determine whether packaging is suitable for your use case.</li>
-<li>To acquire knowledge of components of Python packaging such as
-PyPI.</li>
+<li>To understand the importance of __init_.py file.</li>
+<li>To acquire knowledge of components of Python packaging and
+understand Python Package Index (PyPI).</li>
 <li>To become familiar with the build process.</li>
 </ul></div>
 </div>
@@ -421,8 +424,18 @@ be installed and used <a href="https://pydevtools.com/handbook/explanation/what-
 </section><section><h2 class="section-heading" id="steps-to-create-a-python-package">Steps to create a Python Package :<a class="anchor" aria-label="anchor" href="#steps-to-create-a-python-package"></a></h2>
 <hr class="half-width"><figure><img width="1298" height="250" alt="image" src="https://github.com/user-attachments/assets/be6f94ec-599b-4a1e-bd5b-63c2dfad720c" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="what-may-be-packaged">What may be packaged ?<a class="anchor" aria-label="anchor" href="#what-may-be-packaged"></a></h2>
 <hr class="half-width"><p>Any .py files (modules) or directories with <strong>init</strong>.py
-(packages) can be packaged..</p>
-</section><section><h2 class="section-heading" id="what-is-pypi">What is PyPI<a class="anchor" aria-label="anchor" href="#what-is-pypi"></a></h2>
+(packages) can be packaged.</p>
+</section><section><h2 class="section-heading" id="what-is-init-py-file-in-python">What Is <strong>init</strong>.Py File in Python?<a class="anchor" aria-label="anchor" href="#what-is-init-py-file-in-python"></a></h2>
+<hr class="half-width"><p>The <strong>init</strong>.py file is a Python file that is executed
+when a package is imported. It serves two main purposes:</p>
+<ul><li><p>It marks the directory as a Python Package so that the
+interpreter can find the modules inside it.</p></li>
+<li>
+<p>It can contain initialization code for the Package, such as
+importing submodules, defining variables, or executing other code.</p>
+<p><a href="https://www.geeksforgeeks.org/python/what-is-__init__-py-file-in-python/" class="external-link">source</a></p>
+</li>
+</ul></section><section><h2 class="section-heading" id="what-is-pypi">What is PyPI<a class="anchor" aria-label="anchor" href="#what-is-pypi"></a></h2>
 <hr class="half-width"><p>PyPI is the repository where all released Python packages are made
 available for end users. You may explore it here: <a href="https://pypi.org/" class="external-link">PyPI</a>. There is also <a href="https://test.pypi.org/" class="external-link">TestPyPI</a>, a repository which allows us
 to experiment with distribution tools and procedures without affecting
@@ -445,11 +458,13 @@ version your build and supply the requisite metadata.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>The code must be versioned.</li>
+<ul><li>To make Python code installable, reusable and distributable via PyPI
+or TestPyPI, one must package the code.</li>
+<li>The Package should have modules and <strong>init</strong>.py
+file.</li>
+<li>The code must be versioned.</li>
 <li>Project dependencies must be managed.</li>
 <li>The project’s metadata must be clearly defined.</li>
-<li>To make Python code installable, reusable and distributable via PyPI
-or TestPyPI, one must package the code.</li>
 </ul></div>
 </div>
 </div>
