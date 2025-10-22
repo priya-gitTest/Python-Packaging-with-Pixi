@@ -1,7 +1,7 @@
 ---
 title: "Why Python Packages?"
 teaching: 15
-exercises: 10
+exercises: 5
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
