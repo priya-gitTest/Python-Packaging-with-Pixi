@@ -92,6 +92,7 @@ It also generates a `pixi.lock` file which may look somewhat like the image belo
 
 <img width="590" height="262" alt="image" src="https://github.com/user-attachments/assets/3955c422-99ab-4690-a54f-b0c66decfa61" />
 
+
 To remove a package, use this command and check that `pyproject.toml` is corrected and the package is removed from there.
 ```bash
 pixi remove requests
