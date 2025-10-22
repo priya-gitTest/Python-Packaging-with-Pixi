@@ -156,6 +156,10 @@ pixi update
 ## Adding Modules
 Lets create these 2 files: `happy.py`, `sad.py` in the folder src/greet_me.
 
+Please note, in VSCode inside GitHub codepsaces, you mabe be prompted for below, when creating a python file. So just Install it.
+<img width="650" height="156" alt="image" src="https://github.com/user-attachments/assets/c3f5975a-61fb-4a41-99f9-5064c3c40e22" />
+
+
 ```python
 # happy.py <- A module
 def greet_happy():
