@@ -126,9 +126,11 @@ https://test.pypi.org/project/greet-me1/0.1.7/
   ```
 
 After a successful upload, your package will be available at a URL such as: E.g. : 
-`https://test.pypi.org/project/po-greet-me/0.1.1/`
+`[https://test.pypi.org/project/po-greet-me/0.1.1/](https://test.pypi.org/project/greet-me1/0.1.7/)`
 
-<img width="1619" height="854" alt="image" src="https://github.com/user-attachments/assets/980a83e1-dfce-4902-bb85-e44d47af9088" />
+<img width="1743" height="973" alt="image" src="https://github.com/user-attachments/assets/d41cc3d8-1d9a-4a4e-bdaa-a600fe9d2b1a" />
+
+
 ## Handling Errors
 If the package name is too similar to an existing project, TestPyPI may return a 403 Forbidden or 400 Bad Request error.
 In that case you may end up in an error like this : 
