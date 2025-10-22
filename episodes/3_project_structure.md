@@ -1,7 +1,7 @@
 ---
 title: "Set up a project directory"
 teaching: 5
-exercises: 0
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
