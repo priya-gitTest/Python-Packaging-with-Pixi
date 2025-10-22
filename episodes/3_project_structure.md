@@ -40,10 +40,10 @@ greet_me/
 ```
 Let us create a similar structure within our codespace.
 ```bash
-pixi init greet_me
+pixi init --format pyproject
 ```
 ```output
-✔ Created ...greet_me/pixi.toml
+✔ Created /workspaces/pixi_demo/pyproject.toml
 ```
 
 This generates the following structure:
