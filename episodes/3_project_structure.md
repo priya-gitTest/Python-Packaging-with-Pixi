@@ -31,7 +31,8 @@ Each package must contain a special file named `__init__.py`. The presence of th
 
 ## Project Structure
 A typical project would look like :
-```greet_me/
+```
+greet_me/
 └── src/my_package/
     ├── __init__.py
     ├── happy.py
