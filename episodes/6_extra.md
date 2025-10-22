@@ -18,11 +18,28 @@ exercises: 10
  
 ## Introduction
 
-After cloning a project, Pixi makes it simple to run predefined tasks. If your `pixi.toml` (or `pyproject.toml`) contains a task named start, you can execute it directly using:
+After cloning a project, Install Pixi and Pixi makes it simple to run predefined tasks. If your `pixi.toml` (or `pyproject.toml`) contains a task named start, you can execute it directly using:
 
-`git clone project.git && cd project`
-
-`pixi run start`
+```bash
+gh repo clone priya-gitTest/greet_me && cd greet_me
+curl -fsSL https://pixi.sh/install.sh | sh
+```
+If required, restart your shell:
+```bash
+source ~/.bashrc
+```
+Verify that Pixi has been installed correctly.
+```bash
+pixi --version
+```
+Now run
+```bash
+pixi run start
+```
+```output
+✨ Pixi task (start): python -c 'from greet_me1 import happy; print(happy.greet_happy())'                             
+Yay! happy day! 😀
+```
 
 This command will:
 - Ensure that the required environment is installed (creating or updating it if necessary).
