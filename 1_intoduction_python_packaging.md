@@ -48,12 +48,10 @@ Metadata: Packages include project-specific metadata, which is essential for end
 - Library can have Package(s), which can have module(s) which can have function(s). It can also be considered a Project.
 - Python package : A Python package is a collection of related code modules (files) bundled with metadata describing how the package should be installed and used [*](https://pydevtools.com/handbook/explanation/what-is-a-python-package/)
 
-```mermaid
-graph TD
-    A[Library/Project<br/>requests] --> B[Package<br/>requests/]
-    B --> C[Module<br/>api.py]
-    C --> D["Function<br/>def post(url, data=None, json=None, **kwargs)"]
-```
+<img width="424" height="672" alt="image" src="https://github.com/user-attachments/assets/59d89bdb-c08b-487e-aa27-c3abc75ff794" />
+
+[GIT](https://github.com/psf/requests)
+[PyPI](https://pypi.org/project/requests/ )
 
 ## Steps to create a Python Package :
 
