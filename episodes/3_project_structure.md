@@ -182,12 +182,20 @@ greet_me/
 
 
 ## Running a Task
-Add the following task to your `pyproject.toml` file:
+
+A "task" is a command alias that you can execute easily via the CLI (e.g., pixi run <task-name>). 
+
+Run the following command to add a task and observe the changes in `pyproject.toml` file:
+```bash
+pixi task add start "python -c 'from greet_me import happy; print(happy.greet_happy())'"
+```
+
+`pyproject.toml` file:
 
 ```toml
 
-[tasks]
-start = "python -c 'from my_package  import happy; print(happy.greet_happy())'"
+[tool.pixi.tasks]
+start = "python -c 'from greet_me import happy; print(happy.greet_happy())'"
 ```
 Then execute:
 ```bash
@@ -196,6 +204,9 @@ pixi run start
 ```output
 Yay! happy day! 😀
 ```
+
+You can read more about tasks [here](https://pixi.sh/dev/workspace/advanced_tasks/), which contains all the advanced use cases needed in a professional setting.
+
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Follow the appropriate folder structure.
 - Always include the `__init__.py` file in packages.
