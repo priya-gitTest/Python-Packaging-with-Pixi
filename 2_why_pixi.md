@@ -42,4 +42,8 @@ Key features include:
 
 Pixi allows you to define dependencies for specific operating systems (e.g. Windows, macOS, Linux) or for distinct environments such as development, testing, and production. This makes it easier to tailor the project configuration to match the context in which the software is being deployed or developed.
 
+## pyproject.toml
+For this demo, we will mainly focus on `pyproject.toml` file.
+We make this choice due to following specifications and recomendations : [PEP 621](https://peps.python.org/pep-0621/), [PEP 517](https://peps.python.org/pep-0517/), and [PEP 660](https://peps.python.org/pep-0660/)
+
 
