@@ -38,6 +38,23 @@ Standardisation: Packaging is the established method of distributing code via re
 
 Metadata: Packages include project-specific metadata, which is essential for end users.
 
+## Python Package Structure Hierarchy
+
+- Function : A block of reusable code that performs a single specific task.
+- Module : A single Python file (.py) that groups related classes,  functions and variables.
+- Package : A folder/ collection containing multiple modules and an __init__.py file to organize them.
+- The __init__.py files are required to make Python treat folders containing the file as packages
+- Library : A collection of related packages or modules that provide broad functionality for reuse.
+- Library can have Package(s), which can have module(s) which can have function(s). It can also be considered a Project.
+- Python package : A Python package is a collection of related code modules (files) bundled with metadata describing how the package should be installed and used [*](https://pydevtools.com/handbook/explanation/what-is-a-python-package/)
+
+```mermaid
+graph TD
+    A[Library/Project<br/>requests] --> B[Package<br/>requests/]
+    B --> C[Module<br/>api.py]
+    C --> D[Function<br/>def post]
+```
+
 ## Steps to create a Python Package :
 
 <img width="1298" height="250" alt="image" src="https://github.com/user-attachments/assets/be6f94ec-599b-4a1e-bd5b-63c2dfad720c" />
