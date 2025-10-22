@@ -178,6 +178,9 @@ greet_me/
     ├── happy.py
     └── sad.py
 ```
+<img width="203" height="393" alt="image" src="https://github.com/user-attachments/assets/6acc1213-b9f6-48f9-b385-a3c10268ccd9" />
+
+
 ## Running a Task
 Add the following task to your `pyproject.toml` file:
 
