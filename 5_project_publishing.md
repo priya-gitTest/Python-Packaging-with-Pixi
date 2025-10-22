@@ -199,6 +199,9 @@ requests = ">=2.32.5,<3"
 build = ">=1.3.0,<2"
 twine = ">=6.2.0,<7"
 greet_me1 = { path = ".", editable = true } # Changed
+
+[tool.pixi.tasks]
+start = "python -c 'from greet_me1 import happy; print(happy.greet_happy())'" # Changed
 ```
 - Rebuild and upload the package.
 
