@@ -32,7 +32,7 @@ Each package must contain a special file named `__init__.py`. The presence of th
 ## Project Structure
 A typical project would look like :
 ```greet_me/
-└── my_package/
+└── src/my_package/
     ├── __init__.py
     ├── happy.py
     └── sad.py
