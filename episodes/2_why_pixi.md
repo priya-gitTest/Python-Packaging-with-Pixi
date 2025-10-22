@@ -46,4 +46,12 @@ Pixi allows you to define dependencies for specific operating systems (e.g. Wind
 For this demo, we will mainly focus on `pyproject.toml` file.
 We make this choice due to following specifications and recomendations : [PEP 621](https://peps.python.org/pep-0621/), [PEP 517](https://peps.python.org/pep-0517/), and [PEP 660](https://peps.python.org/pep-0660/)
 
+You can also read at these links : 
+- https://pixi.sh/v0.40.1/reference/pixi_manifest/#pypi-dependencies
+- https://pixi.sh/v0.40.1/advanced/pyproject_toml/
 
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Choose a tool with good support and long term vision.
+- Choose a tool suitable for your project.
+- Focus on  PEP specifications and recomendations.
