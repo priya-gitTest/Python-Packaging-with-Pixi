@@ -145,7 +145,7 @@ ERROR    HTTPError: 403 Forbidden from https://test.pypi.org/legacy/
     Forbidden
 ```
 
-This isnt always helpful and you should try this command as tipped in the error message above to know more.
+This isn't always helpful and you should try this command as tipped in the error message above to know more.
 
 ```bash
 pixi run twine upload --repository testpypi dist/* --verbose
