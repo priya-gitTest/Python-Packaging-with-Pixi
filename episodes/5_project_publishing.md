@@ -125,7 +125,7 @@ https://test.pypi.org/project/greet-me/0.1.0/
   ```
 
 After a successful upload, your package will be available at a URL such as: E.g. : 
-`[https://test.pypi.org/project/po-greet-me/0.1.1/](https://test.pypi.org/project/greet-me1/0.1.7/)`
+[https://test.pypi.org/project/greet-me/0.1.0/](https://test.pypi.org/project/greet-me/0.1.0/).
 
 <img width="1743" height="973" alt="image" src="https://github.com/user-attachments/assets/d41cc3d8-1d9a-4a4e-bdaa-a600fe9d2b1a" />
 
