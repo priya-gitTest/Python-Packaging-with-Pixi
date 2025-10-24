@@ -42,7 +42,7 @@ pixi add --pypi build
 ✔ Added build >=1.3.0, <2
 Added these as pypi-dependencies.
 ```
-Empty the depenencies under `[project]` and move/edit them to `[tool.pixi.pypi-dependencies]` section, like shown below : 
+Empty the depenencies under `[project]` and move/edit them to `[tool.pixi.pypi-dependencies]` section, like shown below:
 
 ```toml
 [project]
