@@ -28,17 +28,17 @@ Your Codespace environment will be **Linux-based**, so we will be using standard
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Create a repository 
+### Create a repository 
 
-- Log into [GitHub](https://github.com) and create a new repository for this lesson called `greet_me` and add a Licence File when creating the repository.
+- Log into [GitHub](https://github.com) and create a new repository for this lesson called `greet_me` and add a Licence File when creating the repository. In this case it doesn't matter which licence (this is just a practice repo) - we just need something to initialise the repo, and a licence to satisfy the TestPyPI requirements.
 
 - From the repository page, open the **Code** dropdown menu, select the **Codespaces** tab, and click **Create codespace on main**.
 
 <img width="416" height="353" alt="image" src="https://github.com/user-attachments/assets/15167dca-b8c3-4701-87ac-3d6cb2b1022b" />
 
+If you get an error (e.g. "Oh no, it looks like you are offline!") try a different browser or incognito mode.
+
  - Once your Codespace has been created, open the terminal inside it and run the following commands.
-   
-:::::::::::::::: spoiler
 
 ### Install Pixi
 
@@ -71,5 +71,4 @@ pixi --version
 ```output
 pixi 0.57.0
 ```
-::::::::::::::::::::::::
 
