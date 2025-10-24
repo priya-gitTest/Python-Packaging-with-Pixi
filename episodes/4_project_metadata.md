@@ -59,8 +59,9 @@ greet_me = { path = ".", editable = true }
 requires-python = ">=3.11, <3.12"
 ```
 Additional sections in `pyproject.toml` may include:
-  `[tool.pixi.workspace]`: Defines project-wide settings, including package sources and target platforms for resolution.  
-  `[tool.pixi.pypi-dependencies]` : Declares the dependencies to be installed from PyPI (or equivalent sources). These are the external libraries required by the project.
+
+-  `[tool.pixi.workspace]`: Defines project-wide settings, including package sources and target platforms for resolution.  
+-  `[tool.pixi.pypi-dependencies]` : Declares the dependencies to be installed from PyPI (or equivalent sources). These are the external libraries required by the project.
 
 You can specify a range or multiple supported Python versions using the syntax below.
 ```toml
