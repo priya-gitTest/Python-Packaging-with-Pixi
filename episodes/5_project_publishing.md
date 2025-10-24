@@ -138,7 +138,7 @@ In that case you may end up in an error like this :
 twine upload --repository testpypi dist/*
 Uploading distributions to https://test.pypi.org/legacy/
 Enter your API token: 
-Uploading greet_me-0.1.1-py3-none-any.whl
+Uploading greet_me-0.1.0-py3-none-any.whl
 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 kB • 00:00 • ?
 WARNING  Error during upload. Retry with the --verbose option for more details.                                                                                                                                            
 ERROR    HTTPError: 403 Forbidden from https://test.pypi.org/legacy/                                                                                                                                                       
