@@ -30,8 +30,6 @@ The two key tools we need are:
 
 **Twine** – for securely uploading those distributions to **PyPI** or **TestPyPI**.
 
-**Note**: Before proceeding, rename or remove the `pixi.tom`l file, as we will focus on `pyproject.toml`. You may experiment with `pixi.toml` later by removing or renaming `pyproject.toml`.
-
 ##  Step 1: Create your build
 
 The `build` tool reads your `pyproject.toml` file and generates the package distribution files.
