@@ -100,8 +100,9 @@ For insipiration, also check [here](https://github.com/prefix-dev/parselmouth/bl
 ## Lockfiles
 A **lockfile** contains the complete set of dependencies, including specific versions, required to reproduce the project environment. It is automatically generated based on the dependencies listed in the `.toml` file, ensuring that builds remain consistent and reproducible.
 
-
+## Readme
 Please add and update the README.md file, in case you havent done so. You can easily generate a README text on [readme.so](https://readme.so/) and copy its content to your READMe file.
+
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Every project must include a `pyproject.toml` file
 - The `[build-system]` section is required and must define both `requires` and `build-backend`.
