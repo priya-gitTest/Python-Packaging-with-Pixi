@@ -115,13 +115,13 @@ Now upload the package to TestPyI
 Uploading distributions to https://test.pypi.org/legacy/
 WARNING  This environment is not supported for trusted publishing                                                     
 Enter your API token: 
-Uploading greet_me1-0.1.7-py3-none-any.whl
+Uploading greet_me-0.1.0-py3-none-any.whl
 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 kB • 00:00 • ?
-Uploading greet_me1-0.1.7.tar.gz
+Uploading greet_me-0.1.0.tar.gz
 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 kB • 00:00 • ?
 
 View at:
-https://test.pypi.org/project/greet-me1/0.1.7/
+https://test.pypi.org/project/greet-me/0.1.0/
   ```
 
 After a successful upload, your package will be available at a URL such as: E.g. : 
