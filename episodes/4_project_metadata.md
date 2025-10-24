@@ -71,11 +71,11 @@ Final `pyproject.toml` should look like this below, for reference.
 
 ```toml
 [project]
-authors = [{name = "Priyanka O"}]
+authors = [{name = "Priyanka Demo", email = "demo@users.noreply.github.com"}]
 dependencies = []
 name = "greet_me"
 requires-python = ">= 3.11"
-version = "0.1.2"
+version = "0.1.0"
 description = "greet_me Pixi-managed package"
 readme = "README.md"
 
