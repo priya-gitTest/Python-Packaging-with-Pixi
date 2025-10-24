@@ -38,10 +38,11 @@ It has two main keys:
 requires = ["hatchling"] 
 build-backend = "hatchling.build"
 ```
-Some other build tools to read are 
-- [pdm.backend](https://backend.pdm-project.org) e.g. [fastapi](https://github.com/fastapi/fastapi/blob/master/pyproject.toml)
-- [mesonpy](https://mesonbuild.com/meson-python/) e.g. [numpy](https://github.com/numpy/numpy/blob/main/pyproject.toml)
-- [setuptools.build_meta]() e.g. [parselmouth](https://github.com/prefix-dev/parselmouth/blob/main/pyproject.toml)
+Some other build tools to read are:
+ 
+- [pdm.backend](https://backend.pdm-project.org) e.g. [fastapi](https://github.com/fastapi/fastapi/blob/cd40c5b40ffd8ba0c6a6a6c96bbf34ec1cf9c525/pyproject.toml#L2)
+- [mesonpy](https://mesonbuild.com/meson-python/) e.g. [numpy](https://github.com/numpy/numpy/blob/1d053b3482b178ed057474402ae94c80701796e0/pyproject.toml#L2)
+- [setuptools.build_meta](https://setuptools.pypa.io/en/latest/build_meta.html) e.g. [parselmouth](https://github.com/prefix-dev/parselmouth/blob/eb3eda68672ba95871719866403318690e1b37be/pyproject.toml#L3)
 
 ## Editable Installation
 
