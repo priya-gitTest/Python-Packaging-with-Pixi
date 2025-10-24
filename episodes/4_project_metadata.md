@@ -46,7 +46,7 @@ Some other build tools to read are:
 
 ## Editable Installation
 
-Projects may be installed in editable mode, which allows you to make changes to the source code and have them reflected immediately in the environment without reinstallation. For example, the `greet_me` package can be added as an editable dependency.
+Projects may be installed in editable mode, which allows you to make changes to the source code and have them reflected immediately in the environment without reinstallation. For example, the `greet_me` package we are creating is listed as editable by default.
   
 ```toml
 [tool.pixi.pypi-dependencies]
