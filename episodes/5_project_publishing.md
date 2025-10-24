@@ -217,10 +217,10 @@ pixi run twine upload --repository testpypi dist/*
 
 ## Step 4: Test your package
 
-Create a new Repository with a readme file and install your package from TestPyPI via this command : 
+Create a new repository with a readme file, open a new codespace, and install your package from TestPyPI via this command:
 
 ```bash
-pip install -i https://test.pypi.org/simple/ greet-me1==0.1.7
+pip install -i https://test.pypi.org/simple/ greet-me1==0.1.0
 ```
 
 ```output
