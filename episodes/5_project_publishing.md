@@ -80,8 +80,7 @@ This command creates a `dist` directory containing two files:
      
 <img width="306" height="533" alt="image" src="https://github.com/user-attachments/assets/503697e4-b93b-45e9-9904-229bd892b47a" />
 
-
- ## Step 2 : Create an account on TestPyPI
+## Step 2 : Create an account on TestPyPI
      
 - Visit [TestPyPI](https://test.pypi.org/account/register/) and create an account.
 - Generate an **API token** from your account settings.
