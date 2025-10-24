@@ -42,6 +42,7 @@ Yay! happy day! 😀
 ```
 
 This command will:
+
 - Ensure that the required environment is installed (creating or updating it if necessary).
 - Run the start task exactly as defined in your configuration file.
 
