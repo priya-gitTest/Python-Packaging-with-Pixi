@@ -1,7 +1,7 @@
 ---
 title: "Metadata for Python packging"
 teaching: 5
-exercises: 10
+exercises: 5
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -27,7 +27,7 @@ Please note, for projects managed with Pixi, either `pyproject.toml` or `pixi.to
 
 This section of a `pyproject.toml` file informs packaging tools such as `pip` which software is required to build your project. It specifies the **build backend** responsible for producing distributable packages such as wheels (`.whl`) or source distributions (`.sdist`).
 
-This section was introduced by **[PEP 518]**(https://peps.python.org/pep-0518/) and is essential for modern Python packaging.
+This section was introduced by **[PEP 518](https://peps.python.org/pep-0518/)** and is essential for modern Python packaging.
 It has two main keys:
 
 1. `requires`: A list of packages required to build the project. These are downloaded and installed into a temporary, isolated environment prior to the build process. The build backend itself must also be listed here.

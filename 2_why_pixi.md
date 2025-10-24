@@ -26,10 +26,10 @@ Pixi is a fast, modern and reproducible package management tool. It has lots of 
 
 Key features include:
 
-- **Support for both PyPI and Conda packages** : enabling flexibility in sourcing dependencies.
-- **Performance** :lightweight and modern, designed for speed.
-- **Multi-language dependency management** : e.g. Python with Rust, or Python with C/C++.
-- **Integration with `uv`** : leveraging a high-performance package installer.
+- **Support for both PyPI and Conda packages**: enabling flexibility in sourcing dependencies.
+- **Performance**: lightweight and modern, designed for speed.
+- **Multi-language dependency management**: e.g. Python with Rust, or Python with C/C++.
+- **Integration with `uv`**: leveraging a high-performance package installer.
 - **Reproducibility**: guaranteed through the use of `pixi.lock`.
 - **Configuration via TOML files**: supports both `pixi.toml` and `pyproject.toml`.
    
@@ -44,9 +44,10 @@ Pixi allows you to define dependencies for specific operating systems (e.g. Wind
 
 ## pyproject.toml
 For this demo, we will mainly focus on `pyproject.toml` file.
-We make this choice due to following specifications and recomendations : [PEP 621](https://peps.python.org/pep-0621/), [PEP 517](https://peps.python.org/pep-0517/), and [PEP 660](https://peps.python.org/pep-0660/)
+We make this choice due to following specifications and recomendations : [PEP 621](https://peps.python.org/pep-0621/), [PEP 517](https://peps.python.org/pep-0517/), and [PEP 660](https://peps.python.org/pep-0660/).
 
-You can also read at these links : 
+You can also read at these links: 
+
 - https://pixi.sh/v0.40.1/reference/pixi_manifest/#pypi-dependencies
 - https://pixi.sh/v0.40.1/advanced/pyproject_toml/
 

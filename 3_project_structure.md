@@ -75,7 +75,7 @@ greet_me = { path = ".", editable = true }
 [tool.pixi.tasks]
 ```
 
-To add libraries via Pixi:
+To add libraries via Pixi use the `pixi add` command. Add the `requests` library:
 ```bash
 pixi add requests
 ```
@@ -111,13 +111,15 @@ Added these as pypi-dependencies.
 Check the `pyproject.toml` file. These get added under the `[project]` section 
 ```toml
 [project]
+authors = [{name = "Priyanka Demo", email = "demo@users.noreply.github.com"}]
 dependencies = ["requests>=2.32.5,<3"]
 name = "greet_me"
 ```
-Please note : this wont create a problem when uploading the build but can create problems, when installing the builds.
+Please note: this won't create a problem when uploading the build but can create problems when installing the builds.
 So best to keep it empty for now and move this to `[tool.pixi.pypi-dependencies]` section , for all projects which need to come from via PyPI namely **build** and **twine** which are used to create and upload build respectively.
 ```toml
 [project]
+authors = [{name = "Priyanka Demo", email = "demo@users.noreply.github.com"}]
 dependencies = []
 name = "greet_me"
 ...
@@ -173,9 +175,11 @@ def greet_sad():
 The overall project structure should then resemble:
 ```
 greet_me/
+├── .pixi
+├── .gitattributes
+├── .gitignore
 ├── LICENSE
 ├── pyproject.toml
-├── README.md
 ├── pixi.lock         # auto-generated, do not edit
 └── src/greet_me/
     ├── __init__.py
@@ -187,7 +191,7 @@ greet_me/
 
 ## Running a Task
 
-Task is a command alias that you can execute easily via the CLI (e.g., pixi run <task-name>). 
+`task` is a command alias that you can execute easily via the CLI (e.g., pixi run task-name). 
 
 Run the following command to add a task and observe the changes in `pyproject.toml` file:
 ```bash
@@ -215,6 +219,6 @@ You can read more about tasks [here](https://pixi.sh/dev/workspace/advanced_task
 - Follow the appropriate folder structure.
 - Always include the `__init__.py` file in packages.
 - Sequence of Pixi commands: **init** → **add** → **run** → **lock** → **install** → **update**.
-- Define / check `[project]`, `[dependencies]` and `[tasks]` in your `pyproject.toml` file .
+- Define / check `[project]`, `[dependencies]` and `[tasks]` in your `pyproject.toml` file.
   
 ::::::::::::::::::::::::::::::::::::::::::::::::

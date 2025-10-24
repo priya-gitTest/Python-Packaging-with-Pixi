@@ -33,13 +33,10 @@ Software development is a creative pursuit, and it is satisfying to write code t
 
 By packaging code, you address several important challenges, including ensuring reproducibility, achieving cross-platform compatibility, and supporting multiple environments. Distributing code as a package offers many advantages over merely sharing source files, for example via GitHub:
 
-Dependency management: A package can explicitly declare its dependencies. Tools such as pip (or uv) can then automatically install them for the user.
-
-Versioning: You may version your package and distribute multiple versions, thereby supporting backwards compatibility.
-
-Standardisation: Packaging is the established method of distributing code via recognised repositories such as PyPI.
-
-Metadata: Packages include project-specific metadata, which is essential for end users.
+- Dependency management: A package can explicitly declare its dependencies. Tools such as pip (or uv) can then automatically install them for the user.
+- Versioning: You may version your package and distribute multiple versions, thereby supporting backwards compatibility.
+- Standardisation: Packaging is the established method of distributing code via recognised repositories such as PyPI.
+- Metadata: Packages include project-specific metadata, which is essential for end users.
 
 ## Python Package Structure Hierarchy
 
@@ -67,7 +64,7 @@ Metadata: Packages include project-specific metadata, which is essential for end
 Any .py files (modules) or directories with __init__.py (packages) can be packaged.
 
 
-## What Is __init__.Py File in Python?
+## What Is __init__.py File in Python?
 The __init__.py file is a Python file that is executed when a package is imported.
 It serves two main purposes:
 
@@ -78,7 +75,7 @@ It serves two main purposes:
 
 ## What is PyPI
 
-PyPI is the repository where all released Python packages are made available for end users. You may explore it here: [PyPI](https://pypi.org/). 
+[PyPI](https://pypi.org/) is the repository where all released Python packages are made available for end users.
 There is also [TestPyPI](https://test.pypi.org/), a repository which allows us to experiment with distribution tools and procedures without affecting the live PyPI. In this course, we will publish our package to TestPyPI.
 
 ## What is a Build ?
