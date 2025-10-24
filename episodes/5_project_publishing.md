@@ -91,7 +91,7 @@ This command creates a `dist` directory containing two files:
 
 ## Step 3: Upload your build
 The **Twine** tool is used to securely upload your package distributions.
-Install `twine` and modify the `pyroject.toml` file simmilar to what you did for `build` tool above.
+Install `twine` and modify the `pyroject.toml` file as you did for `build` tool above.
  
 ```bash
 pixi add --pypi twine
