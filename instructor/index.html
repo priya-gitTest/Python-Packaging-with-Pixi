@@ -335,7 +335,7 @@ collaboration.</li>
 pixi.toml.</li>
 <li>Manage dependencies and lockfiles using Pixi to ensure consistent
 environments.</li>
-<li>Build source and wheel distributions of a Python package..</li>
+<li>Build source and wheel distributions of a Python package.</li>
 <li>Publish a package to Test Python Package Index (TestPyPI) using
 Twine.</li>
 <li>Install a package from TestPyPI using pip.</li>
@@ -403,7 +403,7 @@ What is <code>pyproject.toml</code>?<br>What is a lockfile, and why is
 it necessary?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 55m
+<span class="visually-hidden">Duration: </span>00h 50m
 </td>
 <td>
  5. <a href="5_project_publishing.html">How to publish your Python
@@ -415,7 +415,7 @@ command and what does it do ?<br>How can we create and upload a Python
 package?<br>How can we test and use the uploaded Python package?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 20m
+<span class="visually-hidden">Duration: </span>01h 10m
 </td>
 <td>
  6. <a href="6_extra.html">Extra</a>
@@ -424,7 +424,7 @@ package?<br>How can we test and use the uploaded Python package?
 How can we use <code>pixi run start</code>?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 26m
+<span class="visually-hidden">Duration: </span>01h 16m
 </td>
 <td>
 Finish
@@ -467,25 +467,24 @@ lessons.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="create-a-repository">Create a repository<a class="anchor" aria-label="anchor" href="#create-a-repository"></a></h2>
-<hr class="half-width"><ul><li><p>Log into <a href="https://github.com" class="external-link">GitHub</a> and create a new
+<div class="section level3">
+<h3 id="create-a-repository">Create a repository<a class="anchor" aria-label="anchor" href="#create-a-repository"></a></h3>
+<ul><li><p>Log into <a href="https://github.com" class="external-link">GitHub</a> and create a new
 repository for this lesson called <code>greet_me</code> and add a
-Licence File when creating the repository.</p></li>
+Licence File when creating the repository. In this case it doesn’t
+matter which licence (this is just a practice repo) - we just need
+something to initialise the repo, and a licence to satisfy the TestPyPI
+requirements.</p></li>
 <li><p>From the repository page, open the <strong>Code</strong> dropdown
 menu, select the <strong>Codespaces</strong> tab, and click
 <strong>Create codespace on main</strong>.</p></li>
-</ul><figure><img width="416" height="353" alt="image" src="https://github.com/user-attachments/assets/15167dca-b8c3-4701-87ac-3d6cb2b1022b" class="figure mx-auto d-block"></figure><ul><li>Once your Codespace has been created, open the terminal inside it
+</ul><figure><img width="416" height="353" alt="image" src="https://github.com/user-attachments/assets/15167dca-b8c3-4701-87ac-3d6cb2b1022b" class="figure mx-auto d-block"></figure><p>If you get an error (e.g. “Oh no, it looks like you are offline!”)
+try a different browser or incognito mode.</p>
+<ul><li>Once your Codespace has been created, open the terminal inside it
 and run the following commands.</li>
-</ul><div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">
-  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  Install Pixi
-  </h3>
-</button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
-<div class="accordion-body">
+</ul></div>
+<div class="section level3">
+<h3 id="install-pixi">Install Pixi<a class="anchor" aria-label="anchor" href="#install-pixi"></a></h3>
 <p>Run the following</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -525,14 +524,11 @@ releases may have been published since this course was written.</em></p>
 </h3>
 <pre class="output" tabindex="0"><code>pixi 0.57.0</code></pre>
 </div>
-</div>
-</div>
-</div>
-</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="../instructor/1_intoduction_python_packaging.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -582,8 +578,8 @@ any links that you are not going to use.
   "url": "https://priya-gittest.github.io/Python-Packaging-with-Pixi/instructor/index.html",
   "identifier": "https://priya-gittest.github.io/Python-Packaging-with-Pixi/instructor/index.html",
   "dateCreated": "2025-08-19",
-  "dateModified": "2025-10-22",
-  "datePublished": "2025-10-22"
+  "dateModified": "2025-10-24",
+  "datePublished": "2025-10-24"
 }
 
   </script><script>

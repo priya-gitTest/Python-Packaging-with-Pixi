@@ -373,7 +373,7 @@
         
 <section id="aio-1_intoduction_python_packaging"><p>Content from <a href="1_intoduction_python_packaging.html">Why Python Packages?</a></p>
 <hr>
-<p>Last updated on 2025-10-22 |
+<p>Last updated on 2025-10-24 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/1_intoduction_python_packaging.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -430,16 +430,17 @@ including ensuring reproducibility, achieving cross-platform
 compatibility, and supporting multiple environments. Distributing code
 as a package offers many advantages over merely sharing source files,
 for example via GitHub:</p>
-<p>Dependency management: A package can explicitly declare its
+<ul>
+<li>Dependency management: A package can explicitly declare its
 dependencies. Tools such as pip (or uv) can then automatically install
-them for the user.</p>
-<p>Versioning: You may version your package and distribute multiple
-versions, thereby supporting backwards compatibility.</p>
-<p>Standardisation: Packaging is the established method of distributing
-code via recognised repositories such as PyPI.</p>
-<p>Metadata: Packages include project-specific metadata, which is
-essential for end users.</p>
-</section><section><h2 class="section-heading" id="python-package-structure-hierarchy">Python Package Structure Hierarchy<a class="anchor" aria-label="anchor" href="#python-package-structure-hierarchy"></a>
+them for the user.</li>
+<li>Versioning: You may version your package and distribute multiple
+versions, thereby supporting backwards compatibility.</li>
+<li>Standardisation: Packaging is the established method of distributing
+code via recognised repositories such as PyPI.</li>
+<li>Metadata: Packages include project-specific metadata, which is
+essential for end users.</li>
+</ul></section><section><h2 class="section-heading" id="python-package-structure-hierarchy">Python Package Structure Hierarchy<a class="anchor" aria-label="anchor" href="#python-package-structure-hierarchy"></a>
 </h2>
 <hr class="half-width">
 <ul>
@@ -469,7 +470,7 @@ be installed and used <a href="https://pydevtools.com/handbook/explanation/what-
 <hr class="half-width">
 <p>Any .py files (modules) or directories with <strong>init</strong>.py
 (packages) can be packaged.</p>
-</section><section><h2 class="section-heading" id="what-is-init-py-file-in-python">What Is <strong>init</strong>.Py File in Python?<a class="anchor" aria-label="anchor" href="#what-is-init-py-file-in-python"></a>
+</section><section><h2 class="section-heading" id="what-is-init-py-file-in-python">What Is <strong>init</strong>.py File in Python?<a class="anchor" aria-label="anchor" href="#what-is-init-py-file-in-python"></a>
 </h2>
 <hr class="half-width">
 <p>The <strong>init</strong>.py file is a Python file that is executed
@@ -485,10 +486,11 @@ importing submodules, defining variables, or executing other code.</p>
 </ul></section><section><h2 class="section-heading" id="what-is-pypi">What is PyPI<a class="anchor" aria-label="anchor" href="#what-is-pypi"></a>
 </h2>
 <hr class="half-width">
-<p>PyPI is the repository where all released Python packages are made
-available for end users. You may explore it here: <a href="https://pypi.org/" class="external-link">PyPI</a>. There is also <a href="https://test.pypi.org/" class="external-link">TestPyPI</a>, a repository which allows us
-to experiment with distribution tools and procedures without affecting
-the live PyPI. In this course, we will publish our package to
+<p><a href="https://pypi.org/" class="external-link">PyPI</a> is the repository where all
+released Python packages are made available for end users. There is also
+<a href="https://test.pypi.org/" class="external-link">TestPyPI</a>, a repository which allows
+us to experiment with distribution tools and procedures without
+affecting the live PyPI. In this course, we will publish our package to
 TestPyPI.</p>
 </section><section><h2 class="section-heading" id="what-is-a-build">What is a Build ?<a class="anchor" aria-label="anchor" href="#what-is-a-build"></a>
 </h2>
@@ -527,7 +529,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-2_why_pixi"><p>Content from <a href="2_why_pixi.html">Why choose Pixi for Python Packaging ?</a></p>
 <hr>
-<p>Last updated on 2025-10-22 |
+<p>Last updated on 2025-10-24 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/2_why_pixi.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -575,16 +577,16 @@ multi-language projects.</p>
 <p>Key features include:</p>
 <ul>
 <li>
-<strong>Support for both PyPI and Conda packages</strong> : enabling
+<strong>Support for both PyPI and Conda packages</strong>: enabling
 flexibility in sourcing dependencies.</li>
 <li>
-<strong>Performance</strong> :lightweight and modern, designed for
+<strong>Performance</strong>: lightweight and modern, designed for
 speed.</li>
 <li>
-<strong>Multi-language dependency management</strong> : e.g. Python
+<strong>Multi-language dependency management</strong>: e.g. Python
 with Rust, or Python with C/C++.</li>
 <li>
-<strong>Integration with <code>uv</code></strong> : leveraging a
+<strong>Integration with <code>uv</code></strong>: leveraging a
 high-performance package installer.</li>
 <li>
 <strong>Reproducibility</strong>: guaranteed through the use of
@@ -616,9 +618,12 @@ being deployed or developed.</p>
 <p>For this demo, we will mainly focus on <code>pyproject.toml</code>
 file. We make this choice due to following specifications and
 recomendations : <a href="https://peps.python.org/pep-0621/" class="external-link">PEP
-621</a>, <a href="https://peps.python.org/pep-0517/" class="external-link">PEP 517</a>, and <a href="https://peps.python.org/pep-0660/" class="external-link">PEP 660</a></p>
-<p>You can also read at these links : - <a href="https://pixi.sh/v0.40.1/reference/pixi_manifest/#pypi-dependencies" class="external-link uri">https://pixi.sh/v0.40.1/reference/pixi_manifest/#pypi-dependencies</a>
-- <a href="https://pixi.sh/v0.40.1/advanced/pyproject_toml/" class="external-link uri">https://pixi.sh/v0.40.1/advanced/pyproject_toml/</a></p>
+621</a>, <a href="https://peps.python.org/pep-0517/" class="external-link">PEP 517</a>, and <a href="https://peps.python.org/pep-0660/" class="external-link">PEP 660</a>.</p>
+<p>You can also read at these links:</p>
+<ul>
+<li><a href="https://pixi.sh/v0.40.1/reference/pixi_manifest/#pypi-dependencies" class="external-link uri">https://pixi.sh/v0.40.1/reference/pixi_manifest/#pypi-dependencies</a></li>
+<li><a href="https://pixi.sh/v0.40.1/advanced/pyproject_toml/" class="external-link uri">https://pixi.sh/v0.40.1/advanced/pyproject_toml/</a></li>
+</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -640,7 +645,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-3_project_structure"><p>Content from <a href="3_project_structure.html">Set up a project directory</a></p>
 <hr>
-<p>Last updated on 2025-10-22 |
+<p>Last updated on 2025-10-24 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/3_project_structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -737,7 +742,8 @@ file generated may look like this:</p>
 <span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a></span>
 <span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a><span class="kw">[tool.pixi.tasks]</span></span></code></pre>
 </div>
-<p>To add libraries via Pixi:</p>
+<p>To add libraries via Pixi use the <code>pixi add</code> command. Add
+the <code>requests</code> library:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -789,26 +795,27 @@ Added these as pypi-dependencies.</code></pre>
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="kw">[project]</span></span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[</span><span class="st">"requests&gt;=2.32.5,&lt;3"</span><span class="op">]</span></span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"greet_me"</span></span></code></pre>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[{</span><span class="dt">name</span><span class="op"> =</span> <span class="st">"Priyanka Demo"</span><span class="op">, </span><span class="dt">email</span><span class="op"> =</span> <span class="st">"demo@users.noreply.github.com"</span><span class="op">}]</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[</span><span class="st">"requests&gt;=2.32.5,&lt;3"</span><span class="op">]</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"greet_me"</span></span></code></pre>
 </div>
-<p>Please note : this wont create a problem when uploading the build but
-can create problems, when installing the builds. So best to keep it
-empty for now and move this to
-<code>[tool.pixi.pypi-dependencies]</code> section , for all projects
-which need to come from via PyPI namely <strong>build</strong> and
-<strong>twine</strong> which are used to create and upload build
-respectively.</p>
+<p>Please note: this won’t create a problem when uploading the build but
+can create problems when installing the builds. So best to keep it empty
+for now and move this to <code>[tool.pixi.pypi-dependencies]</code>
+section , for all projects which need to come from via PyPI namely
+<strong>build</strong> and <strong>twine</strong> which are used to
+create and upload build respectively.</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="kw">[project]</span></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[]</span></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"greet_me"</span></span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="dt">...</span></span>
-<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="kw">[tool.pixi.pypi-dependencies]</span></span>
-<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="dt">requests</span> <span class="op">=</span> <span class="st">"&gt;=2.32.5,&lt;3"</span></span>
-<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="dt">greet_me</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">path</span><span class="op"> =</span> <span class="st">"."</span><span class="op">, </span><span class="dt">editable</span><span class="op"> =</span> <span class="cn">true</span><span class="op"> }</span></span></code></pre>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[{</span><span class="dt">name</span><span class="op"> =</span> <span class="st">"Priyanka Demo"</span><span class="op">, </span><span class="dt">email</span><span class="op"> =</span> <span class="st">"demo@users.noreply.github.com"</span><span class="op">}]</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[]</span></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"greet_me"</span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="dt">...</span></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="kw">[tool.pixi.pypi-dependencies]</span></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="dt">requests</span> <span class="op">=</span> <span class="st">"&gt;=2.32.5,&lt;3"</span></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a><span class="dt">greet_me</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">path</span><span class="op"> =</span> <span class="st">"."</span><span class="op">, </span><span class="dt">editable</span><span class="op"> =</span> <span class="cn">true</span><span class="op"> }</span></span></code></pre>
 </div>
 <p>Other commands, that can be later explored :</p>
 <p>To generate or update the <code>pixi.lock</code> file:</p>
@@ -875,9 +882,11 @@ for below, when creating a python file. So just Install it.
 </div>
 <p>The overall project structure should then resemble:</p>
 <pre><code>greet_me/
+├── .pixi
+├── .gitattributes
+├── .gitignore
 ├── LICENSE
 ├── pyproject.toml
-├── README.md
 ├── pixi.lock         # auto-generated, do not edit
 └── src/greet_me/
     ├── __init__.py
@@ -886,8 +895,8 @@ for below, when creating a python file. So just Install it.
 <figure><img width="203" height="393" alt="image" src="https://github.com/user-attachments/assets/6acc1213-b9f6-48f9-b385-a3c10268ccd9" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="running-a-task">Running a Task<a class="anchor" aria-label="anchor" href="#running-a-task"></a>
 </h2>
 <hr class="half-width">
-<p>Task is a command alias that you can execute easily via the CLI
-(e.g., pixi run <task-name>).</task-name></p>
+<p><code>task</code> is a command alias that you can execute easily via
+the CLI (e.g., pixi run task-name).</p>
 <p>Run the following command to add a task and observe the changes in
 <code>pyproject.toml</code> file:</p>
 <div class="codewrapper sourceCode" id="cb24">
@@ -931,7 +940,7 @@ setting.</p>
 <strong>add</strong> → <strong>run</strong> → <strong>lock</strong> →
 <strong>install</strong> → <strong>update</strong>.</li>
 <li>Define / check <code>[project]</code>, <code>[dependencies]</code>
-and <code>[tasks]</code> in your <code>pyproject.toml</code> file .</li>
+and <code>[tasks]</code> in your <code>pyproject.toml</code> file.</li>
 </ul>
 </div>
 </div>
@@ -942,7 +951,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-4_project_metadata"><p>Content from <a href="4_project_metadata.html">Metadata for Python packging</a></p>
 <hr>
-<p>Last updated on 2025-10-22 |
+<p>Last updated on 2025-10-24 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/4_project_metadata.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -996,8 +1005,8 @@ tools such as <code>pip</code> which software is required to build your
 project. It specifies the <strong>build backend</strong> responsible for
 producing distributable packages such as wheels (<code>.whl</code>) or
 source distributions (<code>.sdist</code>).</p>
-<p>This section was introduced by <strong>[PEP 518]</strong>(<a href="https://peps.python.org/pep-0518/" class="external-link uri">https://peps.python.org/pep-0518/</a>) and is essential for
-modern Python packaging. It has two main keys:</p>
+<p>This section was introduced by <strong><a href="https://peps.python.org/pep-0518/" class="external-link">PEP 518</a></strong> and is
+essential for modern Python packaging. It has two main keys:</p>
 <ol style="list-style-type: decimal">
 <li>
 <code>requires</code>: A list of packages required to build the
@@ -1111,7 +1120,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-5_project_publishing"><p>Content from <a href="5_project_publishing.html">How to publish your Python project</a></p>
 <hr>
-<p>Last updated on 2025-10-22 |
+<p>Last updated on 2025-10-24 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/5_project_publishing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1582,8 +1591,8 @@ any links that you are not going to use.
   "url": "https://priya-gittest.github.io/Python-Packaging-with-Pixi/aio.html",
   "identifier": "https://priya-gittest.github.io/Python-Packaging-with-Pixi/aio.html",
   "dateCreated": "2025-08-19",
-  "dateModified": "2025-10-22",
-  "datePublished": "2025-10-22"
+  "dateModified": "2025-10-24",
+  "datePublished": "2025-10-24"
 }
 
   </script><script>
