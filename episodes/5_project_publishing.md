@@ -52,6 +52,7 @@ dependencies = []
 requests = ">=2.32.5,<3"
 build = ">=1.3.0,<2"
 ```
+Then run the `build` command:
 
 ```bash
 pixi run python -m build
