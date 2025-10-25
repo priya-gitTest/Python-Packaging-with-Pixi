@@ -50,6 +50,10 @@ You can also read at these links:
 
 - https://pixi.sh/v0.40.1/reference/pixi_manifest/#pypi-dependencies
 - https://pixi.sh/v0.40.1/advanced/pyproject_toml/
+  
+## envs 
+Automatically creates the environment for you when you initialize the project via Pixi i.e. `pixi init`
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
