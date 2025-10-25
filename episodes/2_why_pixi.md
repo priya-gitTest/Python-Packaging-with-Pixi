@@ -54,6 +54,9 @@ You can also read at these links:
 ## envs 
 Automatically creates the environment for you when you initialize the project via Pixi i.e. `pixi init`
 
+## dependency management
+When you add a package via Pixi, it automatically updates the `pyproject.toml` file and generates or updates the `pixi.lock` file with appropriate source and version.
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
