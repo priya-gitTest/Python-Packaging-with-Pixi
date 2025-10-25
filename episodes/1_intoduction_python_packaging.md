@@ -35,7 +35,7 @@ By packaging code, you address several important challenges, including ensuring 
 
 - Dependency management: A package can explicitly declare its dependencies. Tools such as pip (or uv) can then automatically install them for the user.
 - Versioning: You may version your package and distribute multiple versions, thereby supporting backwards compatibility.
-- Standardisation: Packaging is the established method of distributing code via recognised repositories such as PyPI.
+- Standardisation: Packaging is the established method of distributing code via recognised repositories such as PyPI and conda forge.
 - Metadata: Packages include project-specific metadata, which is essential for end users.
 
 ## Python Package Structure Hierarchy
@@ -64,8 +64,8 @@ By packaging code, you address several important challenges, including ensuring 
 Any .py files (modules) or directories with __init__.py (packages) can be packaged.
 
 
-## What Is __init__.py File in Python?
-The __init__.py file is a Python file that is executed when a package is imported.
+## What is __init__.py file in Python?
+The __init__.py file (aka dunder init)  is a Python file that is executed when a package is imported.
 It serves two main purposes:
 
 - It marks the directory as a Python Package so that the interpreter can find the modules inside it.
@@ -90,7 +90,7 @@ python -m build
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - To make Python code installable, reusable and distributable via PyPI or TestPyPI, one must package the code.
-- The Package should have modules and __init__.py file.
+- The Package should have modules (.py file(s)) and __init__.py file.
 - The code must be versioned.
 - Project dependencies must be managed.
 - The project’s metadata must be clearly defined.
