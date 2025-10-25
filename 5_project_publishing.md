@@ -30,8 +30,6 @@ The two key tools we need are:
 
 **Twine** – for securely uploading those distributions to **PyPI** or **TestPyPI**.
 
-**Note**: Before proceeding, rename or remove the `pixi.tom`l file, as we will focus on `pyproject.toml`. You may experiment with `pixi.toml` later by removing or renaming `pyproject.toml`.
-
 ##  Step 1: Create your build
 
 The `build` tool reads your `pyproject.toml` file and generates the package distribution files.
@@ -44,7 +42,7 @@ pixi add --pypi build
 ✔ Added build >=1.3.0, <2
 Added these as pypi-dependencies.
 ```
-Empty the depenencies under `[project]` and move/edit them to `[tool.pixi.pypi-dependencies]` section, like shown below : 
+Empty the depenencies under `[project]` and move/edit them to `[tool.pixi.pypi-dependencies]` section, like shown below:
 
 ```toml
 [project]
@@ -54,6 +52,7 @@ dependencies = []
 requests = ">=2.32.5,<3"
 build = ">=1.3.0,<2"
 ```
+Then run the `build` command:
 
 ```bash
 pixi run python -m build
@@ -75,13 +74,13 @@ Successfully built greet_me-0.1.0.tar.gz and greet_me-0.1.0-py3-none-any.whl
  ```
       
 This command creates a `dist` directory containing two files:
+
 - A wheel file (`greet_me-0.1.0-py3-none-any.whl`).
 - A source archive (`greet_me-0.1.0.tar.gz`).
      
 <img width="306" height="533" alt="image" src="https://github.com/user-attachments/assets/503697e4-b93b-45e9-9904-229bd892b47a" />
 
-
- ## Step 2 : Create an account on TestPyPI
+## Step 2 : Create an account on TestPyPI
      
 - Visit [TestPyPI](https://test.pypi.org/account/register/) and create an account.
 - Generate an **API token** from your account settings.
@@ -92,7 +91,7 @@ This command creates a `dist` directory containing two files:
 
 ## Step 3: Upload your build
 The **Twine** tool is used to securely upload your package distributions.
-Install `twine` and modify the `pyroject.toml` file simmilar to what you did for `build` tool above.
+Install `twine` and modify the `pyroject.toml` file as you did for `build` tool above.
  
 ```bash
 pixi add --pypi twine
@@ -116,17 +115,17 @@ Now upload the package to TestPyI
 Uploading distributions to https://test.pypi.org/legacy/
 WARNING  This environment is not supported for trusted publishing                                                     
 Enter your API token: 
-Uploading greet_me1-0.1.7-py3-none-any.whl
+Uploading greet_me-0.1.0-py3-none-any.whl
 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 kB • 00:00 • ?
-Uploading greet_me1-0.1.7.tar.gz
+Uploading greet_me-0.1.0.tar.gz
 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 kB • 00:00 • ?
 
 View at:
-https://test.pypi.org/project/greet-me1/0.1.7/
+https://test.pypi.org/project/greet-me/0.1.0/
   ```
 
 After a successful upload, your package will be available at a URL such as: E.g. : 
-`[https://test.pypi.org/project/po-greet-me/0.1.1/](https://test.pypi.org/project/greet-me1/0.1.7/)`
+[https://test.pypi.org/project/greet-me/0.1.0/](https://test.pypi.org/project/greet-me/0.1.0/).
 
 <img width="1743" height="973" alt="image" src="https://github.com/user-attachments/assets/d41cc3d8-1d9a-4a4e-bdaa-a600fe9d2b1a" />
 
@@ -139,14 +138,14 @@ In that case you may end up in an error like this :
 twine upload --repository testpypi dist/*
 Uploading distributions to https://test.pypi.org/legacy/
 Enter your API token: 
-Uploading greet_me-0.1.1-py3-none-any.whl
+Uploading greet_me-0.1.0-py3-none-any.whl
 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 kB • 00:00 • ?
 WARNING  Error during upload. Retry with the --verbose option for more details.                                                                                                                                            
 ERROR    HTTPError: 403 Forbidden from https://test.pypi.org/legacy/                                                                                                                                                       
     Forbidden
 ```
 
-This isnt always helpful and you should try this command as tipped in the error message above to know more.
+This isn't always helpful and you should try this command as tipped in the error message above to know more.
 
 ```bash
 pixi run twine upload --repository testpypi dist/* --verbose
@@ -218,10 +217,10 @@ pixi run twine upload --repository testpypi dist/*
 
 ## Step 4: Test your package
 
-Create a new Repository with a readme file and install your package from TestPyPI via this command : 
+Create a new repository with a readme file, open a new codespace, and install your package from TestPyPI via this command:
 
 ```bash
-pip install -i https://test.pypi.org/simple/ greet-me1==0.1.7
+pip install -i https://test.pypi.org/simple/ greet-me1==0.1.0
 ```
 
 ```output
