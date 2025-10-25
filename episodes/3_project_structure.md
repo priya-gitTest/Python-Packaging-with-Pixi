@@ -115,36 +115,29 @@ authors = [{name = "Priyanka Demo", email = "demo@users.noreply.github.com"}]
 dependencies = ["requests>=2.32.5,<3"]
 name = "greet_me"
 ```
-Please note: this won't create a problem when uploading the build but can create problems when installing the builds.
-So best to keep it empty for now and move this to `[tool.pixi.pypi-dependencies]` section , for all projects which need to come from via PyPI namely **build** and **twine** which are used to create and upload build respectively.
-```toml
-[project]
-authors = [{name = "Priyanka Demo", email = "demo@users.noreply.github.com"}]
-dependencies = []
-name = "greet_me"
-...
-[tool.pixi.pypi-dependencies]
-requests = ">=2.32.5,<3"
-greet_me = { path = ".", editable = true }
-```
 
 Other commands, that can be later explored : 
 
-To generate or update the `pixi.lock` file:
+`pixi lock` : Generates or updates the `pixi.lock` file by resolving exact package versions for reproducible environments. This is conceptually similar to `pip freeze`, but instead of listing installed packages, it proactively locks dependency versions.
+
 ```bash
 pixi lock
 ```
 ```output
 ✔ Lock-file was already up-to-date
 ```
-Alternatively, when cloning a repository, you can install dependencies from the `pixi.lock` file:
+
+`pixi install` : Creates or updates the project environment based on your configuration files (`pixi.toml` / `pyproject.toml` and `pixi.lock`). Useful to run after cloning a repository.
+
 ```bash
 pixi install
 ```
 ```output
 ✔ The default environment has been installed.
 ```
-To upgrade dependencies to the latest compatible versions: 
+
+`pixi update` : It refreshes and upgrades dependencies in your Pixi project to their latest compatible versions, updating both the environment and the lock file.
+
 ```bash
 pixi update
 ```
@@ -155,6 +148,7 @@ pixi update
 ```output
 ✔ Lock-file was already up-to-date
 ```
+
 ## Adding Modules
 Lets create these 2 files: `happy.py`, `sad.py` in the folder src/greet_me.
 
