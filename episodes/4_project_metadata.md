@@ -38,14 +38,15 @@ It has two main keys:
 requires = ["hatchling"] 
 build-backend = "hatchling.build"
 ```
-Some other build tools to read are 
-- [pdm.backend](https://backend.pdm-project.org) e.g. [fastapi](https://github.com/fastapi/fastapi/blob/master/pyproject.toml)
-- [mesonpy](https://mesonbuild.com/meson-python/) e.g. [numpy](https://github.com/numpy/numpy/blob/main/pyproject.toml)
-- [setuptools.build_meta]() e.g. [parselmouth](https://github.com/prefix-dev/parselmouth/blob/main/pyproject.toml)
+Some other build tools to read are:
+ 
+- [pdm.backend](https://backend.pdm-project.org) e.g. [fastapi](https://github.com/fastapi/fastapi/blob/cd40c5b40ffd8ba0c6a6a6c96bbf34ec1cf9c525/pyproject.toml#L2)
+- [mesonpy](https://mesonbuild.com/meson-python/) e.g. [numpy](https://github.com/numpy/numpy/blob/1d053b3482b178ed057474402ae94c80701796e0/pyproject.toml#L2)
+- [setuptools.build_meta](https://setuptools.pypa.io/en/latest/build_meta.html) e.g. [parselmouth](https://github.com/prefix-dev/parselmouth/blob/eb3eda68672ba95871719866403318690e1b37be/pyproject.toml#L3)
 
 ## Editable Installation
 
-Projects may be installed in editable mode, which allows you to make changes to the source code and have them reflected immediately in the environment without reinstallation. For example, the `greet_me` package can be added as an editable dependency.
+Projects may be installed in editable mode, which allows you to make changes to the source code and have them reflected immediately in the environment without reinstallation. For example, the `greet_me` package we are creating is listed as editable by default.
   
 ```toml
 [tool.pixi.pypi-dependencies]
@@ -58,8 +59,9 @@ greet_me = { path = ".", editable = true }
 requires-python = ">=3.11, <3.12"
 ```
 Additional sections in `pyproject.toml` may include:
-  `[tool.pixi.workspace]`: Defines project-wide settings, including package sources and target platforms for resolution.  
-  `[tool.pixi.pypi-dependencies]` : Declares the dependencies to be installed from PyPI (or equivalent sources). These are the external libraries required by the project.
+
+-  `[tool.pixi.workspace]`: Defines project-wide settings, including package sources and target platforms for resolution.  
+-  `[tool.pixi.pypi-dependencies]` : Declares the dependencies to be installed from PyPI (or equivalent sources). These are the external libraries required by the project.
 
 You can specify a range or multiple supported Python versions using the syntax below.
 ```toml
@@ -69,11 +71,11 @@ Final `pyproject.toml` should look like this below, for reference.
 
 ```toml
 [project]
-authors = [{name = "Priyanka O"}]
+authors = [{name = "Priyanka Demo", email = "demo@users.noreply.github.com"}]
 dependencies = []
 name = "greet_me"
 requires-python = ">= 3.11"
-version = "0.1.2"
+version = "0.1.0"
 description = "greet_me Pixi-managed package"
 readme = "README.md"
 
@@ -93,13 +95,14 @@ greet_me = { path = ".", editable = true }
 start = "python -c 'from greet_me import happy; print(happy.greet_happy())'"
 ```
 
-For insipiration, also check [here](https://github.com/prefix-dev/parselmouth/blob/main/pyproject.toml)
+For insipiration, also check [here](https://github.com/prefix-dev/parselmouth/blob/main/pyproject.toml).
 
 ## Lockfiles
 A **lockfile** contains the complete set of dependencies, including specific versions, required to reproduce the project environment. It is automatically generated based on the dependencies listed in the `.toml` file, ensuring that builds remain consistent and reproducible.
 
-
+## Readme
 Please add and update the README.md file, in case you havent done so. You can easily generate a README text on [readme.so](https://readme.so/) and copy its content to your READMe file.
+
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Every project must include a `pyproject.toml` file
 - The `[build-system]` section is required and must define both `requires` and `build-backend`.
