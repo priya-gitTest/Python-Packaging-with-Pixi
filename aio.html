@@ -373,7 +373,7 @@
         
 <section id="aio-1_intoduction_python_packaging"><p>Content from <a href="1_intoduction_python_packaging.html">Why Python Packages?</a></p>
 <hr>
-<p>Last updated on 2025-10-24 |
+<p>Last updated on 2025-10-25 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/1_intoduction_python_packaging.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -437,7 +437,7 @@ them for the user.</li>
 <li>Versioning: You may version your package and distribute multiple
 versions, thereby supporting backwards compatibility.</li>
 <li>Standardisation: Packaging is the established method of distributing
-code via recognised repositories such as PyPI.</li>
+code via recognised repositories such as PyPI and conda forge.</li>
 <li>Metadata: Packages include project-specific metadata, which is
 essential for end users.</li>
 </ul></section><section><h2 class="section-heading" id="python-package-structure-hierarchy">Python Package Structure Hierarchy<a class="anchor" aria-label="anchor" href="#python-package-structure-hierarchy"></a>
@@ -470,11 +470,12 @@ be installed and used <a href="https://pydevtools.com/handbook/explanation/what-
 <hr class="half-width">
 <p>Any .py files (modules) or directories with <strong>init</strong>.py
 (packages) can be packaged.</p>
-</section><section><h2 class="section-heading" id="what-is-init-py-file-in-python">What Is <strong>init</strong>.py File in Python?<a class="anchor" aria-label="anchor" href="#what-is-init-py-file-in-python"></a>
+</section><section><h2 class="section-heading" id="what-is-init-py-file-in-python">What is <strong>init</strong>.py file in Python?<a class="anchor" aria-label="anchor" href="#what-is-init-py-file-in-python"></a>
 </h2>
 <hr class="half-width">
-<p>The <strong>init</strong>.py file is a Python file that is executed
-when a package is imported. It serves two main purposes:</p>
+<p>The <strong>init</strong>.py file (aka dunder init) is a Python file
+that is executed when a package is imported. It serves two main
+purposes:</p>
 <ul>
 <li><p>It marks the directory as a Python Package so that the
 interpreter can find the modules inside it.</p></li>
@@ -514,8 +515,8 @@ version your build and supply the requisite metadata.</p>
 <ul>
 <li>To make Python code installable, reusable and distributable via PyPI
 or TestPyPI, one must package the code.</li>
-<li>The Package should have modules and <strong>init</strong>.py
-file.</li>
+<li>The Package should have modules (.py file(s)) and
+<strong>init</strong>.py file.</li>
 <li>The code must be versioned.</li>
 <li>Project dependencies must be managed.</li>
 <li>The project’s metadata must be clearly defined.</li>
