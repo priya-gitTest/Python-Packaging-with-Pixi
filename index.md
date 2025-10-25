@@ -29,7 +29,7 @@ It is a roughly 2 hour course.
   - Basic knowledge of [GIT](https://swcarpentry.github.io/git-novice/)
   - A GitHub account
   - Familiarity with VSCode
-  - Familiarity with command line / terminal
+  - Familiarity with command line / [terminal](https://swcarpentry.github.io/shell-novice/)
   - A PyPI or TestPyPI API token
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
