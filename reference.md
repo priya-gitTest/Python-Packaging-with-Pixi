@@ -7,6 +7,8 @@ title: 'Reference'
 3. [ff-2024-create-python-package](https://github.com/pyOpenSci/ff-2024-create-python-package)
 4. [pyOpenSci Python Package Guide](https://www.pyopensci.org/python-package-guide/index.html)
 5. [Building and Publishing](https://packaging.python.org/en/latest/guides/section-build-and-publish/)
+6. [PyPI Docs](https://docs.pypi.org/)
+7. [Python Enhancement Proposals](https://peps.python.org/)
 
 ## Glossary
 
