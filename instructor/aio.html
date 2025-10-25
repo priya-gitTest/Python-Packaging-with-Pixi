@@ -636,14 +636,18 @@ recomendations : <a href="https://peps.python.org/pep-0621/" class="external-lin
 </ul></section><section><h2 class="section-heading" id="envs">envs<a class="anchor" aria-label="anchor" href="#envs"></a>
 </h2>
 <hr class="half-width">
-<p>Automatically creates the environment for you when you initialize the
-project via Pixi i.e. <code>pixi init</code></p>
+<p>Pixi automatically manages project environments. When you initialize
+the project with <code>pixi init</code>, it creates the project
+configuration, and the environment is automatically set up when you
+install dependencies or run tasks.</p>
 </section><section><h2 class="section-heading" id="dependency-management">dependency management<a class="anchor" aria-label="anchor" href="#dependency-management"></a>
 </h2>
 <hr class="half-width">
-<p>When you add a package via Pixi, it automatically updates the
-<code>pyproject.toml</code> file and generates or updates the
-<code>pixi.lock</code> file with appropriate source and version.</p>
+<p>When you add a package via Pixi
+(<code>pixi add &lt;package&gt;</code>), it updates the project
+configuration (<code>pyproject.toml</code> or <code>pixi.toml</code>)
+and generates or updates the <code>pixi.lock</code> file, recording the
+exact version and source to ensure reproducible environments.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
