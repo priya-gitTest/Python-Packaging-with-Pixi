@@ -251,6 +251,7 @@
 <li><a href="#editable-installation">Editable Installation</a></li>
 <li><a href="#dependency-management">Dependency Management</a></li>
 <li><a href="#lockfiles">Lockfiles</a></li>
+<li><a href="#readme">Readme</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -333,7 +334,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Metadata for Python packging</h1>
-        <p>Last updated on 2025-10-24 |
+        <p>Last updated on 2025-10-25 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/4_project_metadata.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -405,15 +406,23 @@ distributable packages.</li>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="dt">requires</span> <span class="op">=</span> <span class="op">[</span><span class="st">"hatchling"</span><span class="op">]</span> </span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="dt">build-backend</span> <span class="op">=</span> <span class="st">"hatchling.build"</span></span></code></pre>
 </div>
-<p>Some other build tools to read are - <a href="https://backend.pdm-project.org" class="external-link">pdm.backend</a> e.g. <a href="https://github.com/fastapi/fastapi/blob/master/pyproject.toml" class="external-link">fastapi</a>
-- <a href="https://mesonbuild.com/meson-python/" class="external-link">mesonpy</a> e.g. <a href="https://github.com/numpy/numpy/blob/main/pyproject.toml" class="external-link">numpy</a>
-- <a href="">setuptools.build_meta</a> e.g. <a href="https://github.com/prefix-dev/parselmouth/blob/main/pyproject.toml" class="external-link">parselmouth</a></p>
-</section><section><h2 class="section-heading" id="editable-installation">Editable Installation<a class="anchor" aria-label="anchor" href="#editable-installation"></a></h2>
+<p>Some other build tools to read are:</p>
+<ul><li>
+<a href="https://backend.pdm-project.org" class="external-link">pdm.backend</a> e.g. <a href="https://github.com/fastapi/fastapi/blob/cd40c5b40ffd8ba0c6a6a6c96bbf34ec1cf9c525/pyproject.toml#L2" class="external-link">fastapi</a>
+</li>
+<li>
+<a href="https://mesonbuild.com/meson-python/" class="external-link">mesonpy</a> e.g. <a href="https://github.com/numpy/numpy/blob/1d053b3482b178ed057474402ae94c80701796e0/pyproject.toml#L2" class="external-link">numpy</a>
+</li>
+<li>
+<a href="https://setuptools.pypa.io/en/latest/build_meta.html" class="external-link">setuptools.build_meta</a>
+e.g. <a href="https://github.com/prefix-dev/parselmouth/blob/eb3eda68672ba95871719866403318690e1b37be/pyproject.toml#L3" class="external-link">parselmouth</a>
+</li>
+</ul></section><section><h2 class="section-heading" id="editable-installation">Editable Installation<a class="anchor" aria-label="anchor" href="#editable-installation"></a></h2>
 <hr class="half-width"><p>Projects may be installed in editable mode, which allows you to make
 changes to the source code and have them reflected immediately in the
 environment without reinstallation. For example, the
-<code>greet_me</code> package can be added as an editable
-dependency.</p>
+<code>greet_me</code> package we are creating is listed as editable by
+default.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -429,12 +438,15 @@ For example:</p>
 </h3>
 <pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.11, &lt;3.12"</span></span></code></pre>
 </div>
-<p>Additional sections in <code>pyproject.toml</code> may include:
+<p>Additional sections in <code>pyproject.toml</code> may include:</p>
+<ul><li>
 <code>[tool.pixi.workspace]</code>: Defines project-wide settings,
-including package sources and target platforms for resolution.<br><code>[tool.pixi.pypi-dependencies]</code> : Declares the dependencies
-to be installed from PyPI (or equivalent sources). These are the
-external libraries required by the project.</p>
-<p>You can specify a range or multiple supported Python versions using
+including package sources and target platforms for resolution.<br></li>
+<li>
+<code>[tool.pixi.pypi-dependencies]</code> : Declares the
+dependencies to be installed from PyPI (or equivalent sources). These
+are the external libraries required by the project.</li>
+</ul><p>You can specify a range or multiple supported Python versions using
 the syntax below.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -447,11 +459,11 @@ reference.</p>
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">[project]</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[{</span><span class="dt">name</span><span class="op"> =</span> <span class="st">"Priyanka O"</span><span class="op">}]</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[{</span><span class="dt">name</span><span class="op"> =</span> <span class="st">"Priyanka Demo"</span><span class="op">, </span><span class="dt">email</span><span class="op"> =</span> <span class="st">"demo@users.noreply.github.com"</span><span class="op">}]</span></span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[]</span></span>
 <span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"greet_me"</span></span>
 <span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;= 3.11"</span></span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.2"</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
 <span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"greet_me Pixi-managed package"</span></span>
 <span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="dt">readme</span> <span class="op">=</span> <span class="st">"README.md"</span></span>
 <span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a></span>
@@ -470,24 +482,34 @@ reference.</p>
 <span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a><span class="kw">[tool.pixi.tasks]</span></span>
 <span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a><span class="dt">start</span> <span class="op">=</span> <span class="st">"python -c 'from greet_me import happy; print(happy.greet_happy())'"</span></span></code></pre>
 </div>
-<p>For insipiration, also check <a href="https://github.com/prefix-dev/parselmouth/blob/main/pyproject.toml" class="external-link">here</a></p>
+<p>For insipiration, also check <a href="https://github.com/prefix-dev/parselmouth/blob/main/pyproject.toml" class="external-link">here</a>.</p>
 </section><section><h2 class="section-heading" id="lockfiles">Lockfiles<a class="anchor" aria-label="anchor" href="#lockfiles"></a></h2>
 <hr class="half-width"><p>A <strong>lockfile</strong> contains the complete set of
 dependencies, including specific versions, required to reproduce the
 project environment. It is automatically generated based on the
 dependencies listed in the <code>.toml</code> file, ensuring that builds
 remain consistent and reproducible.</p>
-<p>Please add and update the README.md file, in case you havent done so.
+</section><section><h2 class="section-heading" id="readme">Readme<a class="anchor" aria-label="anchor" href="#readme"></a></h2>
+<hr class="half-width"><p>Please add and update the README.md file, in case you havent done so.
 You can easily generate a README text on <a href="https://readme.so/" class="external-link">readme.so</a> and copy its content to your
-READMe file. ::::::::::::::::::::::::::::::::::::: keypoints - Every
-project must include a <code>pyproject.toml</code> file - The
-<code>[build-system]</code> section is required and must define both
-<code>requires</code> and <code>build-backend</code>. - The
-<code>[project]</code> section must, at minimum, include the project
-<code>name</code> and <code>version</code>. - It is recommended to
-specify dependencies in the <code>[project]</code> section for clarity
-and reproducibility.</p>
-<p>::::::::::::::::::::::::::::::::::::::::::::::::</p>
+READMe file.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul><li>Every project must include a <code>pyproject.toml</code> file</li>
+<li>The <code>[build-system]</code> section is required and must define
+both <code>requires</code> and <code>build-backend</code>.</li>
+<li>The <code>[project]</code> section must, at minimum, include the
+project <code>name</code> and <code>version</code>.</li>
+<li>It is recommended to specify dependencies in the
+<code>[project]</code> section for clarity and reproducibility.</li>
+</ul></div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -550,7 +572,7 @@ any links that you are not going to use.
   "url": "https://priya-gittest.github.io/Python-Packaging-with-Pixi/instructor/4_project_metadata.html",
   "identifier": "https://priya-gittest.github.io/Python-Packaging-with-Pixi/instructor/4_project_metadata.html",
   "dateCreated": "2025-08-19",
-  "dateModified": "2025-10-24",
+  "dateModified": "2025-10-25",
   "datePublished": "2025-10-25"
 }
 
