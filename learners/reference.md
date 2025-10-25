@@ -27,3 +27,6 @@ title: 'Reference'
 
 **Twine**
 : A command-line tool used to securely upload Python packages to the Python Package Index (PyPI) or to a private PyPI-compatible repository.
+
+**Yank**
+: A process of marking a release as problematic or soft deleting it. It was introduced via [PEP 592](https://peps.python.org/pep-0592/). The release still exists on PyPI for backwards compatability. You can install it explicitly but not by default.
