@@ -440,7 +440,10 @@ released Python packages are made available for end users. There is also
 <a href="https://test.pypi.org/" class="external-link">TestPyPI</a>, a repository which allows
 us to experiment with distribution tools and procedures without
 affecting the live PyPI. In this course, we will publish our package to
-TestPyPI.</p>
+TestPyPI. You can search PyPI for existing packages to use in your
+project instead of creating a new one. To make your package easily
+discoverable, it’s important to provide correct metadata and appropriate
+<a href="https://pypi.org/classifiers/" class="external-link">classifiers</a>.</p>
 </section><section><h2 class="section-heading" id="what-is-a-build">What is a Build ?<a class="anchor" aria-label="anchor" href="#what-is-a-build"></a></h2>
 <hr class="half-width"><p>A build is the process by which your project’s source code is
 transformed into a distributable format. These build artefacts can then
@@ -451,13 +454,9 @@ files such as a <strong>wheel</strong> (<code>.whl</code>) or a
 <strong>source archive</strong> (<code>.tar.gz</code>), which can be
 installed via <code>pip</code> or uploaded to PyPI. It is vital to
 version your build and supply the requisite metadata.</p>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<span class="callout-header">Key Points</span>
-<div class="callout-inner">
-<div class="callout-content">
+<p><strong>Please note</strong>: There are several tools and backends
+available for building Python packages.
+::::::::::::::::::::::::::::::::::::: keypoints</p>
 <ul><li>To make Python code installable, reusable and distributable via PyPI
 or TestPyPI, one must package the code.</li>
 <li>The Package should have modules (.py file(s)) and
@@ -465,9 +464,7 @@ or TestPyPI, one must package the code.</li>
 <li>The code must be versioned.</li>
 <li>Project dependencies must be managed.</li>
 <li>The project’s metadata must be clearly defined.</li>
-</ul></div>
-</div>
-</div>
+</ul><p>::::::::::::::::::::::::::::::::::::::::::::::::</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
