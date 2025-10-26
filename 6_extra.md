@@ -68,10 +68,12 @@ Steps to Yank a version of your Python Package :
 - Select the version you wish to yank and choose that option by clicking on the **Options** button and select **Yank**. 
 - dd
 - You will be shown a pop-up. Fill the version nos and your releace will not be yanked.
-  <img width="594" height="780" alt="image" src="https://github.com/user-attachments/assets/ee484e21-750f-4779-a928-26b5e5dc77d5" />
+  <img width="602" height="795" alt="image" src="https://github.com/user-attachments/assets/eca2232d-0fb9-42e7-b080-afb4f3da9f23" />
+
 
 - Once your release is yanked, it be be shown like below.
-  <img width="1295" height="266" alt="image" src="https://github.com/user-attachments/assets/72b0c557-84ae-4bad-bb22-b00ddc011e8d" />
+  <img width="1279" height="297" alt="image" src="https://github.com/user-attachments/assets/740f84ed-e586-487c-8498-90d0378c066d" />
+
 
 - You can also un-yank it, by clicking on the **Options** and clicking on **Un-yank**.
   <img width="627" height="544" alt="image" src="https://github.com/user-attachments/assets/5a53e6b9-6305-4683-a7af-9b64c2cf9436" />
