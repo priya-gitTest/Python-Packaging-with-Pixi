@@ -59,7 +59,7 @@ Yanked releases remain accessible for reproducibility but are ignored by default
 
 Steps to Yank a version of your Python Package : 
 - Log into your PyPI or TestPyPI account
-- Click on the Your Projects from the top righlocation user your user name.
+- Click on the your Projects from the top right location under your **<<user name>>**.
   <img width="708" height="439" alt="image" src="https://github.com/user-attachments/assets/25d8773a-1912-407c-8338-8e3d10150328" />
 
 - Select the right project /package from the options shown and click on the **Manage** button.
@@ -89,5 +89,6 @@ You can read more about Yanking [here](https://docs.pypi.org/project-management/
 - Define tasks such as `start` in your `pixi.toml` or `pyproject.toml`.
 - Use `pixi run <task-name>` to execute those tasks.
 - `pixi run start` ensures consistency and reproducibility when launching a project.
+- Yank a faulty release and provide useful comments for why you yanked it.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
