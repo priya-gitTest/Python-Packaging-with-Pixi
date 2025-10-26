@@ -265,6 +265,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
+<li><a href="#yank-and-un-yank">Yank and Un-yank</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -329,7 +330,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Extra</h1>
-        <p>Last updated on 2025-10-25 |
+        <p>Last updated on 2025-10-26 |
 
         <a href="https://github.com/priya-gitTest/Python-Packaging-with-Pixi/edit/main/episodes/6_extra.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -349,6 +350,9 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul><li>How can we use <code>pixi run start</code>?</li>
+<li>How to yank or un-yank a release?</li>
+<li>How to automatically version and store your releases from via
+Codespaces</li>
 </ul></div>
 </div>
 </div>
@@ -357,6 +361,9 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul><li>Learn how to use Pixi to run your project.</li>
+<li>Learn how to make a release unavialable or undo that.</li>
+<li>Learn how to use dynamic versioing and release from via
+codespaces.</li>
 </ul></div>
 </div>
 </div>
@@ -405,7 +412,34 @@ file.</li>
 </ul><p>This provides a convenient and reproducible way to launch your
 project without needing to manually manage dependencies or commands. You
 can check the example project <a href="https://github.com/priya-gitTest/greet_me" class="external-link">here</a></p>
-<div id="keypoints1" class="callout keypoints">
+</section><section><h2 class="section-heading" id="yank-and-un-yank">Yank and Un-yank<a class="anchor" aria-label="anchor" href="#yank-and-un-yank"></a></h2>
+<hr class="half-width"><p>Occasionally, a release may contain an error or be uploaded by
+mistake. While PyPI and TestPyPI don’t allow deleting releases for
+security and reproducibility reasons, you can mark a specific version as
+yanked. Yanked releases remain accessible for reproducibility but are
+ignored by default when users install packages with
+<code>pip install &lt;package-name&gt;</code></p>
+<p>Steps to Yank a version of your Python Package : - Log into your PyPI
+or TestPyPI account - Click on the Your Projects from the top
+righlocation user your user name.
+<img width="708" height="439" alt="image" src="https://github.com/user-attachments/assets/25d8773a-1912-407c-8338-8e3d10150328" class="figure"></p>
+<ul><li><p>Select the right project /package from the options shown and
+click on the <strong>Manage</strong> button.
+<img width="1295" height="633" alt="image" src="https://github.com/user-attachments/assets/1aa1cffa-9961-4f2b-aae3-c6b18c90f331" class="figure"></p></li>
+<li><p>Select the version you wish to yank and choose that option by
+clicking on the <strong>Options</strong> button and select
+<strong>Yank</strong>.</p></li>
+<li><p>dd</p></li>
+<li><p>You will be shown a pop-up. Fill the version nos and your releace
+will not be yanked.
+<img width="594" height="780" alt="image" src="https://github.com/user-attachments/assets/ee484e21-750f-4779-a928-26b5e5dc77d5" class="figure"></p></li>
+<li><p>Once your release is yanked, it be be shown like below.
+<img width="1295" height="266" alt="image" src="https://github.com/user-attachments/assets/72b0c557-84ae-4bad-bb22-b00ddc011e8d" class="figure"></p></li>
+<li><p>You can also un-yank it, by clicking on the
+<strong>Options</strong> and clicking on <strong>Un-yank</strong>.
+<img width="627" height="544" alt="image" src="https://github.com/user-attachments/assets/5a53e6b9-6305-4683-a7af-9b64c2cf9436" class="figure"></p></li>
+<li><p>d</p></li>
+</ul><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -484,7 +518,7 @@ any links that you are not going to use.
   "url": "https://priya-gittest.github.io/Python-Packaging-with-Pixi/6_extra.html",
   "identifier": "https://priya-gittest.github.io/Python-Packaging-with-Pixi/6_extra.html",
   "dateCreated": "2025-08-19",
-  "dateModified": "2025-10-25",
+  "dateModified": "2025-10-26",
   "datePublished": "2025-10-26"
 }
 
