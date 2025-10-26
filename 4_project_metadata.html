@@ -250,6 +250,7 @@
 <li><a href="#the-build-system-table">The <code>[build-system]</code> table</a></li>
 <li><a href="#editable-installation">Editable Installation</a></li>
 <li><a href="#dependency-management">Dependency Management</a></li>
+<li><a href="#classifiers">Classifiers</a></li>
 <li><a href="#lockfiles">Lockfiles</a></li>
 <li><a href="#readme">Readme</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -449,34 +450,51 @@ the syntax below.</p>
 </h3>
 <pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.11, &lt;3.12"</span></span></code></pre>
 </div>
-<p>Final <code>pyproject.toml</code> should look like this below, for
-reference.</p>
+</section><section><h2 class="section-heading" id="classifiers">Classifiers<a class="anchor" aria-label="anchor" href="#classifiers"></a></h2>
+<hr class="half-width"><p>They are standardized metadata tags that describe your Python package
+for PyPI and help with filtering and discoverability. You can look for
+the list of acceptable classifiers <a href="https://pypi.org/classifiers/" class="external-link">here</a>. They are defined under
+project section.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">[project]</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[{</span><span class="dt">name</span><span class="op"> =</span> <span class="st">"Priyanka Demo"</span><span class="op">, </span><span class="dt">email</span><span class="op"> =</span> <span class="st">"demo@users.noreply.github.com"</span><span class="op">}]</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[]</span></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"greet_me"</span></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;= 3.11"</span></span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"greet_me Pixi-managed package"</span></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="dt">readme</span> <span class="op">=</span> <span class="st">"README.md"</span></span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a><span class="kw">[build-system]</span></span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="dt">build-backend</span> <span class="op">=</span> <span class="st">"hatchling.build"</span></span>
-<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a><span class="dt">requires</span> <span class="op">=</span> <span class="op">[</span><span class="st">"hatchling"</span><span class="op">]</span></span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a><span class="kw">[tool.pixi.workspace]</span></span>
-<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"conda-forge"</span><span class="op">]</span></span>
-<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"linux-64"</span><span class="op">]</span></span>
-<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a><span class="kw">[tool.pixi.pypi-dependencies]</span></span>
-<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a><span class="dt">requests</span> <span class="op">=</span> <span class="st">"&gt;=2.32.5,&lt;3"</span></span>
-<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a><span class="dt">greet_me</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">path</span><span class="op"> =</span> <span class="st">"."</span><span class="op">, </span><span class="dt">editable</span><span class="op"> =</span> <span class="cn">true</span><span class="op"> }</span></span>
-<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a></span>
-<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a><span class="kw">[tool.pixi.tasks]</span></span>
-<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a><span class="dt">start</span> <span class="op">=</span> <span class="st">"python -c 'from greet_me import happy; print(happy.greet_happy())'"</span></span></code></pre>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="dt">...</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="dt">classifiers</span> <span class="op">=</span> <span class="op">[</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>    <span class="st">"Programming Language :: Python :: 3"</span><span class="op">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    <span class="st">"License :: OSI Approved :: MIT License"</span><span class="op">,</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    <span class="st">"Operating System :: OS Independent"</span><span class="op">,</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="op">]</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="dt">...</span></span></code></pre>
+</div>
+<p>Final <code>pyproject.toml</code> should look like this below, for
+reference.</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">[project]</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[{</span><span class="dt">name</span><span class="op"> =</span> <span class="st">"Priyanka Demo"</span><span class="op">, </span><span class="dt">email</span><span class="op"> =</span> <span class="st">"demo@users.noreply.github.com"</span><span class="op">}]</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[]</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"greet_me"</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;= 3.11"</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"greet_me Pixi-managed package"</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="dt">readme</span> <span class="op">=</span> <span class="st">"README.md"</span></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="kw">[build-system]</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="dt">build-backend</span> <span class="op">=</span> <span class="st">"hatchling.build"</span></span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="dt">requires</span> <span class="op">=</span> <span class="op">[</span><span class="st">"hatchling"</span><span class="op">]</span></span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a><span class="kw">[tool.pixi.workspace]</span></span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"conda-forge"</span><span class="op">]</span></span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"linux-64"</span><span class="op">]</span></span>
+<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a><span class="kw">[tool.pixi.pypi-dependencies]</span></span>
+<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a><span class="dt">requests</span> <span class="op">=</span> <span class="st">"&gt;=2.32.5,&lt;3"</span></span>
+<span id="cb6-20"><a href="#cb6-20" tabindex="-1"></a><span class="dt">greet_me</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">path</span><span class="op"> =</span> <span class="st">"."</span><span class="op">, </span><span class="dt">editable</span><span class="op"> =</span> <span class="cn">true</span><span class="op"> }</span></span>
+<span id="cb6-21"><a href="#cb6-21" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a><span class="kw">[tool.pixi.tasks]</span></span>
+<span id="cb6-23"><a href="#cb6-23" tabindex="-1"></a><span class="dt">start</span> <span class="op">=</span> <span class="st">"python -c 'from greet_me import happy; print(happy.greet_happy())'"</span></span></code></pre>
 </div>
 <p>For insipiration, also check <a href="https://github.com/prefix-dev/parselmouth/blob/main/pyproject.toml" class="external-link">here</a>.</p>
 </section><section><h2 class="section-heading" id="lockfiles">Lockfiles<a class="anchor" aria-label="anchor" href="#lockfiles"></a></h2>
