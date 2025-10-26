@@ -66,7 +66,8 @@ Steps to Yank a version of your Python Package :
   <img width="1295" height="633" alt="image" src="https://github.com/user-attachments/assets/1aa1cffa-9961-4f2b-aae3-c6b18c90f331" />
 
 - Select the version you wish to yank and choose that option by clicking on the **Options** button and select **Yank**. 
-- dd
+  <img width="1298" height="644" alt="image" src="https://github.com/user-attachments/assets/554d4387-18ff-4e34-829f-759a9671bbcc" />
+
 - You will be shown a pop-up. Fill the version nos and your releace will not be yanked.
   <img width="602" height="795" alt="image" src="https://github.com/user-attachments/assets/eca2232d-0fb9-42e7-b080-afb4f3da9f23" />
 
@@ -78,7 +79,6 @@ Steps to Yank a version of your Python Package :
 - You can also un-yank it, by clicking on the **Options** and clicking on **Un-yank**.
   <img width="627" height="544" alt="image" src="https://github.com/user-attachments/assets/5a53e6b9-6305-4683-a7af-9b64c2cf9436" />
 
-- d
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Define tasks such as `start` in your `pixi.toml` or `pyproject.toml`.
