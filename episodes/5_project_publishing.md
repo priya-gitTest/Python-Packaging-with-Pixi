@@ -42,17 +42,7 @@ pixi add --pypi build
 ✔ Added build >=1.3.0, <2
 Added these as pypi-dependencies.
 ```
-Empty the depenencies under `[project]` and move/edit them to `[tool.pixi.pypi-dependencies]` section, like shown below:
-
-```toml
-[project]
-dependencies = []
-
-[tool.pixi.pypi-dependencies]
-requests = ">=2.32.5,<3"
-build = ">=1.3.0,<2"
-```
-Then run the `build` command:
+Now run the `build` command:
 
 ```bash
 pixi run python -m build
@@ -91,7 +81,7 @@ This command creates a `dist` directory containing two files:
 
 ## Step 3: Upload your build
 The **Twine** tool is used to securely upload your package distributions.
-Install `twine` and modify the `pyroject.toml` file as you did for `build` tool above.
+Install `twine`.
  
 ```bash
 pixi add --pypi twine
@@ -187,7 +177,8 @@ ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/
 ```
 
 To fix this, 
-- Rename your  Package Folder, [project].name (e.g. from `greet_me` to `greet_me1`) and also change this section, `[tool.pixi.pypi-dependencies]`
+- Rename your  Package Folder, [project].name (e.g. from `greet_me` to `greet_me1`)
+- Make changes to your package name in the `pyproject.toml` file.
   
 ```toml
 [project]
