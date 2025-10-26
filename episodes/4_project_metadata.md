@@ -69,6 +69,22 @@ You can specify a range or multiple supported Python versions using the syntax b
 ```toml
 requires-python = ">=3.11, <3.12"
 ```
+
+## Classifiers
+They are standardized metadata tags that describe your Python package for PyPI and help with filtering and discoverability. You can look for the list of acceptable classifiers [here](https://pypi.org/classifiers/).
+They are defined under project section.
+
+```toml
+[project]
+...
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+...
+```
+
 Final `pyproject.toml` should look like this below, for reference.
 
 ```toml
