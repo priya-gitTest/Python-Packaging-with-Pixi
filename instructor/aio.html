@@ -1475,19 +1475,35 @@ Downloading https://test-files.pythonhosted.org/packages/92/84/76afd107870f18a14
 Installing collected packages: greet-me1
 Successfully installed greet-me1-0.1.7</code></pre>
 </div>
-<p>Then create a test script : <code>test_package.py</code>:</p>
-<div class="codewrapper sourceCode" id="cb16">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<p>In case you get an error like this :</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="im">from</span> greet_me1 <span class="im">import</span> happy, sad</span>
-<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a><span class="bu">print</span>(happy.greet_happy())</span></code></pre>
+<pre class="output" tabindex="0"><code>ERROR: Could not find a version that satisfies the requirement requests&lt;3,&gt;=2.32.5 (from pixi-demo1) (from versions: 2.5.4.1)
+ERROR: No matching distribution found for requests&lt;3,&gt;=2.32.5</code></pre>
 </div>
-<p>Run it:</p>
+<p>resolve it by adding this extra parameter
+<code>--extra-index-url https://pypi.org/simple/</code> to your
+<code>pip install</code> command. This tells the pip command to also
+look for packages in the extra URL provided.</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">python</span> test_package.py </span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-i</span> https://test.pypi.org/simple/ <span class="at">--extra-index-url</span> https://pypi.org/simple/  greet-me1==0.1.0</span></code></pre>
+</div>
+<p>Then create a test script : <code>test_package.py</code>:</p>
+<div class="codewrapper sourceCode" id="cb18">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="im">from</span> greet_me1 <span class="im">import</span> happy, sad</span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="bu">print</span>(happy.greet_happy())</span></code></pre>
+</div>
+<p>Run it:</p>
+<div class="codewrapper sourceCode" id="cb19">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">python</span> test_package.py </span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
