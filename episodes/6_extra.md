@@ -8,7 +8,6 @@ exercises: 5
 
 - How can we use `pixi run start`?
 - How to yank or un-yank a release?
-- How to automatically version and store your releases from via Codespaces 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -16,7 +15,6 @@ exercises: 5
 
 - Learn how to use Pixi to run your project.
 - Learn how to make a release unavialable or undo that.
-- Learn how to use dynamic versioing and release from via codespaces.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
  
