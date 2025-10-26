@@ -149,6 +149,23 @@ pixi update
 ✔ Lock-file was already up-to-date
 ```
 
+`pixi tree` : It shows a dependency tree for your current Pixi project or environment
+
+```bash
+pixi tree
+```
+```output
+├── requests 2.32.5 
+│   ├── charset_normalizer 3.4.4 
+│   ├── idna 3.11 
+│   ├── urllib3 2.5.0 
+│   └── certifi 2025.10.5 
+├── python 3.14.0 
+│   ├── bzip2 1.0.8 
+│   │   └── libgcc 15.2.0
+...
+```
+
 ## Adding Modules
 Lets create these 2 files: `happy.py`, `sad.py` in the folder src/greet_me.
 
