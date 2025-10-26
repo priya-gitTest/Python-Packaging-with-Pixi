@@ -44,6 +44,8 @@ Some other build tools to read are:
 - [mesonpy](https://mesonbuild.com/meson-python/) e.g. [numpy](https://github.com/numpy/numpy/blob/1d053b3482b178ed057474402ae94c80701796e0/pyproject.toml#L2)
 - [setuptools.build_meta](https://setuptools.pypa.io/en/latest/build_meta.html) e.g. [parselmouth](https://github.com/prefix-dev/parselmouth/blob/eb3eda68672ba95871719866403318690e1b37be/pyproject.toml#L3)
 
+  Also, refer to the table [here](https://pixi.sh/latest/concepts/conda_pypi/#tool-comparison)
+
 ## Editable Installation
 
 Projects may be installed in editable mode, which allows you to make changes to the source code and have them reflected immediately in the environment without reinstallation. For example, the `greet_me` package we are creating is listed as editable by default.
