@@ -223,6 +223,20 @@ Installing collected packages: greet-me1
 Successfully installed greet-me1-0.1.7
 ```
 
+In case you get an error like this : 
+```output
+ERROR: Could not find a version that satisfies the requirement requests<3,>=2.32.5 (from pixi-demo1) (from versions: 2.5.4.1)
+ERROR: No matching distribution found for requests<3,>=2.32.5
+```
+
+resolve it by adding this extra parameter `--extra-index-url https://pypi.org/simple/`  to your `pip install` command.
+This tells the pip command to also look for packages in the extra URL provided.
+
+```bash
+pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/  greet-me1==0.1.0
+```
+
+
 Then create a test script : `test_package.py`:
 
 ```python
