@@ -22,7 +22,7 @@ exercises: 0
 
 ## Introduction
 
-Pixi is a fast, modern and reproducible package management tool. It has lots of [features](https://pixi.sh/latest/#what-is-the-difference-with-pixi) which are not all present in a single tool at this point in time. These capabilities make Pixi an attractive choice for managing Python and multi-language projects.
+Pixi is a fast, modern and reproducible package management tool. It has lots of [features](https://pixi.sh/latest/#what-is-the-difference-with-pixi) which are not all present in a single tool at this point in time. Read [here](https://pixi.sh/latest/concepts/conda_pypi/#tool-comparison). These capabilities make Pixi an attractive choice for managing Python and multi-language projects.
 
 Key features include:
 
