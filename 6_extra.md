@@ -78,7 +78,12 @@ Steps to Yank a version of your Python Package :
 
 - You can also un-yank it, by clicking on the **Options** and clicking on **Un-yank**.
   <img width="627" height="544" alt="image" src="https://github.com/user-attachments/assets/5a53e6b9-6305-4683-a7af-9b64c2cf9436" />
+  
+- When you do a `pip install` without stating an explicit verion and no un-yanked versions are available. You may get an error as shown below :
+ <img width="1215" height="128" alt="image" src="https://github.com/user-attachments/assets/a70a221f-a1e2-49d8-bf43-5664acc4067d" />
 
+
+You can read more about Yanking [here](https://docs.pypi.org/project-management/yanking/) and related PEP 592 specification [here](https://peps.python.org/pep-0592/)
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Define tasks such as `start` in your `pixi.toml` or `pyproject.toml`.
