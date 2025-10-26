@@ -29,6 +29,8 @@ Packages are used to organise modules within a Python project. As projects often
 
 Each package must contain a special file named `__init__.py`. The presence of this file indicates to Python that the folder is a package, thereby allowing it to be imported into your code.
 
+It is a recommended practice to place your Python packages inside a `src/` directory. This structure helps prevent accidental imports from the working directory and ensures your tests accurately reflect how your package will be used after installation.
+
 ## Project Structure
 A typical project would look like :
 ```
