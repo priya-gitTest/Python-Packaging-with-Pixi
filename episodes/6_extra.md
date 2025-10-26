@@ -7,12 +7,16 @@ exercises: 5
 :::::::::::::::::::::::::::::::::::::: questions
 
 - How can we use `pixi run start`?
+- How to yank or un-yank a release?
+- How to automatically version and store your releases from via Codespaces 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Learn how to use Pixi to run your project.
+- Learn how to make a release unavialable or undo that.
+- Learn how to use dynamic versioing and release from via codespaces.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
  
@@ -48,6 +52,31 @@ This command will:
 
 This provides a convenient and reproducible way to launch your project without needing to manually manage dependencies or commands.
 You can check the example project [here](https://github.com/priya-gitTest/greet_me)
+
+## Yank and Un-yank
+Occasionally, a release may contain an error or be uploaded by mistake. While PyPI and TestPyPI don’t allow deleting releases for security and reproducibility reasons, you can mark a specific version as yanked.
+Yanked releases remain accessible for reproducibility but are ignored by default when users install packages with `pip install <package-name>`
+
+Steps to Yank a version of your Python Package : 
+- Log into your PyPI or TestPyPI account
+- Click on the Your Projects from the top righlocation user your user name.
+  <img width="708" height="439" alt="image" src="https://github.com/user-attachments/assets/25d8773a-1912-407c-8338-8e3d10150328" />
+
+- Select the right project /package from the options shown and click on the **Manage** button.
+  <img width="1295" height="633" alt="image" src="https://github.com/user-attachments/assets/1aa1cffa-9961-4f2b-aae3-c6b18c90f331" />
+
+- Select the version you wish to yank and choose that option by clicking on the **Options** button and select **Yank**. 
+- dd
+- You will be shown a pop-up. Fill the version nos and your releace will not be yanked.
+  <img width="594" height="780" alt="image" src="https://github.com/user-attachments/assets/ee484e21-750f-4779-a928-26b5e5dc77d5" />
+
+- Once your release is yanked, it be be shown like below.
+  <img width="1295" height="266" alt="image" src="https://github.com/user-attachments/assets/72b0c557-84ae-4bad-bb22-b00ddc011e8d" />
+
+- You can also un-yank it, by clicking on the **Options** and clicking on **Un-yank**.
+  <img width="627" height="544" alt="image" src="https://github.com/user-attachments/assets/5a53e6b9-6305-4683-a7af-9b64c2cf9436" />
+
+- d
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Define tasks such as `start` in your `pixi.toml` or `pyproject.toml`.
