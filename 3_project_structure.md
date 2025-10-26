@@ -231,5 +231,6 @@ You can read more about tasks [here](https://pixi.sh/dev/workspace/advanced_task
 - Always include the `__init__.py` file in packages.
 - Sequence of Pixi commands: **init** → **add** → **run** → **lock** → **install** → **update**.
 - Define / check `[project]`, `[dependencies]` and `[tasks]` in your `pyproject.toml` file.
+- Keep your project dependencies lean and remove unused packages.
   
 ::::::::::::::::::::::::::::::::::::::::::::::::
