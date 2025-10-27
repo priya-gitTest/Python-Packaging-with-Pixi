@@ -53,11 +53,12 @@ You can check the example project [here](https://github.com/priya-gitTest/greet_
 
 ## Yank and Un-yank
 Occasionally, a release may contain an error or be uploaded by mistake. While PyPI and TestPyPI don’t allow deleting releases for security and reproducibility reasons, you can mark a specific version as yanked.
-Yanked releases remain accessible for reproducibility but are ignored by default when users install packages with `pip install <package-name>`
+Yanked releases remain accessible for reproducibility but are ignored by default when users install packages with `pip install <package-name>`.
 
-Steps to Yank a version of your Python Package : 
+Steps to Yank a version of your Python Package:
+
 - Log into your PyPI or TestPyPI account
-- Click on the your Projects from the top right location under your **<<user name>>**.
+- Click on the your Projects from the top right location under your user-name.
   <img width="708" height="439" alt="image" src="https://github.com/user-attachments/assets/25d8773a-1912-407c-8338-8e3d10150328" />
 
 - Select the right project /package from the options shown and click on the **Manage** button.
@@ -81,7 +82,7 @@ Steps to Yank a version of your Python Package :
  <img width="1215" height="128" alt="image" src="https://github.com/user-attachments/assets/a70a221f-a1e2-49d8-bf43-5664acc4067d" />
 
 
-You can read more about Yanking [here](https://docs.pypi.org/project-management/yanking/) and related PEP 592 specification [here](https://peps.python.org/pep-0592/)
+You can read more about Yanking [here](https://docs.pypi.org/project-management/yanking/) and related PEP 592 specification [here](https://peps.python.org/pep-0592/).
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Define tasks such as `start` in your `pixi.toml` or `pyproject.toml`.
