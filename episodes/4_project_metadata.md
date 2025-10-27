@@ -114,7 +114,8 @@ start = "python -c 'from greet_me import happy; print(happy.greet_happy())'"
 ```
 
 For insipiration, also check [here](https://github.com/prefix-dev/parselmouth/blob/main/pyproject.toml).
-You can read more about `pyproject.toml` [here](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/)
+
+You can read more about `pyproject.toml` [here](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/).
 
 ## Lockfiles
 A **lockfile** contains the complete set of dependencies, including specific versions, required to reproduce the project environment. It is automatically generated based on the dependencies listed in the `.toml` file, ensuring that builds remain consistent and reproducible.
