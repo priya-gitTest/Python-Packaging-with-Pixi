@@ -84,6 +84,10 @@ Steps to Yank a version of your Python Package:
 
 You can read more about Yanking [here](https://docs.pypi.org/project-management/yanking/) and related PEP 592 specification [here](https://peps.python.org/pep-0592/).
 
+## Further Reading
+
+1. [Reproducible Machine Learning Workflows for Scientists with Pixi](https://proceedings.scipy.org/articles/nwuf8465)
+   
 ::::::::::::::::::::::::::::::::::::: keypoints
 - Define tasks such as `start` in your `pixi.toml` or `pyproject.toml`.
 - Use `pixi run <task-name>` to execute those tasks.
