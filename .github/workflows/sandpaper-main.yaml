@@ -56,6 +56,13 @@ jobs:
         with:
           cache-version: ${{ secrets.CACHE_VERSION }}
 
+      - name: "Ensure recent sandpaper + pkgdown"
+        run: |
+          install.packages(c("sandpaper", "pkgdown"))
+          packageVersion("sandpaper")
+          packageVersion("pkgdown")
+        shell: Rscript {0}
+
       - name: "Deploy Site"
         run: |
           reset <- "${{ github.event.inputs.reset }}" == "true"
