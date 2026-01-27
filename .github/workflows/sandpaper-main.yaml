@@ -59,6 +59,7 @@ jobs:
       - name: "Force update sandpaper + pkgdown"
         run: |
           install.packages("pkgdown")
+          install.packages("purrr")
           remotes::install_github("carpentries/sandpaper", upgrade = "never")
           packageVersion("sandpaper")
           packageVersion("pkgdown")
