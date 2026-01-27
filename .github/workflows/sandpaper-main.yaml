@@ -56,9 +56,10 @@ jobs:
         with:
           cache-version: ${{ secrets.CACHE_VERSION }}
 
-      - name: "Ensure recent sandpaper + pkgdown"
+      - name: "Force update sandpaper + pkgdown"
         run: |
-          install.packages(c("sandpaper", "pkgdown"))
+          install.packages("pkgdown")
+          remotes::install_github("carpentries/sandpaper", upgrade = "never")
           packageVersion("sandpaper")
           packageVersion("pkgdown")
         shell: Rscript {0}
